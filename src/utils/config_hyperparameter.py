@@ -1,0 +1,23 @@
+from argparse import ArgumentParser
+from src.utils.argument_parser import str2bool
+from definitions import ROOT_DIR
+import time
+class ConfigHyperparameter():
+    @staticmethod
+    def arguments_parser(parser = None) -> ArgumentParser:
+        if not parser:
+            parser = ArgumentParser(description="Parser for equations for each dataset")
+
+        parser.add_argument("--seed", type=int,
+                            default=0,
+                            help='Seed for expeiment')
+
+        parser.add_argument("--logging_level", type=int, default=30,
+                            help="CRITICAL = 50, ERROR = 40, "
+                                 "WARNING = 30, INFO = 20, "
+                                 "DEBUG = 10, NOTSET = 0")
+        parser.add_argument("--root_dir", type=str, default=ROOT_DIR,
+                            help="Path to project")
+        parser.add_argument("--exp_name", type=str, default="1c_50_interations",
+                            help="Path to project")
+        return parser
