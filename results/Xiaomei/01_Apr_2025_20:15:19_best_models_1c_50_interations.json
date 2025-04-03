@@ -1,0 +1,4237 @@
+{
+  "0": {
+    "best_model_0": {
+      "train": {
+        "error": 1.7219208317610896e-09,
+        "infix": "( (  cos (( c_0 *  ( rec )  )  ) - c_1 )  *    ( adv )   **   ( 3 )    ) ",
+        "prefix": " *  -  cos  * c rec  c  ** adv 3  ",
+        "num_operations": 5,
+        "num_constants": 2,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0036042212996818543
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999711911702712
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0035363528867023556
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999698418767656
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0036118934363168383
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999706298816531
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.026559946786038114
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9997083479643373
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.001999368460703886
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.999985840482562
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0041177630812256425
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999653657255332
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.007022043730573246
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999616106826866
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0032824165467545794
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999740808104497
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.003591319055478709
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999711458749587
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.008417958550600759
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999577874151679
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.003972403165673023
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.999964871453076
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.004565842387097259
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999558887994002
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0037464930003959737
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999699500220968
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0036802532441971097
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999655684293134
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.00349110590641571
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999753563190426
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.004056750591187913
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999629964451292
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.003742330779034252
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999701215987684
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0043283458357210695
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.999961619025839
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0011932329307895453
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999867655507114
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.0061495050819355525
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999655558042713
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 4.0,
+              "value": 0.003132066617735459
+            },
+            "c_1": {
+              "node_id": 257.0,
+              "value": 0.9999751520862422
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 4.0,
+                "value": 0.0036042212996818543
+              },
+              "c_1": {
+                "node_id": 257.0,
+                "value": 0.9999711911702712
+              },
+              "value": 0.005133410160678993
+            },
+            "c_1": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 4.0,
+                "value": 0.0036042212996818543
+              },
+              "c_1": {
+                "node_id": 257.0,
+                "value": 0.9999711911702712
+              },
+              "value": 0.9999566517818227
+            }
+          }
+        }
+      }
+    },
+    "best_model_1": {
+      "train": {
+        "error": 1.805351962137918e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    / (  exp  ( rec )  +   sin ( c_1 ) )  )  ) ",
+        "prefix": " * c  /  ** adv 3   +  exp rec  sin c   ",
+        "num_operations": 6,
+        "num_constants": 2,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.081732805074614e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -13.32210517191082
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.715624913071034e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.5707856161054112
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.125407151693649e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.5236064563683767
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00044068684805009475
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.4055498052731673
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.309672890782817e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.569173361068417
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.448828957732063e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 5.266783802538432
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.836434363421361e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.638480670511238
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.109538014204345e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.1322985478433501
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.6650726974605976e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -0.3229487304403162
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.011365778019715e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -6.3348319891195475
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.947031784357653e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.522079774740658
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001240864234110252
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.5699222765534724
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.0495870571802164e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -3.0214260047435686
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00010513937725790972
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.5708468223450238
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.684354561015589e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.5707824029237027
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.88104744254813e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -2.9861055482231267
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.305651983733439e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -6.836948855667314
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.076430069669287e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": -8.346204771598368
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.840766363100965e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.57079593319182
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.706897555640542e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 1.5708540508895612
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.530055299226248e-05
+            },
+            "c_1": {
+              "node_id": 897.0,
+              "value": 0.5011191933114617
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 5.081732805074614e-05
+              },
+              "c_1": {
+                "node_id": 897.0,
+                "value": -13.32210517191082
+              },
+              "value": 8.776988788563583e-05
+            },
+            "c_1": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 5.081732805074614e-05
+              },
+              "c_1": {
+                "node_id": 897.0,
+                "value": -13.32210517191082
+              },
+              "value": -1.0565472551447126
+            }
+          }
+        }
+      }
+    },
+    "best_model_2": {
+      "train": {
+        "error": 1.7981813455145864e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    / ( c_1 +   exp  ( rec )  )  )  ) ",
+        "prefix": " * c  /  ** adv 3   + c  exp rec   ",
+        "num_operations": 5,
+        "num_constants": 2,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0817134432380746e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.6858354516436561
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001240741327999926
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 2.6065552165014374
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.125651174346779e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.5001527882125719
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00044069728674301354
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.3945661559524678
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.940359255906617e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 1.8528189646071878
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.448841745078788e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.8502120094958475
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.836429244246887e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.5959743557131872
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.109592181570857e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.1319476956105325
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.665073984392853e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.317363428766737
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.011336402958011e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.05163290406192959
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.946754326999467e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.4985518222111172
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00015203473917368022
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 1.979532903497015
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.049585150139091e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.1198787800508914
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00010948492931143683
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 1.2067282151774814
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.742965008737771e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 1.0340276067876486
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.881091536128384e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.1548415486670715
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.3056808843534164e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.5258746264076178
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.0764049047301996e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": -0.881297365875269
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00032076935097074795
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 23.177624439064086
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.073516754135235e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 1.4618639282925334
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.530054544862067e-05
+            },
+            "c_1": {
+              "node_id": 769.0,
+              "value": 0.480406954969802
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 5.0817134432380746e-05
+              },
+              "c_1": {
+                "node_id": 769.0,
+                "value": -0.6858354516436561
+              },
+              "value": 0.00010406242592462458
+            },
+            "c_1": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 5.0817134432380746e-05
+              },
+              "c_1": {
+                "node_id": 769.0,
+                "value": -0.6858354516436561
+              },
+              "value": 1.5397054729346689
+            }
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 1.8568281877638083e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    *  exp ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  )  ) ",
+        "prefix": " * c  *  ** adv 3   exp  *  - 0 1 rec   ",
+        "num_operations": 6,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.16231199984705e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.291162164148538e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.275765552834666e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00034238127490420015
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.5617187683693206e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.917461589521749e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0489779993729264e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.9030467221548386e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.169534014070979e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.1761444823057255e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.897077226776755e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.522939066421e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.252200030924987e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.390543228771466e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.923475929349565e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.224968716822131e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.161037435789265e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.751672465164068e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.672359637320934e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.690165445833266e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.7349143274888985e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.16231199984705e-05
+              },
+              "value": 7.712647823509912e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_4": {
+      "train": {
+        "error": 2.2994274963132447e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    /  ( rec )  )  ) ",
+        "prefix": " * c  /  ** adv 3  rec  ",
+        "num_operations": 3,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.0801986798663727e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.1992682105078914e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.136069690481313e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.5361752002538467e-05
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.3321769892350235e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.3347471188029256e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.1697566321925107e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.011886262909854e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.0802784219345375e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.2860222479933948e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.7631505881349405e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.4123414543844115e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.139345315000543e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.8836035748345154e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.7606897269351528e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.8558961528250894e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.091043876783953e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.620058667044994e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.8278602367240526e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.56197823611935e-06
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.9644430106289475e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 2.0801986798663727e-05
+              },
+              "value": 2.111486184813629e-05
+            }
+          }
+        }
+      }
+    }
+  },
+  "input_features": [
+    "drop_length",
+    "adv",
+    "rec",
+    "avg_vel",
+    "width"
+  ],
+  "1": {
+    "best_model_0": {
+      "train": {
+        "error": 1.709558076633909e-08,
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  sin ( (  ( rec )  - ( c_1 /  ( avg_vel )  )  )  ) )  ) ",
+        "prefix": " * c  *  - adv rec  sin  - rec  / c avg_vel   ",
+        "num_operations": 6,
+        "num_constants": 2,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.276899707084903e-06
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9898440557046823
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.46772514317319e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.8963792866886433
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00023823335742388893
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.6189053026411971
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00011023344363486758
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9265996556768864
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.0002344903512152601
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 1.255781021842565
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -5.401263838822233e-06
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9914935267434081
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.1877432105309282e-06
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9985037909318455
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00013620040229646134
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 1.1633893365482808
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.678640698276328e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9906138113536053
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.122078373690024e-06
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9918216500059271
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00032831699452337906
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.5400045135388001
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00026103527849195883
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9183950795568321
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -3.200143285616413e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9936328682354011
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.0002421681695038784
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 1.0161185934605446
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.175069822534064e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9141277726357779
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00019380232515261178
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9795513051273936
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.574388244872027e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.986437043733511
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -2.5412592268979403e-06
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.998317973601714
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00026503552198445696
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.918536455232905
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.0082757172052913e-05
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 0.9890666121057827
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00018968928858106371
+            },
+            "c_1": {
+              "node_id": 834.0,
+              "value": 1.07361478245485
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 9.276899707084903e-06
+              },
+              "c_1": {
+                "node_id": 834.0,
+                "value": 0.9898440557046823
+              },
+              "value": -7.952955078975588e-05
+            },
+            "c_1": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 9.276899707084903e-06
+              },
+              "c_1": {
+                "node_id": 834.0,
+                "value": 0.9898440557046823
+              },
+              "value": 0.9595778303724073
+            }
+          }
+        }
+      }
+    },
+    "best_model_2": {
+      "train": {
+        "error": 4.07796491944204e-09,
+        "infix": "( c_0 * ( (  ( adv )  - (  ( drop_length )  -  ( rec )  )  )  *  sin (  ( rec )  ) )  ) ",
+        "prefix": " * c  *  - adv  - drop_length rec  sin rec  ",
+        "num_operations": 5,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.63807947027064e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0192033907218216e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.607217121239147e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00030945848541380814
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.0869696712656493e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.255728259861898e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.5363274311133535e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.005847008554617e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.476000848924446e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.5733103202228206e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.607242690764878e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0510383481865934e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.870922423209508e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.494334456919434e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.447242657306088e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.627143148092129e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.6888328462090294e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.912979472517974e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.83738720169983e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 2.5499737683563588e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 3.7184289260563136e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 3.63807947027064e-05
+              },
+              "value": 5.140478952517779e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 1.7892401852379571e-09,
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  sin (  ( rec )  ) )  ) ",
+        "prefix": " * c  *  - adv rec  sin rec  ",
+        "num_operations": 4,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022705686104034097
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00024188911759812678
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023411057716082932
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0009462152775623506
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00020151377685106406
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00024551020319060936
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00014865668801523451
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021710329198096234
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023058387636896549
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00014927437862863845
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002633202710632464
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00031627121889558706
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023057458610933158
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00029497261948430647
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00017743619958340395
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002864572093704464
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022746759725311016
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00027053453716462627
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002031005190042294
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00013563068176494447
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021439088904857352
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 0.00022705686104034097
+              },
+              "value": 0.000260098589387568
+            }
+          }
+        }
+      }
+    },
+    "best_model_4": {
+      "train": {
+        "error": 1.8568281877638083e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    *  exp ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  )  ) ",
+        "prefix": " * c  *  ** adv 3   exp  *  - 0 1 rec   ",
+        "num_operations": 6,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.16231199984705e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.291162164148538e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.275765552834666e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00034238127490420015
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.5617187683693206e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.917461589521749e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0489779993729264e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.9030467221548386e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.169534014070979e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.1761444823057255e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.897077226776755e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.522939066421e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.252200030924987e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.390543228771466e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.923475929349565e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.224968716822131e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.161037435789265e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.751672465164068e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.672359637320934e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.690165445833266e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.7349143274888985e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.16231199984705e-05
+              },
+              "value": 7.712647823509912e-05
+            }
+          }
+        }
+      }
+    }
+  },
+  "2": {
+    "best_model_2": {
+      "train": {
+        "error": 1.7925559079591174e-09,
+        "infix": "( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *  ( drop_length )  )  +  ( (  ( adv )  -  ( rec )  )  *  sin (  ( rec )  ) )  )  ) ",
+        "prefix": " * c  +  *  - 0 1 drop_length   *  - adv rec  sin rec   ",
+        "num_operations": 7,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022849465851818823
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.000243643550557775
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002359809176605584
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0009873489781971072
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002035452683793804
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002470328090770262
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001520415279771526
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021841214645291473
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023215645602320636
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001536281605471307
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002651596981821698
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00032010310101729405
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023203676627553665
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00029760392336853573
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00017881319122055287
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.000288852104828589
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022895024003448733
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002721557288100652
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00020432451961194253
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00013990107873783095
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021608981764771647
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 0.00022849465851818823
+              },
+              "value": 0.0002641083163392933
+            }
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 1.7892401852379571e-09,
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  sin (  ( rec )  ) )  ) ",
+        "prefix": " * c  *  - adv rec  sin rec  ",
+        "num_operations": 4,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022705686104034097
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00024188911759812678
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023411057716082932
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0009462152775623506
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00020151377685106406
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00024551020319060936
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00014865668801523451
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021710329198096234
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023058387636896549
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00014927437862863845
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002633202710632464
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00031627121889558706
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00023057458610933158
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00029497261948430647
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00017743619958340395
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002864572093704464
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00022746759725311016
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00027053453716462627
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002031005190042294
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00013563068176494447
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021439088904857352
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 0.00022705686104034097
+              },
+              "value": 0.000260098589387568
+            }
+          }
+        }
+      }
+    },
+    "best_model_4": {
+      "train": {
+        "error": 1.9606232755335294e-09,
+        "infix": "( c_0 * (  ( rec )  * (  ( adv )  -  ( rec )  )  )  ) ",
+        "prefix": " * c  * rec  - adv rec  ",
+        "num_operations": 3,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001575980107366923
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00019455539726239362
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00016710050865398435
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0009198228995631047
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00011346446358351962
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00016745806360904693
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00013849087698912903
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00015163424662914044
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00015961738819134238
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001402280840619312
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00019102661551630395
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0002461816016566037
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00016238322134889995
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021210572510604953
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00014258913700660204
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00021117856537788371
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001588408652920239
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00018441271078088487
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0001265164722776111
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00012880215777614332
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00015408062722174109
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 0.0001575980107366923
+              },
+              "value": 0.00020133750660195386
+            }
+          }
+        }
+      }
+    }
+  },
+  "3": {
+    "best_model_0": {
+      "train": {
+        "error": 1.754709891142686e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    / (    cos (   ( rec )   **   ( 2 )    )  **   ( 2 )    +   exp  ( rec )  )  )  ) ",
+        "prefix": " * c  /  ** adv 3   +  **  cos  ** rec 2  2   exp rec   ",
+        "num_operations": 8,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.566460522498959e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.316448519306435e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.852538736115052e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00058470503300741
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.073054083382974e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.433151664780232e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.509831702166714e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.318175712930484e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.685883951985399e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.883133376974203e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.147447670607917e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.840506250225949e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.744199078989699e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.809784301679268e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.5590591633110146e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.59812909454762e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.616826775058523e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.295550570384538e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.356435239222611e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.469314252619829e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.242213208597265e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.566460522498959e-05
+              },
+              "value": 9.656602246482175e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_1": {
+      "train": {
+        "error": 1.7026463530904179e-09,
+        "infix": "(  ( adv )  * ( c_0 *  sin ( (  ( adv )  - (  ( rec )  +  c_1 )  )  ) )  ) ",
+        "prefix": " * adv  * c  sin  - adv  + rec c   ",
+        "num_operations": 5,
+        "num_constants": 2,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011021881021325676
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.018926770437918683
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -0.00010654896388223905
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.979583429346462
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010737717077509036
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.0819857546935975
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -0.0002519364938367145
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.80491371654624
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -4.46529069301515e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.5555200094292387
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001353798992378978
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 0.08419895973268977
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 5.240210899257176e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.25114621633911516
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010549396813281601
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.011670100401073325
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011131420482600116
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.02621745410359867
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 5.217984451201852e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.199211123910895
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -0.00011269177098832815
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.944638112225966
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -0.0001304137894847618
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.924453648182386
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001188696076750467
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 0.03107363300782635
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -0.00011324211228196889
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.8770347260565328
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 7.925388783193309e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.1426057121789158
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001218773930220093
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.18064030635999578
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011617739477097841
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 0.025280825890867546
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001486996532890079
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 0.08219808745720758
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -6.60381738925047e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.5102627207454
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": -4.015610452472591e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": 2.8240167616401823
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.690050433634784e-05
+            },
+            "c_1": {
+              "node_id": 865.0,
+              "value": -0.10574997234716688
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 513.0,
+                "value": 0.00011021881021325676
+              },
+              "c_1": {
+                "node_id": 865.0,
+                "value": -0.018926770437918683
+              },
+              "value": 2.3355434847313383e-05
+            },
+            "c_1": {
+              "num_fitted_constants": 2,
+              "c_0": {
+                "node_id": 513.0,
+                "value": 0.00011021881021325676
+              },
+              "c_1": {
+                "node_id": 865.0,
+                "value": -0.018926770437918683
+              },
+              "value": 1.0297629152137489
+            }
+          }
+        }
+      }
+    },
+    "best_model_2": {
+      "train": {
+        "error": 1.787299908286442e-09,
+        "infix": "(  ( adv )  * ( c_0 *  sin ( (  ( adv )  - (  ( rec )  +   ( width )  )  )  ) )  ) ",
+        "prefix": " * adv  * c  sin  - adv  + rec width   ",
+        "num_operations": 5,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011289801430801459
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00012007070554815456
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011783788519078977
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00037915963487477017
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.254314150875434e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001224244449582983
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 7.475186977702286e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010697027438487498
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011534072623071896
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 7.129729906091047e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001345978160127899
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00017617670036345227
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011538310097624846
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00015457845849229849
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.008396387774876e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00014899944010152364
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011345554927697018
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00013485684603983016
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.469690364418392e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 6.191612693820273e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010658101254949412
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 513.0,
+                "value": 0.00011289801430801459
+              },
+              "value": 0.00012593428162452626
+            }
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 1.7852387852555866e-09,
+        "infix": "(  ( adv )  * ( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) )  ) ",
+        "prefix": " * adv  * c  sin  - adv rec  ",
+        "num_operations": 4,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011244197376974099
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011966487863780573
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011751243936104713
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0003753896180442008
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.198248036666882e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00012186556516824211
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 7.421521673977754e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010662280116771387
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011480569519217445
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 7.073616611248428e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001340847036247374
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00017506524505555462
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011489761266162476
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00015378621626748568
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 8.974101123097272e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00014830658318413929
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00011296766173728502
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.0001342950199684443
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 9.441478046375095e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 6.143840211176671e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 513.0,
+              "value": 0.00010635597607028296
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 513.0,
+                "value": 0.00011244197376974099
+              },
+              "value": 0.00012526619271123335
+            }
+          }
+        }
+      }
+    },
+    "best_model_4": {
+      "train": {
+        "error": 1.8568281877638083e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    *  exp ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  )  ) ",
+        "prefix": " * c  *  ** adv 3   exp  *  - 0 1 rec   ",
+        "num_operations": 6,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.16231199984705e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.291162164148538e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.275765552834666e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00034238127490420015
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.5617187683693206e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.917461589521749e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0489779993729264e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.9030467221548386e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.169534014070979e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.1761444823057255e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.897077226776755e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.522939066421e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.252200030924987e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.390543228771466e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.923475929349565e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.224968716822131e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.161037435789265e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.751672465164068e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.672359637320934e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.690165445833266e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.7349143274888985e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.16231199984705e-05
+              },
+              "value": 7.712647823509912e-05
+            }
+          }
+        }
+      }
+    }
+  },
+  "4": {
+    "best_model_0": {
+      "train": {
+        "error": 1.754709891142686e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    / (    cos (   ( rec )   **   ( 2 )    )  **   ( 2 )    +   exp  ( rec )  )  )  ) ",
+        "prefix": " * c  /  ** adv 3   +  **  cos  ** rec 2  2   exp rec   ",
+        "num_operations": 8,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.566460522498959e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.316448519306435e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.852538736115052e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00058470503300741
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.073054083382974e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.433151664780232e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.509831702166714e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.318175712930484e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.685883951985399e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.883133376974203e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.147447670607917e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.840506250225949e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.744199078989699e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.809784301679268e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.5590591633110146e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.59812909454762e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.616826775058523e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.295550570384538e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.356435239222611e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.469314252619829e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.242213208597265e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.566460522498959e-05
+              },
+              "value": 9.656602246482175e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_1": {
+      "train": {
+        "error": 1.988032242664382e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    / (  ( avg_vel )  - (  ( rec )  +   exp  ( rec )  )  )  )  ) ",
+        "prefix": " * c  /  ** adv 3   - avg_vel  + rec  exp rec   ",
+        "num_operations": 6,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -8.151679439500676e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -8.368789668465476e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -7.97433302543434e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00040434248612359225
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -5.578908794155718e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -9.256493400230803e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -3.6529128782120325e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -7.643499081789391e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -8.239601126971738e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -6.604371882257422e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00010135412361822696
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.0001203375677034594
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -8.38903102163154e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00010666491826370717
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -6.608064078766309e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00010511176817955624
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -8.217084227631371e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -0.00010375481417048188
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -7.035319123927853e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -5.833748384114652e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": -7.065328253928354e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": -8.151679439500676e-05
+              },
+              "value": -9.655987247281907e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_2": {
+      "train": {
+        "error": 1.8574115817885987e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  -    ( avg_vel )   **   ( 3 )    )  )  ) ",
+        "prefix": " * c  *  ** adv 3   exp  -  *  - 0 1 rec   ** avg_vel 3   ",
+        "num_operations": 8,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.165122351453645e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.292225898982301e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.397782666741435e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0003424064257958634
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.98375145957535e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.91746187630507e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.048978048674844e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.9447465933410535e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.169567521900705e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.176145952964481e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.043108549284481e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.853446501953694e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.25220576618727e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.680544742206464e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.9238869509217426e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.448599549587286e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.161289909226813e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.751672608570254e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.058676264766898e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.690173404876704e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.0102957514909065e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.165122351453645e-05
+              },
+              "value": 7.819539283266559e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 1.8565220227235739e-09,
+        "infix": "( c_0 * ( (  ( avg_vel )  +     ( adv )   **   ( 3 )    )  *  exp ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  )  ) ",
+        "prefix": " * c  *  + avg_vel  ** adv 3    exp  *  - 0 1 rec   ",
+        "num_operations": 7,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.128111389735812e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.253496406638534e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.13289215611842e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00032639006362288764
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.4040386798957974e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.915496474653938e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.042684413154597e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.821736531689016e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.1610857477965e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.149571357657341e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.695624568656399e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.03093337525675e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.247416749514564e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.136941068391302e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.895714905735278e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.004078774434885e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.144945287215263e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.749899493870756e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.517780504220534e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.644163765609987e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.561874175490932e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.128111389735812e-05
+              },
+              "value": 7.53702343752502e-05
+            }
+          }
+        }
+      }
+    },
+    "best_model_4": {
+      "train": {
+        "error": 1.8568281877638083e-09,
+        "infix": "( c_0 * (    ( adv )   **   ( 3 )    *  exp ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  )  ) ",
+        "prefix": " * c  *  ** adv 3   exp  *  - 0 1 rec   ",
+        "num_operations": 6,
+        "num_constants": 1,
+        "constants": {
+          "12-summary-Teflon -Au-70_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.16231199984705e-05
+            }
+          },
+          "20-summary-Teflon-Au-Ionic liquid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.291162164148538e-05
+            }
+          },
+          "19-summary-Teflon-Au-Formamid.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.275765552834666e-05
+            }
+          },
+          "1-summary-Si-water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.00034238127490420015
+            }
+          },
+          "7-summary-Teflon-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.5617187683693206e-05
+            }
+          },
+          "16-summary-Teflon -Au-95_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.917461589521749e-05
+            }
+          },
+          "23-summary-Teflon-Au-50cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.0489779993729264e-05
+            }
+          },
+          "11-summary-Teflon -Au-60_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.9030467221548386e-05
+            }
+          },
+          "14-summary-Teflon -Au-85_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.169534014070979e-05
+            }
+          },
+          "22-summary-Teflon-Au-10cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.1761444823057255e-05
+            }
+          },
+          "2-summary-ITO-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.897077226776755e-05
+            }
+          },
+          "5-summary-PS-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 9.522939066421e-05
+            }
+          },
+          "15-summary-Teflon -Au-90_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.252200030924987e-05
+            }
+          },
+          "3-summary-PFOTS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.390543228771466e-05
+            }
+          },
+          "18-summary-Teflon-Au-Ethylene Glycol.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.923475929349565e-05
+            }
+          },
+          "4-summary-PDMS-Si-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 8.224968716822131e-05
+            }
+          },
+          "13-summary-Teflon -Au-80_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 6.161037435789265e-05
+            }
+          },
+          "17-summary-Teflon -Au-99_Glyerol in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 7.751672465164068e-05
+            }
+          },
+          "6-summary-Fthiol-Au-Water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.672359637320934e-05
+            }
+          },
+          "21-summary-Teflon-Au-5cst silicon oil.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 4.690165445833266e-05
+            }
+          },
+          "9-summary-Teflon-Au_40_Glycerol-in water.xlsx": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 5.7349143274888985e-05
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "num_fitted_constants": 1,
+              "c_0": {
+                "node_id": 1.0,
+                "value": 6.16231199984705e-05
+              },
+              "value": 7.712647823509912e-05
+            }
+          }
+        }
+      }
+    }
+  }
+}
