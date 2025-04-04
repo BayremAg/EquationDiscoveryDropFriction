@@ -3,12 +3,31 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 
+def load_Sajjad(args, path):
+    df = pd.read_csv(path, index_col=0)
+    df = df.assign(system_id_column=pd.Series(np.ones(df.shape[0])))
+    df = df.astype({"Video ID": np.float64, 'tilt_angle(degree)': np.float64,})
+    df.columns = [s.split('(')[0] for s in df.columns]
+
+    df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001  # gamma is given as mN in the Dataset
+    df['viscosity'] = df.loc[:, 'viscosity'].to_numpy() * 0.001
+    df = df.rename(columns={'velocity': 'avg_vel',
+                            'middle_angle':'mid'})
+    df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy())
+    df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
+    df['mid'] = np.deg2rad(df.loc[:, 'mid'].to_numpy())
+
+    df['tilt_angle'] = np.deg2rad(df.loc[:, 'tilt_angle'].to_numpy())
+    df.rename(columns={args.target: 'y'}, inplace=True)
+
+    return df
+
 
 def prepare_dataset(args, files):
     other_files = random.sample(files, len(files))
     filtered_dfs = []
     for f in set(other_files):
-        df= load_xiaomei_single_dataset(args, f)
+        df= load_Sajjad(args, f)
         filtered_df = filter_moving_average(df, args)
         filtered_dfs.append(filtered_df)
     filtered_dfs = pd.concat(filtered_dfs, axis=0, ignore_index=True)
@@ -89,9 +108,9 @@ class RowsToKeep():
             del self.rows_to_keep[index]
 
     def contains(self, index):
-        if index in self.rows_to_keep: 
-            return True 
-        else: 
+        if index in self.rows_to_keep:
+            return True
+        else:
             return False
 
     def get_index(self):
