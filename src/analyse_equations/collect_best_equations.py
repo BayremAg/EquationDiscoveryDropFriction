@@ -167,7 +167,7 @@ def histogram_for_features(args, filtered_dfs_test, tree):
         ax.hist2d(filtered_dfs_test[feature], diff, bins=10,
                   # norm='log',
                   cmap='YlGn',
-                  vmax=400)
+                 )
         ax.set_ylabel('$y_{pred}$ - $\\tilde y$')
         ax.set_xlabel(feature)
     fig.suptitle(f"{args.target} = {tree.rearrange_equation_infix_notation()[1]}", fontsize=10,
