@@ -11,10 +11,10 @@ class ConfigLoadData:
         parser.add_argument("--number_of_data_sets_to_load", type=int, default=3000,
                             help='How many data sets to read in')
 
-        parser.add_argument("--system_id_column", type=str, default='excel_name',
+        parser.add_argument("--system_id_column", type=str, default='system_id_column',
                             help='Column name which gives the system id')
         parser.add_argument("--path_to_datasets", type=str,
-                            default='data/Xiaomei/single_datasets',
+                            default='data/Sajjad',
                             help='Seed for expeiment')
         parser.add_argument("--path_to_units", type=str,
                             default='data/units_feynman.csv',
@@ -31,7 +31,7 @@ class ConfigLoadData:
         parser.add_argument('-features', nargs='+', help='<Required> Set flag',
                             #  'id','time','tilt_angle','gamma','m','m*','viscosity','static_adv','static_rec','friction_coef',
                             #'row_id','col_id','sheet_name'
-                            default = ['drop_length', 'adv', 'rec','avg_vel', 'width'])
+                            default = ['drop_length', 'adv', 'y_center', 'mid', 'rec','avg_vel', 'width'])
         parser.add_argument("--target", type=str, default='friction_force',
                             help='Column name which gives the system id')
         parser.add_argument("--prefix_from_dimension_reduction", type=str, default='',
