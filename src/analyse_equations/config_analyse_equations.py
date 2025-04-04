@@ -1,4 +1,6 @@
 from argparse import ArgumentParser
+
+
 class ConfigPlotBestEquation:
     @staticmethod
     def arguments_parser(parser=None) -> ArgumentParser:
@@ -11,9 +13,9 @@ class ConfigPlotBestEquation:
                                'results/Sajjad/04_Apr_2025_09:07:37_best_models_1c_50_interations.json',
                            ])
         parser.add_argument("--equation_set_id", type=str, default='01_April',
-                            help='id of the equation set')
+                            help='Id of the equation set')
 
         parser.add_argument("--save_set_folder", type=str, default='Sajjad',
-                            help='id of the equation set')
+                            help='Where to save the equation set')
 
         return parser
