@@ -17,11 +17,9 @@ class ConfigLoadData:
                             help='Column name which gives the system id')
 
         parser.add_argument("--path_to_datasets", type=str,
-                            default='data/Xiaomei/single_datasets',
+                            default='data/Sajjad',
                             help='Path to the folder with the data sets we would like to fit inside ')
 
-                            default='data/Sajjad',
-                            help='Seed for expeiment')
         parser.add_argument("--path_to_units", type=str,
                             default='data/units_feynman.csv',
                             help='path to the file with the units')
@@ -42,11 +40,12 @@ class ConfigLoadData:
         parser.add_argument("--ROOT_DIR", type=Path,
                             default=ROOT_DIR,
                             help='Path to Project root')
-
-        parser.add_argument('-features', nargs='+', help='<Required> Set flag',
+        parser.add_argument('-features', nargs='+',
                             #  'id','time','tilt_angle','gamma','m','m*','viscosity','static_adv','static_rec','friction_coef',
-                            # 'row_id','col_id','sheet_name'
-                            default=['drop_length', 'adv', 'y_center', 'mid', 'rec', 'avg_vel', 'width'])
+                            #'row_id','col_id','sheet_name'
+                            default = ['drop_length', 'adv', 'y_center', 'mid', 'rec','avg_vel', 'width'],
+                            help='Features we would like to use in the equation discovery'
+                            )
 
         parser.add_argument("--target", type=str, default='friction_force',
                             help='(y) Column name we want to fit '
