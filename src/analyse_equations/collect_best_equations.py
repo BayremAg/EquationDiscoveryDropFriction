@@ -27,10 +27,9 @@ def run():
     args.unit_dimension = 5
 
     proposed_equations = load_proposed_equations(args)
-    files_test, files_train = get_train_test_files(args, proposed_equations)
-
-
     add_proposed_equations(args, proposed_equations)
+
+    files_test, files_train = get_train_test_files(args, proposed_equations)
     filtered_dfs_train = prepare_dataset(args, files_train)
     filtered_dfs_test = prepare_dataset(args, files_test)
 
