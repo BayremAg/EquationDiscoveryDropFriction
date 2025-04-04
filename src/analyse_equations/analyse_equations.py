@@ -7,7 +7,7 @@ from definitions import ROOT_DIR
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.evaluate_equation import test_equation, map_equation_to_syntax_tree, evaluate_equation
 from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict
-from src.analyse_equations.config_collect_best_equation import ConfigPlotBestEquation
+from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
 from src.preprocess_data.config_load_dataset import ConfigLoadData
 from SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
 from src.utils.config_hyperparameter import ConfigHyperparameter
