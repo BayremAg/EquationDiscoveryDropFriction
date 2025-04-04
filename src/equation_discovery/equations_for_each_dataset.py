@@ -147,7 +147,7 @@ def prepare_data_for_eq(args, df):
     random_indices = np.random.choice(num_rows, size=size, replace=False)
     X = df.iloc[random_indices].loc[:, args.features].to_numpy()
     y = df.iloc[random_indices].loc[:, ['y']].to_numpy()
-    category = pd.factorize(df.iloc[random_indices].loc[:, ['sheet_name']].to_numpy().squeeze())
+    category = pd.factorize(df.iloc[random_indices].loc[:, [args.system_id_column]].to_numpy().squeeze())
     return X, y, category
 
 
@@ -156,6 +156,7 @@ def save_best_mode_dict(args, best_models):
         args.save_path = args.ROOT_DIR / (f"results/{args.path_to_datasets.split('/')[1]}/"
                                           f"{args.time_stamp}_best_models_{args.exp_name}.json")
     print(f'results are saved to {args.save_path}')
+    Path(args.save_path).parent.mkdir(parents=True, exist_ok=True)
     with open(args.save_path, 'w') as input_file:
         json.dump(best_models, input_file, indent=2, )
 
