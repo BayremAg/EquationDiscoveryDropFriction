@@ -2,13 +2,12 @@ import traceback
 import time
 from pathlib import Path
 
-from SyntaxTree.src.equation_classes.node import replace_floats_by_c
+from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
 from src.preprocess_data.config_load_dataset import ConfigLoadData
 from src.preprocess_data.preprocess_data import prepare_dataset, get_unit_dict
-from SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
-from SyntaxTree.src.syntax_tree.syntax_tree import unit_vector_to_str
+from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
 from definitions import ROOT_DIR
 from src.equation_discovery.evaluate_equation import infix_to_prefix, evaluate_equation
 from src.utils.config_hyperparameter import ConfigHyperparameter
