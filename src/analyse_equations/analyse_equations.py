@@ -6,6 +6,7 @@ from definitions import ROOT_DIR
 
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.evaluate_equation import test_equation, map_equation_to_syntax_tree, evaluate_equation
+from src.error_propergation.propagate_error import propagate_error
 from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict
 from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
 from src.preprocess_data.config_load_dataset import ConfigLoadData
@@ -14,17 +15,25 @@ from src.utils.config_hyperparameter import ConfigHyperparameter
 import pandas as pd
 import math
 
+
 def run():
-    parser =ConfigHyperparameter.arguments_parser()
-    parser= ConfigLoadData.arguments_parser(parser)
+    parser = ConfigHyperparameter.arguments_parser()
+    parser = ConfigLoadData.arguments_parser(parser)
     parser = ConfigEquationDiscovery.arguments_parser(parser)
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args = parser.parse_args()
-    args.save_path = args.ROOT_DIR /f'results/{args.save_set_folder}/equation_set_{args.equation_set_id}.json'
+    args.save_path = args.ROOT_DIR / f'results/{args.save_set_folder}/equation_set_{args.equation_set_id}.json'
     args.unit_dict = get_unit_dict(args)
     args.unit_dict['y'] = args.unit_dict[args.target]
     args.unit_dimension = 5
+    measurement_error_dic = {
+        'drop_length': 0.5,
+        'adv': 0.5,
+        'rec': 0.5,
+        'avg_vel': 0.5,
+        'width': 0.5
+    }
 
     proposed_equations = load_proposed_equations(args)
     add_proposed_equations(args, proposed_equations)
@@ -35,11 +44,13 @@ def run():
 
     equation_list = list(proposed_equations.keys())
     for equation in equation_list:
-        if  not 'units' in proposed_equations[equation]:
+        if not 'units' in proposed_equations[equation]:
             try:
                 tree = all_data(args, equation, filtered_dfs_test, filtered_dfs_train, proposed_equations)
                 system_data(args, equation, filtered_dfs_test, proposed_equations, tree)
                 add_units(args, equation, filtered_dfs_train, proposed_equations, tree)
+                add_propagate_error(args, equation, filtered_dfs_test, measurement_error_dic, proposed_equations, tree)
+
             except Exception as e:
                 del proposed_equations[equation]
                 print(traceback.format_exc())
@@ -67,6 +78,26 @@ def run():
     index_0 = 15
     index_1 = 16
     abs_difference_between_equation(args, df, filtered_dfs_test, index_0, index_1)
+
+
+def add_propagate_error(args, equation, filtered_dfs_test, measurement_error_dic, proposed_equations, tree):
+    if 'constants' in proposed_equations[equation]['train']:
+        equation_infix = tree.start_node.parent_node.math_class.infix_notation(
+            call_node_id=-1,
+            kwargs=proposed_equations[equation]['train']['constants']['average']
+        )
+    else:
+        equation_infix = tree.start_node.parent_node.math_class.infix_notation(
+            call_node_id=-1,
+            kwargs={}
+        )
+    proposed_equations[equation]['error_propagation'] = (
+        propagate_error(args,
+                        equation_infix=equation_infix,
+                        measurement_error_dic=measurement_error_dic,
+                        df=filtered_dfs_test)
+    )
+    pass
 
 
 def plot_error_per_system(df, index, proposed_equations):
@@ -245,11 +276,11 @@ def add_proposed_equations(args, proposed_equations):
         for key, values in best_models.items():
             if isinstance(values, dict):
                 for i, equation_dic in values.items():
-                    train_dict =  equation_dic['train']
+                    train_dict = equation_dic['train']
                     if 'prefix' in train_dict:
-                        if not train_dict['prefix'] in proposed_equations :
+                        if not train_dict['prefix'] in proposed_equations:
                             if train_dict['error'] < 7e-9:
-                                proposed_equations[train_dict['prefix']] = {'train':train_dict}
+                                proposed_equations[train_dict['prefix']] = {'train': train_dict}
     if not '+ c * friction_coef * width * viscosity avg_vel' in proposed_equations:
         proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei'}
         proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki'}
@@ -261,15 +292,16 @@ def proposed_equation_to_df(proposed_equations, num_variables):
     i = 0
     for equation, equation_dic in proposed_equations.items():
         if int(equation_dic['test_all']['num_constants']) == num_variables:
-            pd_dict[i]= {
-                'equation' : equation,
+            pd_dict[i] = {
+                'equation': equation,
                 'infix': equation_dic['test_all']['infix'],
                 'test all error': equation_dic['test_all']['error'],
-                'train all error': equation_dic['train_all']['error']
+                'train all error': equation_dic['train_all']['error'],
+                'std': equation_dic['error_propagation']['mean_error']
             }
             i += 1
     df = pd.DataFrame(pd_dict)
-    return  df.T
+    return df.T
 
 
 if __name__ == '__main__':
