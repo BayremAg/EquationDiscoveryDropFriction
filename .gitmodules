@@ -1,3 +1,0 @@
-[submodule "src/SyntaxTree"]
-	path = src/SyntaxTree
-	url = git@github.com:wwjbrugger/SyntaxTree.git

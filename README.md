@@ -12,6 +12,7 @@ We represent equations as syntax trees. The code for this is integrated via a gi
 It behaves like a separate repro in the main project.
 In the best case, the submodule should be downloaded with the following command
 ```
+cd src
 git submodule update --init --recursive
 ```
 If it doesn't work, we can also download it manually.
