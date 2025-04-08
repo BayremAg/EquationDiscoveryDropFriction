@@ -1,10 +1,9 @@
 import re
 
 import numpy as np
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-from SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
-from SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
-import pandas as pd
+from sklearn.metrics import mean_squared_error
+from src.SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
+from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 import traceback
 
 

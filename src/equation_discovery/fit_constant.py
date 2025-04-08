@@ -2,7 +2,7 @@ import copy
 
 import numpy as np
 from src.utils.logging import gfk
-from SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
+from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 
 
 def fit_constants(args, prefix, df):
