@@ -6,6 +6,7 @@ from definitions import ROOT_DIR
 
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.evaluate_equation import test_equation, map_equation_to_syntax_tree, evaluate_equation
+from src.equation_discovery.fit_constant import fit_constants
 from src.error_propergation.propagate_error import propagate_error
 from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict
 from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
@@ -68,6 +69,7 @@ def run():
     for id, units in equation['units'].items():
         i = float(id.split('_')[0])
         tree.dict_of_nodes[i].units.units = units
+    tree.constants_in_tree = proposed_equations[equation]['train_all']['constants']
     print(tree.rearrange_equation_infix_notation())
     tree.print()
 
@@ -77,14 +79,14 @@ def run():
 
     index_0 = 15
     index_1 = 16
-    abs_difference_between_equation(args, df, filtered_dfs_test, index_0, index_1)
+    abs_difference_between_equation(args, proposed_equations, df, filtered_dfs_test, index_0, index_1)
 
 
 def add_propagate_error(args, equation, filtered_dfs_test, measurement_error_dic, proposed_equations, tree):
-    if 'constants' in proposed_equations[equation]['train']:
+    if 'constants' in proposed_equations[equation]['train_all']:
         equation_infix = tree.start_node.parent_node.math_class.infix_notation(
             call_node_id=-1,
-            kwargs=proposed_equations[equation]['train']['constants']['average']
+            kwargs=proposed_equations[equation]['train_all']['constants']['average']
         )
     else:
         equation_infix = tree.start_node.parent_node.math_class.infix_notation(
@@ -138,9 +140,13 @@ def plot_error_per_system(df, index, proposed_equations):
     plt.show()
 
 
-def abs_difference_between_equation(args, df, filtered_dfs_test, index_0, index_1):
+def abs_difference_between_equation(args,proposed_equations, df, filtered_dfs_test, index_0, index_1):
+    prefix_0 = df.iloc[index_0].loc['equation']
+    prefix_1 = df.iloc[index_1].loc['equation']
     tree_0 = map_equation_to_syntax_tree(args, df.iloc[index_0].loc['equation'], infix=False, catch_exceptions=False)
+    tree_0.constants_in_tree = proposed_equations[prefix_0]['train_all']['constants']
     tree_1 = map_equation_to_syntax_tree(args, df.iloc[index_1].loc['equation'], infix=False, catch_exceptions=False)
+    tree_1.constants_in_tree = proposed_equations[prefix_1]['train_all']['constants']
     system_id_column = args.system_id_column
     system_ids = filtered_dfs_test[system_id_column].unique()
     id_list = []
@@ -245,7 +251,7 @@ def system_data(args, equation, filtered_dfs_test, proposed_equations, tree):
 
 
 def all_data(args, equation, filtered_dfs_test, filtered_dfs_train, proposed_equations):
-    tree = map_equation_to_syntax_tree(args, equation, infix=False, catch_exceptions=False)
+    tree = fit_constants(args, equation, filtered_dfs_train)
     proposed_equations[equation]['train_all'] = evaluate_equation(args, tree, filtered_dfs_train)
     proposed_equations[equation]['test_all'] = test_equation(args, tree, filtered_dfs_test)
     return tree
@@ -288,6 +294,10 @@ def add_proposed_equations(args, proposed_equations):
                             if train_dict['error'] < 7e-9:
                                 proposed_equations[train_dict['prefix']] = {'train': train_dict}
     if not '+ c * friction_coef * width * viscosity avg_vel' in proposed_equations:
+        proposed_equations['/ * c - adv rec drop_length'] = {}
+        proposed_equations['/ * adv * c - adv rec drop_length'] = {}
+        proposed_equations['* * c - adv rec exp sin rec'] = {}
+        proposed_equations['*  c sin - adv rec'] = {}
         proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei'}
         proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki'}
         proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width '}
