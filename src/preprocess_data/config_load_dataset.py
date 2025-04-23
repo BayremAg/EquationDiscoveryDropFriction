@@ -24,13 +24,18 @@ class ConfigLoadData:
                             default='data/units_feynman.csv',
                             help='path to the file with the units')
 
-        parser.add_argument("--corridor_with", type=float,
-                            default=1,
+        parser.add_argument("--corridor_width", type=float,
+                            default=10,
                             help='When filter the df how often the distance between 0.25 and 0.75 quantile should be allowed ')
 
         parser.add_argument("--delete_adjacent_rows_number", type=int,
-                            default=2,
+                            default=3,
                             help='Delete the x adjacent rows before and after the row with the filtered values')
+        
+        parser.add_argument("--ema_alpha", type=float,
+                            default=0.1,
+                            help='alpha value for calculating the exponential moving average'
+                                 'A value of 0 means only the first value is used a value of 1 only the current value ')
 
         parser.add_argument("--ROOT_DIR", type=Path,
                             default=ROOT_DIR,
