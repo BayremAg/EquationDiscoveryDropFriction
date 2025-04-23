@@ -1,7 +1,7 @@
 import random
 import pandas as pd
 import numpy as np
-
+from matplotlib import pyplot as plt
 
 
 def prepare_dataset(args, files):
@@ -9,40 +9,93 @@ def prepare_dataset(args, files):
     filtered_dfs = []
     for f in set(other_files):
         df= load_xiaomei_single_dataset(args, f)
-        filtered_df = filter(df, args)
+        filtered_df = filter_moving_average(df, args)
         filtered_dfs.append(filtered_df)
     filtered_dfs = pd.concat(filtered_dfs, axis=0, ignore_index=True)
     return filtered_dfs
 
-def filter(df, args):
-    median = df['y'].quantile(0.5)
+def filter_moving_average(df, args):
+    # delete rows +- adjacent rows which are outside a corridor around the current exponential moving average
+    rows_to_keep = RowsToKeep()
+    y_array= df['y'].to_numpy()
+    ema =  np.median(y_array[:20])
+    q90 = df['y'].quantile(0.9)
+    q10 = df['y'].quantile(0.1)
+    iqr = q90 - q10   #
+    i = 0
+    while i < len(y_array):
+        diff =np.abs( y_array[i]  - ema )   # np.expand_dims(y_array,axis=1)
+        if diff > iqr * args.corridor_width:
+            i_next = delete_adjacent_rows(args, i, rows_to_keep)
+        else:
+            rows_to_keep.add(i)
+            i_next = i+ 1
+        if rows_to_keep.contains(i - args.delete_adjacent_rows_number):
+            ema = calc_delayed_ema(args, ema, i, y_array)
+        i = i_next
+    index = rows_to_keep.get_index()
+    if len(index) / len(y_array) < 0.8:
+        print(f"For the dataset: {df.iloc[0]['id']}, {df.iloc[0]['excel_name']}, "
+              f"{np.rad2deg(df.iloc[0]['tilt_angle'])}° \n    only {round(len(index) / len(y_array),2)*100} % of the records are used.\n"
+              f"    the iqr is: {iqr:.2E}")
+    if df.iloc[0]['id'] == 125:
+        plot_data(y_array, index, df, args)
+    return df.iloc[index]
 
-    # Step 2: Calculate the interquartile range (IQR)
-    q75 = df['y'].quantile(0.75)
-    q25 = df['y'].quantile(0.25)
-    iqr = q75 - q25
-    # Step 3: Define the corridor limits
-    lower_bound = median - args.corridor_with * iqr
-    upper_bound = median + args.corridor_with * iqr
+def plot_data(y_array, index, df, args):
+    # Create a figure with two subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6), sharey=True)
 
-    # Step 4: Find indices of rows outside the corridor
-    out_of_corridor = df[(df['y'] < lower_bound) | (df['y'] > upper_bound)].index
+    # Scatter plot on the first subplot
+    ax1.scatter(range(len(y_array)), y_array, color='blue')
+    ax1.set_title('Without filtering')
+    ax1.set_xlabel('Index')
+    ax1.set_ylabel('Friction Force')
 
-    # Step 5: Create a set of indices to delete (including two rows before and two after)
-    rows_to_delete = set(out_of_corridor)
-    for idx in out_of_corridor:
-        index_before = idx - args.delete_adjacent_rows_number
-        if index_before < df.index[0]:
-            index_before = df.index[0]
-        index_after = idx + args.delete_adjacent_rows_number
-        if index_after > df.index[-1]:
-            index_after = df.index[-1]
-        # Add x rows before and x rows after the row outside the corridor
-        rows_to_delete.update(range(index_before, index_after + 1))
-    # Step 6: Remove rows that are either out of the corridor or around them
-    filtered_df = df.drop(rows_to_delete)
-    return filtered_df
+    # Scatter plot on the second subplot
+    ax2.scatter(index, df.iloc[index]['y'], color='green')
+    ax2.set_title('Filtered')
+    ax2.set_xlabel('Index')
+    ax2.set_ylabel('Friction Force')
 
+    # Display the plots
+    plt.tight_layout()
+    plt.savefig(args.ROOT_DIR/"plots/filtering_of_data.pdf")
+
+
+def calc_delayed_ema(args, ema, i, y_array):
+    ema = (args.ema_alpha *
+           y_array[i - args.delete_adjacent_rows_number]
+           + (1 - args.ema_alpha) * ema)
+    return ema
+
+
+def delete_adjacent_rows(args, i, rows_to_keep):
+    for j in range(args.delete_adjacent_rows_number):
+        rows_to_keep.delete(i - j)
+    i = int(i + args.delete_adjacent_rows_number)
+    return i
+
+
+class RowsToKeep():
+    def __init__(self):
+        self.rows_to_keep = {}
+
+    def add(self, index):
+        self.rows_to_keep[index] = None
+
+    def delete(self, index):
+        if index in self.rows_to_keep:
+            del self.rows_to_keep[index]
+
+    def contains(self, index):
+        if index in self.rows_to_keep: 
+            return True 
+        else: 
+            return False
+
+    def get_index(self):
+        return list(self.rows_to_keep.keys())
 def load_xiaomei_single_dataset(args, path):
     df = pd.read_csv(path,index_col=0)
     df.columns = [s.strip() for s in df.columns]
