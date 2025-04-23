@@ -1,6 +1,7 @@
 import traceback
 import time
 from pathlib import Path
+from random import random
 
 from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
@@ -19,6 +20,8 @@ from sympy import sympify
 
 
 def run(args):
+    np.random.seed(args.seed)
+    random.seed(args.seed)
     best_models = {}
     args.time_stamp = time.strftime('%d_%b_%Y_%H:%M:%S')
     if args.run_equation_discovery:
