@@ -1,3 +1,4 @@
+import copy
 import json
 import traceback
 import matplotlib.pyplot as plt
@@ -15,6 +16,8 @@ from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
 from src.utils.config_hyperparameter import ConfigHyperparameter
 import pandas as pd
 import math
+
+from src.utils.save_tables import formate_latex_table
 
 
 def run():
@@ -61,6 +64,12 @@ def run():
 
     num_variables = 1
     df = proposed_equation_to_df(proposed_equations, num_variables)
+    df = df.sort_values('test all error')
+    save_path = args.ROOT_DIR/'plots/table_with_equations.tex'
+    latex_table = formate_latex_table(df.drop('infix', axis=1))
+    with open(save_path, "w") as text_file:
+        text_file.write(latex_table)
+    print(f"table_saved @ {save_path}")
     print(df)
 
     index = 15
@@ -69,11 +78,11 @@ def run():
     for id, units in equation['units'].items():
         i = float(id.split('_')[0])
         tree.dict_of_nodes[i].units.units = units
-    tree.constants_in_tree = proposed_equations[equation]['train_all']['constants']
+    tree.constants_in_tree = equation['train_all']['constants']
     print(tree.rearrange_equation_infix_notation())
     tree.print()
 
-    plot_error_per_system(df, index, proposed_equations)
+    plot_error_per_system(args, df, index, proposed_equations)
 
     histogram_for_features(args, filtered_dfs_test, tree)
 
@@ -102,7 +111,7 @@ def add_propagate_error(args, equation, filtered_dfs_test, measurement_error_dic
     pass
 
 
-def plot_error_per_system(df, index, proposed_equations):
+def plot_error_per_system(args, df, index, proposed_equations):
     test_error_system = proposed_equations[df.iloc[index].loc['equation']]['test_error_system']
     pred_error = [test_error_system[key]['error'] for key in test_error_system]
     id_list = [key for key in test_error_system]
@@ -137,6 +146,7 @@ def plot_error_per_system(df, index, proposed_equations):
         np.arange(len(mean_abs_error)),
         labels=[f"{e:0.2e}"[:-4] for e in mean_abs_error])
     ax2.set_ylabel('MSE')
+    plt.savefig(args.ROOT_DIR / "plots/error_per_system.pdf")
     plt.show()
 
 
@@ -187,6 +197,7 @@ def abs_difference_between_equation(args,proposed_equations, df, filtered_dfs_te
         np.arange(len(mean_abs_error)),
         labels=[f"{e:0.2e}"[:-4] for e in mean_abs_error])
     ax2.set_ylabel('MSE')
+    plt.savefig(args.ROOT_DIR / "plots/difference_between_equation.pdf")
     plt.show()
 
 
@@ -203,14 +214,14 @@ def histogram_for_features(args, filtered_dfs_test, tree):
                 feature = args.features[i]
 
             ax.hist2d(filtered_dfs_test[feature], diff, bins=10,
-                      # norm='log',
                       cmap='YlGn',
-                      vmax=400)
+                      vmax=50)
             ax.set_ylabel('$y_{pred}$ - $\\tilde y$')
             ax.set_xlabel(feature)
         fig.suptitle(f"{args.target} = {tree.rearrange_equation_infix_notation()[1]}", fontsize=10,
                      )
         fig.tight_layout()
+        fig.savefig(args.ROOT_DIR / "plots/histogram.pdf")
         plt.show()
     except Exception as e:
         print(f'Error in drawing histogram {e}')
