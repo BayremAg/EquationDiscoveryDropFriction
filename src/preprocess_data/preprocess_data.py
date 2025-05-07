@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 def load_Sajjad(args, path):
     df = pd.read_csv(path, index_col=0)
     df = df.assign(system_id_column=pd.Series(np.ones(df.shape[0])))
-    df = df.astype({"Video ID": np.float64, 'tilt_angle(degree)': np.float64,})
+    df = df.astype({"Video ID": np.float64, 'tilt_angle(degree)': np.float64})
     df.columns = [s.split('(')[0] for s in df.columns]
 
     df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001  # gamma is given as mN in the Dataset
@@ -26,7 +26,7 @@ def load_Sajjad(args, path):
 def prepare_dataset(args, files):
     other_files = random.sample(files, len(files))
     filtered_dfs = []
-    for f in set(other_files):
+    for f in other_files:
         df= load_Sajjad(args, f)
         filtered_df = filter_moving_average(df, args)
         filtered_dfs.append(filtered_df)
@@ -57,7 +57,7 @@ def filter_moving_average(df, args):
         print(f"For the dataset: {df.iloc[0]['id']}, {df.iloc[0]['excel_name']}, "
               f"{np.rad2deg(df.iloc[0]['tilt_angle'])}° \n    only {round(len(index) / len(y_array),2)*100} % of the records are used.\n"
               f"    the iqr is: {iqr:.2E}")
-    if df.iloc[0]['id'] == 125:
+
         plot_data(y_array, index, df, args)
     return df.iloc[index]
 
@@ -149,3 +149,11 @@ def split_train_test(files):
             test_files.append(file)
             id_seen.add(id)
     return train_files, test_files
+
+def split_train_test_sajjad(files):
+    np.random.shuffle(files)
+    split_idx =int( len(files)* 0.66666)  # avoid 0 or full split
+    train_files = files[:split_idx]
+    test_files = files[split_idx:]
+    return train_files, test_files
+
