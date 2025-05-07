@@ -9,7 +9,7 @@ from src.equation_discovery.config_equations_for_each_dataset import ConfigEquat
 from src.equation_discovery.evaluate_equation import test_equation, map_equation_to_syntax_tree, evaluate_equation
 from src.equation_discovery.fit_constant import fit_constants
 from src.error_propergation.propagate_error import propagate_error
-from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict
+from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict, split_train_test_sajjad
 from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
 from src.preprocess_data.config_load_dataset import ConfigLoadData
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
@@ -36,7 +36,12 @@ def run():
         'adv': 0.5,
         'rec': 0.5,
         'avg_vel': 0.5,
-        'width': 0.5
+        'width': 0.5,
+        'y_center':0.5,
+        'middle_angle': 0.5,
+        'x_center': 0.5,
+        'static_adv': 0.5,
+        'static_rec': 0.5
     }
 
     proposed_equations = load_proposed_equations(args)
@@ -66,7 +71,7 @@ def run():
     df = proposed_equation_to_df(proposed_equations, num_variables)
     df = df.sort_values('test all error')
     save_path = args.ROOT_DIR/'plots/table_with_equations.tex'
-    latex_table = formate_latex_table(df.drop('infix', axis=1))
+    latex_table = formate_latex_table(df)#df.drop('infix', axis=1))
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     print(f"table_saved @ {save_path}")
@@ -182,7 +187,7 @@ def abs_difference_between_equation(args,proposed_equations, df, filtered_dfs_te
                   padding=-60, color='white', fontweight='bold')
     # Partition the percentile values to be able to draw large numbers in
     # white within the bar, and small numbers in black outside the bar.
-    ax1.set_xlim([0, np.max(mean_abs_error) * 1.2])
+    ax1.set_xlim([0, np.max(mean_abs_error) * 1.2 + 0.0001])
     ax1.set_yticks(range(len(id_list)))
     ax1.set_yticklabels(id_list)
     ax1.xaxis.grid(True, linestyle='--', which='major',
@@ -213,14 +218,16 @@ def histogram_for_features(args, filtered_dfs_test, tree):
             else:
                 feature = args.features[i]
 
-            ax.hist2d(filtered_dfs_test[feature], diff, bins=10,
-                      cmap='YlGn',
+            _,_,_,im =ax.hist2d(filtered_dfs_test[feature], diff, bins=10,
+                      cmap='binary',
                       vmax=50)
             ax.set_ylabel('$y_{pred}$ - $\\tilde y$')
             ax.set_xlabel(feature)
         fig.suptitle(f"{args.target} = {tree.rearrange_equation_infix_notation()[1]}", fontsize=10,
                      )
         fig.tight_layout()
+        cbar = fig.colorbar(im, ax=axs, orientation='horizontal', fraction=.1)
+        cbar.set_label('Intensity')
         fig.savefig(args.ROOT_DIR / "plots/histogram.pdf")
         plt.show()
     except Exception as e:
@@ -278,7 +285,7 @@ def get_train_test_files(args, proposed_equations):
         files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()
                  if f.is_file()
                  ]
-        files_train, files_test = split_train_test(files)
+        files_train, files_test = split_train_test_sajjad(files)
     return files_test, files_train
 
 
@@ -292,6 +299,15 @@ def load_proposed_equations(args):
 
 
 def add_proposed_equations(args, proposed_equations):
+    if not '+ c * friction_coef * width * viscosity avg_vel' in proposed_equations:
+        proposed_equations['/ * c - adv rec drop_length'] = {}
+        proposed_equations['/ * adv * c - adv rec drop_length'] = {}
+        proposed_equations['* * c - adv rec exp sin rec'] = {}
+        proposed_equations['*  c sin - adv rec'] = {}
+        proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei'}
+        proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki'}
+        proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width '}
+
     for path in args.paths_to_load_results:
         with open(args.ROOT_DIR / path, 'r') as input_file:
             best_models = json.load(input_file)
@@ -304,21 +320,12 @@ def add_proposed_equations(args, proposed_equations):
                         if not train_dict['prefix'] in proposed_equations:
                             if train_dict['error'] < 7e-9:
                                 proposed_equations[train_dict['prefix']] = {'train': train_dict}
-    if not '+ c * friction_coef * width * viscosity avg_vel' in proposed_equations:
-        proposed_equations['/ * c - adv rec drop_length'] = {}
-        proposed_equations['/ * adv * c - adv rec drop_length'] = {}
-        proposed_equations['* * c - adv rec exp sin rec'] = {}
-        proposed_equations['*  c sin - adv rec'] = {}
-        proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei'}
-        proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki'}
-        proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width '}
-
 
 def proposed_equation_to_df(proposed_equations, num_variables):
     pd_dict = {}
     i = 0
     for equation, equation_dic in proposed_equations.items():
-        if int(equation_dic['test_all']['num_constants']) == num_variables:
+        if int(equation_dic['test_all']['num_constants']) <= num_variables:
             pd_dict[i] = {
                 'equation': equation,
                 'infix': equation_dic['test_all']['infix'],

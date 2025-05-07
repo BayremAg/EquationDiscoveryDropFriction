@@ -25,7 +25,7 @@ class ConfigPlotBestEquation:
         parser.add_argument("--equation_set_id", type=str, default='01_March',
                             help='Id of the equation set')
 
-        parser.add_argument("--save_set_folder", type=str, default='Xiaomei',
+        parser.add_argument("--save_set_folder", type=str, default='Sajjad',
                             help='Where to save the equation set')
 
         return parser

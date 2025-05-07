@@ -1,7 +1,14 @@
 def formate_latex_table(df):
-    df = df.applymap(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
+    df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
+    df['equation'] = df['equation'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
+    if 'infix' in list(df.columns):
+        df['infix'] = df['infix'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
+
     latex_table = df.to_latex()
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
+    latex_table = latex_table.replace("**", "\hat{}")
+    latex_table = latex_table.replace("*", "\cdot")
+    latex_table = latex_table.replace("_", " ")
     latex_table = latex_table.replace("pm", "\pm")
     latex_table = latex_table.replace("pm", "\pm")
     latex_table = latex_table.replace("&", " & ")
@@ -25,5 +32,5 @@ def formate_latex_table(df):
     latex_table = latex_table.replace("hyperparameter", "Hyper")
     latex_table = latex_table.replace("refit_constants", "Refit")
     latex_table = latex_table.replace("post_gp", "Seeded GPLearn")
-
+    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
     return latex_table
