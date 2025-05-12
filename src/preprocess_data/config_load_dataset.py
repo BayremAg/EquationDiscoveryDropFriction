@@ -42,8 +42,14 @@ class ConfigLoadData:
                             help='Path to Project root')
         parser.add_argument('-features', nargs='+',
                             #  'id','time','tilt_angle','gamma','m','m*','viscosity','static_adv','static_rec','friction_coef',
-                            #'row_id','col_id','sheet_name'
-                            default = ['drop_length', 'adv', 'y_center', 'mid', 'rec','avg_vel', 'width'],
+                            #'row_id','col_id','sheet_name', 'mid', 'rec', 'adv'
+                            default = ['drop_length', 'y_center',
+                                       'avg_vel', 'width',
+                                       'cos_adv','cos_rec','cos_mid',
+                                       'sin_adv', 'sin_rec', 'sin_mid',
+                                       'cos_square_adv', 'cos_square_rec', 'cos_square_mid',
+                                       'sin_square_adv', 'sin_square_rec', 'sin_square_mid'
+                                       ],
                             help='Features we would like to use in the equation discovery'
                             )
 
