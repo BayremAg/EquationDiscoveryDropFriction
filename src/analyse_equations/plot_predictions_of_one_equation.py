@@ -25,7 +25,7 @@ from src.utils.save_tables import formate_latex_table
 
 def run():
 
-    equation = '* c - ** + adv sin ** rec 2 2 sin rec'
+    equation = ' / c sin_rec '
     #equation = '* c * width - cos rec cos adv'
     parser = ConfigHyperparameter.arguments_parser()
     parser = ConfigLoadData.arguments_parser(parser)
@@ -50,7 +50,7 @@ def run():
     y_pred_train = tree.evaluate_subtree(-1, filtered_dfs_train)
     y_pred_test=tree.evaluate_subtree(-1, filtered_dfs_test)
 
-    fig, (ax1, ax2) = plt.subplots(figsize=(9, 5),nrows=2, sharex=True, sharey=True)
+    fig, (ax1, ax2) = plt.subplots(figsize=(14, 10),nrows=2, sharex=True, sharey=True)
     fig.suptitle(equation)
     ax1.set_title('Train Data')
     ax1.scatter(range(len(y_true_train)), y_true_train, label='true', s=1)
@@ -59,9 +59,13 @@ def run():
     ax1.set_ylabel('Friction Force')
     for index in filtered_dfs_train.drop_duplicates(subset='Video ID').index:
         ax1.axvline(x=index,ymax=1, color='black', linewidth=1)
+        string = (f"{int(filtered_dfs_train.loc[index,'Video ID'])} "
+                  f"{round(np.rad2deg(filtered_dfs_train.loc[index,'tilt_angle']))}° "
+                  f"{filtered_dfs_train.loc[index, 'excel_name']}")
+        print(string)
         ax1.text(x=index,
                  y=0.00038,
-                 s=int(filtered_dfs_train.loc[index, 'Video ID']),
+                 s=string,
                  rotation=90
                  )
 
@@ -74,9 +78,11 @@ def run():
     ax2.set_xlabel('Index in concatenated dataset')
     for index in filtered_dfs_test.drop_duplicates(subset='Video ID').index:
         ax2.axvline(x=index,ymax=1, color='black', linewidth=1)
+        string = (f"{int(filtered_dfs_test.loc[index,'Video ID'])} "
+                  f"{filtered_dfs_test.loc[index, 'excel_name']}")
         ax2.text(x=index,
                  y=0.00038,
-                 s=int(filtered_dfs_test.loc[index,'Video ID']),
+                 s=string,
                  rotation=90
                  )
 
