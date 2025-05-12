@@ -17,6 +17,27 @@ def load_Sajjad(args, path):
     df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
     df['mid'] = np.deg2rad(df.loc[:, 'mid'].to_numpy())
 
+    df['square_adv'] = np.square(df.loc[:, 'adv'].to_numpy())
+    df['square_rec'] = np.square(df.loc[:, 'rec'].to_numpy())
+    df['square_mid'] = np.square(df.loc[:, 'mid'].to_numpy())
+
+    df['cos_square_adv'] = np.cos(df.loc[:, 'square_adv'].to_numpy())
+    df['cos_square_rec'] = np.cos(df.loc[:, 'square_rec'].to_numpy())
+    df['cos_square_mid'] = np.cos(df.loc[:, 'square_mid'].to_numpy())
+
+    df['sin_square_adv'] = np.sin(df.loc[:, 'square_adv'].to_numpy())
+    df['sin_square_rec'] = np.sin(df.loc[:, 'square_rec'].to_numpy())
+    df['sin_square_mid'] = np.sin(df.loc[:, 'square_mid'].to_numpy())
+
+    df['cos_adv'] = np.cos(df.loc[:, 'adv'].to_numpy())
+    df['cos_rec'] = np.cos(df.loc[:, 'rec'].to_numpy())
+    df['cos_mid'] = np.cos(df.loc[:, 'mid'].to_numpy())
+
+    df['sin_adv'] = np.sin(df.loc[:, 'adv'].to_numpy())
+    df['sin_rec'] = np.sin(df.loc[:, 'rec'].to_numpy())
+    df['sin_mid'] = np.sin(df.loc[:, 'mid'].to_numpy())
+
+
     df['tilt_angle'] = np.deg2rad(df.loc[:, 'tilt_angle'].to_numpy())
     df.rename(columns={args.target: 'y'}, inplace=True)
 
@@ -156,4 +177,6 @@ def split_train_test_sajjad(files):
     train_files = files[:split_idx]
     test_files = files[split_idx:]
     return train_files, test_files
+
+
 
