@@ -1,0 +1,10 @@
+{
+ 'PFOTS-Si-water' : [1,0,0,0,0,0],
+ '40-Glycerol-Teflon-Au' : [0,1,0,0,0,0],
+ '20-Glycerol-Teflon-Au' : [0,0,1,0,0,0],
+ '30-Glycerol-Teflon-Au' : [0,0,0,1,0,0],
+ 'Fthiols_Au' : [0,0,0,0,1,0],
+ 'Fthiols-Au' : [0,0,0,0,0,1],
+ 'PFOTS-Si-water_drop' : [1,1,0,0,0,0],
+ 'other' : [0,0,0,0,0,0]
+}

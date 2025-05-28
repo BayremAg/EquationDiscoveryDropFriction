@@ -12,12 +12,12 @@ class ConfigHyperparameter():
                             default=0,
                             help='Seed for expeiment')
 
-        parser.add_argument("--logging_level", type=int, default=30,
+        parser.add_argument("--logging_level", type=int, default=20,
                             help="CRITICAL = 50, ERROR = 40, "
                                  "WARNING = 30, INFO = 20, "
                                  "DEBUG = 10, NOTSET = 0")
         parser.add_argument("--root_dir", type=str, default=ROOT_DIR,
                             help="Path to project")
-        parser.add_argument("--exp_name", type=str, default="1c_50_interations",
+        parser.add_argument("--exp_name", type=str, default="NGED",
                             help="Path to project")
         return parser
