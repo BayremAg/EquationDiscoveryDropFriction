@@ -1,26 +1,17 @@
-import copy
-import json
-import traceback
 import random
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+
 from definitions import ROOT_DIR
-
-from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
-from src.equation_discovery.evaluate_equation import test_equation, map_equation_to_syntax_tree, evaluate_equation
-from src.equation_discovery.fit_constant import fit_constants
-from src.error_propergation.propagate_error import propagate_error
-from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test, get_unit_dict, split_train_test_sajjad
-from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
-from src.preprocess_data.config_load_dataset import ConfigLoadData
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
+from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
+from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
+from src.equation_discovery.fit_constant import fit_constants
+from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test_sajjad
 from src.utils.config_hyperparameter import ConfigHyperparameter
-import pandas as pd
-import math
-
-from src.utils.save_tables import formate_latex_table
 
 
 def run():
