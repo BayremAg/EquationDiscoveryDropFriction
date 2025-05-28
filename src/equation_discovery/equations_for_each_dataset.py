@@ -1,9 +1,11 @@
 import traceback
 import time
 from pathlib import Path
-from random import random
+import random
 
 from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
+from src.equation_discovery.NGED_adapter import run_NGED
+from src.equation_discovery.config_NGED import ConfigNGED
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
 from src.preprocess_data.config_load_dataset import ConfigLoadData
@@ -31,10 +33,16 @@ def run(args):
         filtered_dfs = prepare_dataset(args, files)
         for i in range(args.number_of_runs):
             print(f"Iteration: {i} of  {args.number_of_runs}")
-            best_models[i] = run_equation_discovery(
-                filtered_dfs,
-                args
-            )
+            if args.equation_discovere == "PySR":
+                best_models[i] = run_equation_discovery(
+                    filtered_dfs,
+                    args
+                )
+            elif args.equation_discovere == "NGED":
+                best_models[i] = run_NGED(
+                    filtered_dfs,
+                    args
+                )
             best_models['input_features'] = args.features
             save_best_mode_dict(args, best_models)
 
@@ -184,5 +192,6 @@ if __name__ == '__main__':
     ConfigHyperparameter.arguments_parser(parser)
     ConfigSyntaxTree.arguments_parser(parser)
     ConfigEquationDiscovery.arguments_parser(parser)
+    ConfigNGED.arguments_parser(parser)
     args = parser.parse_args()
     run(args)
