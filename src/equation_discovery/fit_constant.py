@@ -53,6 +53,7 @@ def get_average_constants(constant_per_system_dict, eq_tree):
     for i in range(eq_tree.num_constants_in_complete_tree):
         c_values = np.array([constant_per_system_dict[id][f'c_{i}']['value']
                              for id in constant_per_system_dict])
-        average_dict[f'c_{i}'] = copy.deepcopy(constant_per_system_dict[gfk(constant_per_system_dict)])
+        average_dict[f'c_{i}'] = copy.deepcopy(constant_per_system_dict[gfk(constant_per_system_dict)][f'c_{i}'])
         average_dict[f'c_{i}']['value'] = c_values.mean()
+    average_dict['num_fitted_constants'] = constant_per_system_dict[gfk(constant_per_system_dict)]['num_fitted_constants']
     return average_dict
