@@ -3,9 +3,11 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 
+from src.preprocess_data.OneHotEncoder import OneHotEncoder
+
+
 def load_Sajjad(args, path):
     df = pd.read_csv(path, index_col=0)
-    df = df.assign(system_id_column=pd.Series(np.ones(df.shape[0])))
     df = df.astype({"Video ID": np.float64, 'tilt_angle(degree)': np.float64})
     df.columns = [s.split('(')[0] for s in df.columns]
 
@@ -37,11 +39,14 @@ def load_Sajjad(args, path):
     df['sin_rec'] = np.sin(df.loc[:, 'rec'].to_numpy())
     df['sin_mid'] = np.sin(df.loc[:, 'mid'].to_numpy())
 
+    one_hot_encoder = OneHotEncoder(args=args)
+    one_hot_encoder.add_one_hot_to_frame(df)
 
     df['tilt_angle'] = np.deg2rad(df.loc[:, 'tilt_angle'].to_numpy())
     df.rename(columns={args.target: 'y'}, inplace=True)
 
     return df
+
 
 
 def prepare_dataset(args, files):
