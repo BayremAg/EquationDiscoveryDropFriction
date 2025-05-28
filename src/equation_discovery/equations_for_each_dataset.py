@@ -105,7 +105,7 @@ def run_pysr(args, df):
     model = PySRRegressor(
         niterations=args.iterations_ed,  # < Increase me for better results
         populations=8,
-        population_size=100,
+        population_size=128,
         # ^ Generations between migrations.
         ncycles_per_iteration=500,
         binary_operators=["*", "+", "-", "/"],
@@ -116,13 +116,14 @@ def run_pysr(args, df):
             "inv(x) = 1/x",
             "square",
             "cube",
+            "log"
             # ^ Custom operator (julia syntax)
         ],
         extra_sympy_mappings={"inv": lambda x: 1 / x},
         # ^ Define operator for SymPy as well
-        elementwise_loss="loss(prediction, target) = (prediction - target)^2",
+        elementwise_loss="myloss(x, y) = abs(x-y)",
         # ^ Custom loss function (julia syntax)
-        maxsize=12,  # ^ max complexity.
+        maxsize=7,  # ^ max complexity.
         expression_spec=ParametricExpressionSpec(max_parameters=2),
         temp_equation_file=True,
         constraints={
@@ -134,9 +135,12 @@ def run_pysr(args, df):
         },
         complexity_of_constants=2,
         nested_constraints={
-            "sin": {"sin": 0, "cos": 0, "exp": 0},
-            "cos": {"sin": 0, "cos": 0, "exp": 0},
-            "exp": {"sin": 0, "cos": 0, "exp": 0}
+            "square": {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
+            "cube":   {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
+            "sin":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
+            "cos":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
+            "exp":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
+            'inv':    {'inv':0}
         },
         warm_start=True,
         # output_directory = pysr_output_folder,
