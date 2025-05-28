@@ -1,99 +1,177 @@
+import matplotlib.pyplot as plt
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from matplotlib import ticker
+from matplotlib.ticker import NullFormatter
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+from sklearn import manifold
 from torch.utils.data import DataLoader, TensorDataset
-# SPDX-License-Identifier: MIT
-# SPDX-FileCopyrightText: Copyright 2019-2022 Heal Research
 
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import r2_score, make_scorer, mean_squared_error
-from sklearn.ensemble import RandomForestRegressor
-
-from pyoperon.sklearn import SymbolicRegressor
-from pyoperon import R2, MSE, InfixFormatter, FitLeastSquares, Interpreter
-import re
-
-from src.preprocess_data.preprocess_data import load_Sajjad
-from sympy import parse_expr
-import matplotlib.pyplot as plt
-from copy import deepcopy
 from definitions import ROOT_DIR
+from src.equation_discovery.fit_constant import fit_constants
 from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.preprocess_data.preprocess_data import load_Sajjad
+from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
+from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
+from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
+from src.utils.config_hyperparameter import ConfigHyperparameter
 
-# Define the 3-layer MLP
+
+def fmt(x, pos):
+    a, b = '{:.2e}'.format(x).split('e')
+    b = int(b)
+    return r'${} \times 10^{{{}}}$'.format(a, b)
+
+
 class MLP(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(MLP, self).__init__()
-        self.fc1 = nn.Linear(input_size, hidden_size, dtype=float)
-        self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(hidden_size, hidden_size,dtype=float)
-        self.fc3 = nn.Linear(hidden_size, output_size, dtype=float)
+        self.fc1 = nn.Linear(input_size, hidden_size, bias=False)
+        self.activation_1 = torch.nn.LeakyReLU()
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.activation_2 = torch.nn.LeakyReLU()
+        self.fc3 = nn.Linear(hidden_size, output_size)
+        # Initialize weights to identity matrix
+        #nn.init.eye_(self.fc1.weight)
+
+        # Initialize biases to zero
+        #nn.init.zeros_(self.fc1.bias)
 
     def forward(self, x):
         out = self.fc1(x)
-        out = self.relu(out)
+        out = self.activation_1(out)
         out = self.fc2(out)
-        out = self.relu(out)
+        out = self.activation_2(out)
         out = self.fc3(out)
-        return out
+        return out.squeeze()
 
-# Hyperparameters
+def train_NN(x, y):
+    # Hyperparameters
+    hidden_size = 6  # Example hidden layer size
+    output_size = 1  # Example output size
+    learning_rate = 0.1
+    batch_size = 16
+    num_epochs = 10000
+    x = torch.tensor(x)
+    y = torch.tensor(y[:, 0])
 
-hidden_size = 50  # Example hidden layer size
-output_size = 1   # Example output size
-learning_rate = 0.001
-batch_size = 32
-num_epochs = 1000
+    dataset = TensorDataset(x.to(torch.float32), y.to(torch.float32))
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+
+    model = MLP(x.shape[1], hidden_size, output_size)
+    criterion = nn.MSELoss()
+    optimizer = optim.SGD(model.parameters(), lr=learning_rate)
+    # Training loop
+    for epoch in range(num_epochs):
+        for batch_x, batch_y in dataloader:
+            optimizer.zero_grad()
+            # Forward pass
+            outputs = model(batch_x)
+            loss = criterion(outputs, batch_y)
+            # Backward pass and optimization
+            loss.backward()
+            optimizer.step()
+        if epoch % 100 == 0:
+            print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4e}   {model.fc1.weight}')
+    print("Training complete!")
+    return model
 
 
-parser = ConfigLoadData.arguments_parser()
-args = parser.parse_args()
+def add_tsne_plot(args,fig, gs,D_train):
+    x, y =  D_train.loc[:,  ['drop_length', 'adv', 'rec','avg_vel', 'width'] ].to_numpy(), D_train.loc[:, ['y']].to_numpy()
+    perplexities = [3, 10, 20, 30]
+    for i, perplexity in enumerate(perplexities):
+        ax = fig.add_subplot(gs[1, i])
+        if i == 3:
+            divider = make_axes_locatable(ax)
+            cax = divider.append_axes('right', size='5%', pad=0.05)
 
-#D_test =  load_Sajjad(args,f'{ROOT_DIR}/data/Sajjad/full_dataset500_RoboSci_V3_no-defect_97.csv')
-D_train = load_Sajjad(args, f'{ROOT_DIR}/data/Sajjad/full_dataset500_RoboSci_V3_no-defect_217.csv')
+        tsne = manifold.TSNE(
+            n_components=2,
+            init="random",
+            random_state=0,
+            perplexity=perplexity,
+            max_iter=300,
+        )
+        Y = tsne.fit_transform(x)
+
+        print("circles, perplexity=%d in sec" % (perplexity))
+        ax.set_title("Perplexity=%d" % perplexity)
+
+        sc = ax.scatter(Y[:, 0], Y[:, 1], c=y)
+        ax.xaxis.set_major_formatter(NullFormatter())
+        ax.yaxis.set_major_formatter(NullFormatter())
+        ax.axis("tight")
+        if i == 0:
+            ax.set_ylabel('TSNE of Dataset')
+        if i == 3:
+            cbar = fig.colorbar(sc, cax=cax, orientation='vertical', format=ticker.FuncFormatter(fmt))
+            cbar.set_label('Friction Force [mF]', rotation=0, labelpad=-30, y=1.05)
 
 
-x, y = D_train.loc[:, args.features].to_numpy(), D_train.loc[:,['y']].to_numpy()
-#X_test, y_test = D_test.loc[:, args.features].to_numpy(), D_test.loc[:,['y']].to_numpy()
-x=torch.tensor(x)
-y=torch.tensor(y[:,0]) * 1000
+def add_NN_prediction(args, fig, gs, dataset_name, D_train, model):
+    x, y =  D_train.loc[:,  ['drop_length', 'adv', 'rec','avg_vel', 'width'] ].to_numpy(), D_train.loc[:, ['y']].to_numpy()
+    predict = model(torch.tensor(x).to(torch.float32)).detach().numpy()
+    ax = fig.add_subplot(gs[0, 0:4])
+    ax.set_title(dataset_name)
+    ax.plot(range(len(predict)), D_train.loc[:, ['y']].to_numpy() ,
+            label='true',  # s=1,
+            marker='o', linestyle='-')
+    ax.plot(range(len(predict)), predict, label='prediction NN',  marker='p',  linestyle='-')
+    # ax.bar(range(len(predict)), (D_train.loc[:,['y']].to_numpy() - predict)[:,0], label='difference' )
+    ax.set_ylabel('Friction Force [mN]')
+    return ax
 
-# Create DataLoader
-dataset = TensorDataset(x, y)
-dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
-# Initialize the model, loss function, and optimizer
-model = MLP(x.shape[1], hidden_size, output_size)
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
-for epoch in range(num_epochs):
-    for batch_x, batch_y in dataloader:
-        # Forward pass
-        outputs = model(batch_x)
-        loss = criterion(outputs, batch_y)
+def add_equation_prediction(ax, equation, D_train):
+    parser = ConfigHyperparameter.arguments_parser()
+    parser = ConfigLoadData.arguments_parser(parser)
+    parser = ConfigEquationDiscovery.arguments_parser(parser)
+    parser = ConfigPlotBestEquation.arguments_parser(parser)
+    parser = ConfigSyntaxTree.arguments_parser(parser)
+    args = parser.parse_args()
+    tree = fit_constants(args, equation, D_train)
+    y_pred_train = tree.evaluate_subtree(-1, D_train)
+    ax.plot(range(len(y_pred_train)), y_pred_train, label=equation,
+    marker = 'v', linestyle='--'
+    )
 
-        # Backward pass and optimization
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+def run():
+    parser = ConfigLoadData.arguments_parser()
+    args = parser.parse_args()
 
-    print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-string = (f"{int(D_train.loc[0, 'Video ID'])} "
-          f"{round(np.rad2deg(D_train.loc[0, 'tilt_angle']))}° "
-          f"{D_train.loc[0, 'excel_name']}")
+    #D_test =  load_Sajjad(args,f'{ROOT_DIR}/data/Sajjad/full_dataset500_RoboSci_V3_no-defect_97.csv')
+    D_train = load_Sajjad(args, f'{ROOT_DIR}/data/Sajjad/full_dataset500_RoboSci_V3_no-defect_97.csv')
+    D_train.loc[:, ['y']] = D_train.loc[:, ['y']] *1000
+    D_train.loc[:, ['drop_length']] = D_train.loc[:, ['drop_length']] * 100
+    D_train.loc[:, ['y_center']] = D_train.loc[:, ['y_center']] * 100
+    D_train.loc[:, ['width']] = D_train.loc[:, ['width']] * 100
 
-print("Training complete!")
-predict = model(x).detach().numpy()
-fig, (ax1) = plt.subplots(figsize=(7, 5),nrows=1, sharex=True, sharey=True)
-ax1.set_title(string)
-ax1.scatter(range(len(predict)), D_train.loc[:,['y']].to_numpy()* 1000, label='true', s=1)
-ax1.scatter(range(len(predict)), predict, label='prediction NN', s=1)
-#ax1.bar(range(len(predict)), (D_train.loc[:,['y']].to_numpy() - predict)[:,0], label='difference' )
-ax1.legend(loc='upper right')
-ax1.set_ylabel('Friction Force')
-plt.show()
+    x, y = D_train.loc[:,  ['drop_length', 'adv', 'rec','avg_vel', 'width'] ].to_numpy(), D_train.loc[:,['y']].to_numpy()
+    #x, y = D_train.loc[:, ['y']].to_numpy(), D_train.loc[:, ['y']].to_numpy()
+    #X_test, y_test = D_test.loc[:,  ['y']].to_numpy(), D_test.loc[:,['y']].to_numpy()
+    dataset_name = (f"{int(D_train.loc[0, 'Video ID'])} "
+              f"{round(np.rad2deg(D_train.loc[0, 'tilt_angle']))}° "
+              f"{D_train.loc[0, 'excel_name']}")
+
+    fig = plt.figure( figsize=(15, 8))
+    gs = fig.add_gridspec(2,4)
+
+    model = train_NN(x,y)
+    ax = add_NN_prediction(args, fig, gs, dataset_name, D_train, model)
+    add_equation_prediction(ax, equation = ' * c sin / rec / 1 mid', D_train=D_train)
+    add_equation_prediction(ax, equation=' * c * width - cos rec  cos adv ', D_train=D_train)
+    ax.legend(loc='upper right',ncol=4)
+    add_tsne_plot(args, fig, gs,D_train)
+    save_string = ROOT_DIR / f"plots/one_dataset/{dataset_name}"
+    save_string.parent.mkdir(exist_ok=True, parents= True)
+    fig.savefig(save_string)
+    plt.show()
+
+if __name__ == '__main__':
+    run()
+
