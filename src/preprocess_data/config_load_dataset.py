@@ -13,11 +13,11 @@ class ConfigLoadData:
         parser.add_argument("--number_of_data_sets_to_load", type=int, default=3000,
                             help='How many data sets to read in')
 
-        parser.add_argument("--system_id_column", type=str, default='system_id_column',
+        parser.add_argument("--system_id_column", type=str, default='excel_name',
                             help='Column name which gives the system id')
 
         parser.add_argument("--path_to_datasets", type=str,
-                            default='data/Sajjad',
+                            default='data/Sajjad_Smoothed',
                             help='Path to the folder with the data sets we would like to fit inside ')
 
         parser.add_argument("--path_to_units", type=str,
@@ -45,15 +45,16 @@ class ConfigLoadData:
                             #'row_id','col_id','sheet_name', 'mid', 'rec', 'adv'
                             default = ['drop_length', 'y_center',
                                        'avg_vel', 'width',
-                                       'cos_adv','cos_rec','cos_mid',
-                                       'sin_adv', 'sin_rec', 'sin_mid',
-                                       'cos_square_adv', 'cos_square_rec', 'cos_square_mid',
-                                       'sin_square_adv', 'sin_square_rec', 'sin_square_mid'
+                                       'adv', 'rec',
+                                       # 'cos_adv','cos_rec','cos_mid',
+                                       # 'sin_adv', 'sin_rec', 'sin_mid',
+                                       # 'cos_square_adv', 'cos_square_rec', 'cos_square_mid',
+                                       # 'sin_square_adv', 'sin_square_rec', 'sin_square_mid'
                                        ],
                             help='Features we would like to use in the equation discovery'
                             )
 
-        parser.add_argument("--target", type=str, default='friction_force',
+        parser.add_argument("--target", type=str, default='smoothed_friction_force',
                             help='(y) Column name we want to fit '
                             )
 
