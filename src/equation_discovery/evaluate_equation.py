@@ -1,7 +1,7 @@
 import re
 
 import numpy as np
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 from src.SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
 from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 import traceback
@@ -12,10 +12,12 @@ from src.equation_discovery.rewards import ReMSe
 def evaluate_equation(args, tree, X_df):
     try:
         y_pred = tree.evaluate_subtree(-1, X_df)
-        err = mean_squared_error(y_pred, X_df.loc[:, 'y'])
+        err = mean_absolute_error(y_pred, X_df.loc[:, 'y'])
+        err_mse = mean_squared_error(y_pred, X_df.loc[:, 'y'])
         err_rel = ReMSe(y_pred=y_pred, y_true=X_df.loc[:, 'y'].to_numpy())
         output = {}
         output['error'] = err
+        output['error_mse'] = err_mse
         output['err_rel'] = err_rel
         output['infix'] = tree.rearrange_equation_infix_notation()[-1]
         output['prefix'] = tree.rearrange_equation_prefix_notation()[-1]
