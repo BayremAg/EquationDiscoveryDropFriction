@@ -7,7 +7,7 @@ from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 from src.equation_discovery.evaluate_equation import infix_to_prefix
 
 
-def propagate_error(args, equation_infix, measurement_error_dic, df):
+def propagate_error(args, equation_infix, measurement_error_dic, df, logger):
     #Implements std_x = sqrt( sum_i square(dy/x_i * std_x_i ) )
     error_list = []
     output = {
@@ -26,10 +26,10 @@ def propagate_error(args, equation_infix, measurement_error_dic, df):
         mean_error = np.mean(np.sqrt(np.sum(error_list, axis=0)))
         output['mean_error'] = mean_error
     except Exception as e:
-        print(f'Error in error propagation  {e}')
-        print(f"original equation : {equation_infix}")
-        print(f"derivative target : {feature}")
-        print(traceback.format_exc())
+        logger.debug(f'Error in error propagation  {e}')
+        logger.debug(f"original equation : {equation_infix}")
+        logger.debug(f"derivative target : {feature}")
+        logger.debug(traceback.format_exc())
         output['mean_error'] = np.inf
 
 
