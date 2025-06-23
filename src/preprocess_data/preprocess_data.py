@@ -176,6 +176,41 @@ def split_train_test(files):
             id_seen.add(id)
     return train_files, test_files
 
+
+def split_n_folds(files, args):
+    fold_dict = {}
+    system_dict = {}
+    for file in files:
+        excel_name = pd.read_csv(file, index_col=0, nrows=1)['excel_name'][0]
+        if not excel_name in system_dict:
+            system_dict[excel_name] = [file]
+        else:
+            system_dict[excel_name].append(file)
+    add_one_file_from_each_system_to_fold_dict(args, fold_dict, system_dict)
+    # distribute rest files equally
+    distribute_other_files(args, fold_dict, system_dict)
+    return fold_dict
+
+
+
+def distribute_other_files(args, fold_dict, system_dict):
+    rest_files = []
+    for excel_name, files in system_dict.items():
+        rest_files.extend(files)
+    rest_files = random.sample(rest_files, len(rest_files))
+    for i in range(len(rest_files)):
+        fold_dict[f"fold_{i % args.n_folds}"].append(rest_files.pop(0))
+
+
+def add_one_file_from_each_system_to_fold_dict(args, fold_dict, system_dict):
+    # each fold has at least one file from each system
+    for i in range(args.n_folds):
+        if f"fold_{i}" not in fold_dict:
+            fold_dict[f"fold_{i}"] = []
+        for excel_name, files in system_dict.items():
+            fold_dict[f"fold_{i}"].append(files.pop())
+
+
 def split_train_test_sajjad(files):
     np.random.shuffle(files)
     split_idx =int( len(files)* 0.66666)  # avoid 0 or full split
