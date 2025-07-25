@@ -43,5 +43,5 @@ def plot_error_per_system(args, df, index, proposed_equations):
     #     labels=[f"{e:0.2e}"[:-4] for e in mean_abs_error])
     # ax2.set_ylabel('MSE')
     fig.tight_layout()
-    plt.savefig(args.ROOT_DIR / "plots/error_per_system.pdf")
+    plt.savefig(args.ROOT_DIR / f"plots/{args.exp_name}/error_per_system.pdf")
     plt.show()

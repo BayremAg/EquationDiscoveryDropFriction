@@ -81,7 +81,7 @@ def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree):
                  rotation=90
                  )
     fig.tight_layout()
-    save_path = args.ROOT_DIR / f'plots/equations/prediction_{equation_infix}.pdf'
+    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/equations/prediction_{equation_infix}.pdf'
     print(f"Saving prediction plot to: {save_path}")
     Path(save_path).parent.mkdir(exist_ok=True, parents=True)
     fig.savefig(save_path)

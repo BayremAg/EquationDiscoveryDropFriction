@@ -18,6 +18,6 @@ class ConfigHyperparameter():
                                  "DEBUG = 10, NOTSET = 0")
         parser.add_argument("--root_dir", type=str, default=ROOT_DIR,
                             help="Path to project")
-        parser.add_argument("--exp_name", type=str, default="NGED",
-                            help="Path to project")
+        parser.add_argument("--exp_name", type=str, default="ID_error_per_dataset",
+                            help="Name of the experiment")
         return parser

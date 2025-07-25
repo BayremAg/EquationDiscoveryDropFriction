@@ -17,7 +17,7 @@ def create_constant_table(all_data_dfs, args, df, index, proposed_equations):
     calculate_correlations(c_dict_equation, pd_constants)
 
     latex_table = formate_latex_constants(pd_constants)
-    save_path = args.ROOT_DIR / 'plots/table_with_constants.tex'
+    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_constants.tex'
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     logger.info(f"table with constants saved @ {save_path}")
