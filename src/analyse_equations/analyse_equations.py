@@ -34,7 +34,7 @@ def run():
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args = parser.parse_args()
-    args.save_path = args.ROOT_DIR / f'results/{args.save_set_folder}/equation_set_{args.equation_set_id}.json'
+    args.save_path = args.ROOT_DIR / f'results/{args.save_set_folder}/equation_set_{args.exp_name}.json'
     args.unit_dict = get_unit_dict(args)
     args.unit_dict['y'] = args.unit_dict[args.target]
     args.unit_dimension = 5
@@ -195,7 +195,8 @@ def create_error_table(args, num_variables, proposed_equations):
     df = proposed_equation_to_df(args, proposed_equations, num_variables)
     df = df.sort_values('train all error')
     df['rank'] = range(len(df))
-    save_path = args.ROOT_DIR / 'plots/table_with_equations.tex'
+    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_equations_{metric}.tex'
+    save_path.parent.mkdir(parents=True, exist_ok=True)
     latex_table = formate_latex_table_error(df)  # df.drop('infix', axis=1))
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
