@@ -1,5 +1,7 @@
 from argparse import ArgumentParser
 
+from src.utils.argument_parser import str2bool
+
 
 class ConfigPlotBestEquation:
     @staticmethod
@@ -23,12 +25,12 @@ class ConfigPlotBestEquation:
 
                             ])
 
-        parser.add_argument("--equation_set_id", type=str, default='16_June',
-                            help='Id of the equation set')
-
         parser.add_argument("--save_set_folder", type=str, default='Sajjad_Smoothed',
                             help='Where to save the equation set')
 
         parser.add_argument("--n_folds", type=int, default=3)
+        
+        parser.add_argument("--error_per_dataset", type=str2bool, default=True,
+                            help="Calculate one error per dataset and average over it or calculate error per data sample and average than.")
 
         return parser

@@ -1,5 +1,6 @@
 import json
 
+import numpy as np
 from src.analyse_equations.simplify_prefix import simplify_prefix
 from src.equation_discovery.evaluate_equation import test_equation, evaluate_equation
 from src.error_propergation.propagate_error import propagate_error
@@ -50,10 +51,42 @@ def add_performance_per_system(args, equation, filtered_dfs_test, proposed_equat
 def fit_and_evaluate(args, equation, filtered_dfs_test, filtered_dfs_train, proposed_equations, fold_id):
     all_data_dict = {}
     tree = fit_constants(args, equation, filtered_dfs_train)
-    all_data_dict['train'] = evaluate_equation(args, tree, filtered_dfs_train)
-    all_data_dict['test'] = test_equation(args, tree, filtered_dfs_test)
+    if args.error_per_dataset:
+        err_dict_train = evaluate_average_error_per_dataset(args,
+                                                      filtered_dfs_train,
+                                                      tree,
+                                                      method=evaluate_equation
+                                                      )
+        err_dict_test =  evaluate_average_error_per_dataset(args,
+                                                      filtered_dfs_train,
+                                                      tree,
+                                                      method=test_equation
+                                                      )
+    else:
+        err_dict_train = evaluate_equation(args, tree, filtered_dfs_train)
+        err_dict_test = test_equation(args, tree, filtered_dfs_test)
+    all_data_dict['train'] = err_dict_train
+    all_data_dict['test'] = err_dict_test
+
+
     proposed_equations[equation][fold_id] = all_data_dict
     return tree
+
+
+def evaluate_average_error_per_dataset(args, filtered_dfs_train, tree, method):
+    error_per_video = {}
+    for video_id in filtered_dfs_train.loc[:, 'Video ID'].unique():
+        df_video_id = filtered_dfs_train[filtered_dfs_train['Video ID'] == video_id]
+        error_per_video[video_id] = method(args, tree, df_video_id)
+    average_error_per_video = np.mean([v['error'] for v in error_per_video.values()])
+    average_error_mse_per_video = np.mean([v['error_mse'] for v in error_per_video.values()])
+    average_error_rel_per_video = np.mean([v['err_rel'] for v in error_per_video.values()])
+    err_dict = error_per_video[video_id]
+    err_dict['error'] = average_error_per_video
+    err_dict['error_mse'] = average_error_mse_per_video
+    err_dict['err_rel'] = average_error_rel_per_video
+    return err_dict
+
 
 def add_proposed_equations(args, proposed_equations):
     if not '+ c * friction_coef * width * viscosity avg_vel' in proposed_equations:

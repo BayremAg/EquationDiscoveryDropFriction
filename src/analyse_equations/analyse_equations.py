@@ -77,7 +77,9 @@ def run():
     ###### create error table ##############
     ########################################
     num_variables = 1
-    df_error = create_error_table(args, num_variables, proposed_equations)
+    df_error = create_error_table(args, num_variables, proposed_equations, metric='error')
+    create_error_table(args, num_variables, proposed_equations, metric='error_mse')
+    create_error_table(args, num_variables, proposed_equations, metric='err_rel')
 
     ########################################
     ###### create constant table ##############
@@ -191,9 +193,9 @@ def get_currend_fold(fold_id, folds_dict):
     return files_test, files_train
 
 
-def create_error_table(args, num_variables, proposed_equations):
-    df = proposed_equation_to_df(args, proposed_equations, num_variables)
-    df = df.sort_values('train all error')
+def create_error_table(args, num_variables, proposed_equations, metric):
+    df = proposed_equation_to_df(args, proposed_equations, num_variables, metric)
+    df = df.sort_values(f'train all error {metric}')
     df['rank'] = range(len(df))
     save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_equations_{metric}.tex'
     save_path.parent.mkdir(parents=True, exist_ok=True)
@@ -228,10 +230,9 @@ def set_pandas_options():
 
 
 
-def proposed_equation_to_df(args, proposed_equations, num_variables):
+def proposed_equation_to_df(args, proposed_equations, num_variables, metric = 'error'):
     pd_dict = {}
     i = 0
-    metric = 'error'
     for equation, equation_dict in proposed_equations.items():
         if int(equation_dict['all_data']['train']['num_constants']) <= num_variables\
                 or 'manuel' in equation_dict:
@@ -240,9 +241,9 @@ def proposed_equation_to_df(args, proposed_equations, num_variables):
             pd_dict[i] = {
                 'equation': equation,
                 'infix': equation_dict['all_data']['test']['infix'],
-                'fold mean train': mean_train_fold,
-                'fold mean test': mean_test_fold,
-                'train all error': equation_dict['all_data']['train'][metric],
+                f'fold mean train {metric}': mean_train_fold,
+                f'fold mean test {metric}': mean_test_fold,
+                f'train all error {metric}': equation_dict['all_data']['train'][metric],
                 'calc. std': equation_dict['error_propagation']['mean_error']
             }
             i += 1
