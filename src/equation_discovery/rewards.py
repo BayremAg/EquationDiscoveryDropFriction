@@ -7,7 +7,7 @@ def ReMSe(y_pred, y_true):
     mean_y_true = np.mean(y_true)
     mean_square_error = Mse(y_pred, y_true)
     variance = np.mean(np.power(y_true - mean_y_true, 2))
-    remse = np.divide(np.sqrt(mean_square_error), variance + 0.0001)
+    remse = np.divide(np.sqrt(mean_square_error), variance + 10e-10)
     return float(remse)
 
 
