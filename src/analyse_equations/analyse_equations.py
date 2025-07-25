@@ -85,19 +85,19 @@ def run():
     ###### create constant table ##############
     ########################################
 
-    index = 174
-    create_constant_table(all_data_dfs, args, df_error, index, proposed_equations)
+    index = 2
+    create_constant_table(all_data_dfs, args, df_error, index, proposed_equations, logger)
 
     ########################################
     ############# print units ##############
     ########################################
-    index =  174
+    index =  2
     print_units_of_one_equation(args, df_error, index, proposed_equations)
 
     ########################################
     ###### plot prediction #################
     ########################################
-    index =  174
+    index =  2
     equation = proposed_equations[df_error.loc[index].loc['equation']]
     tree = map_equation_to_syntax_tree(args, df_error.loc[index].loc['equation'], infix=False, catch_exceptions=False)
     tree.constants_in_tree = equation['all_data']['train']['constants']
@@ -117,7 +117,7 @@ def run():
     ###### difference between two eq #######
     ########################################
 
-    index_0 = 174
+    index_0 = 2
     index_1 = 4
     abs_difference_between_equation(args, proposed_equations, df_error, all_data_dfs, index_0, index_1)
 

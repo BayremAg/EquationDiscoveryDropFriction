@@ -1,10 +1,8 @@
 import pandas as pd
-
-from src.analyse_equations.analyse_equations import logger
 from src.utils.save_tables import formate_latex_constants
 
 
-def create_constant_table(all_data_dfs, args, df, index, proposed_equations):
+def create_constant_table(all_data_dfs, args, df, index, proposed_equations, logger):
     constant_dict = {}
     equation_dict = proposed_equations[df.loc[index].loc['equation']]
     excel_names = all_data_dfs['excel_name'].unique()
