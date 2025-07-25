@@ -3,11 +3,27 @@ from pathlib import Path
 import pandas as pd
 import os
 
+friction_coefficient_map = {
+    '90-Glycerol-hydrophobic': 1.388,
+    '70-Glycerol-hydrophobic': 0.703,
+    '50-Glycerol-hydrophobic': 0.026
+}
+
+def update_friction_coefficient_superhydro(row):
+    if row['excel_name'] in friction_coefficient_map:
+        return friction_coefficient_map[row['excel_name']]
+    else:
+        return row['friction_coef']
 
 def split_dataset():
-    input_file = '/home/jbrugger/PycharmProjects/EquatationDiscoveryDropFriction/data/smoothed_friction_force_Sajjad.csv'  # Replace with your actual filename
+    input_file = '/home/jbrugger/PycharmProjects/EquatationDiscoveryDropFriction/data/smoothed_ff_add_superhydro_nonegative.csv'  # Replace with your actual filename
     output_folder = '/home/jbrugger/PycharmProjects/EquatationDiscoveryDropFriction/data/Sajjad_Smoothed'
     df = pd.read_csv(input_file)
+    # Mapping dictionary
+
+
+    # Replace values in 'Friction Coefficient' based on 'excelname'
+    df['friction_coef'] = df.apply(update_friction_coefficient_superhydro, axis=1)
     # Ensure the 'Video ID' column exists
     if 'Video ID' not in df.columns:
         raise ValueError("Column 'Video ID' not found in the dataset.")
@@ -15,7 +31,7 @@ def split_dataset():
     for video_id, group in df.groupby('Video ID'):
         # Sanitize the video ID for filename use
         safe_video_id = str(video_id).replace("/", "_").replace("\\", "_")
-        output_filename = f"{output_folder}/smoothed_friction_force_{safe_video_id}.csv"
+        output_filename = f"{output_folder}/smoothed_friction_force_{safe_video_id}_superhydro.csv"
         group.to_csv(output_filename, index=False)
     print("CSV files created for each Video ID.")
 
