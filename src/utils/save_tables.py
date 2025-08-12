@@ -8,6 +8,7 @@ def formate_latex_table_error(df):
 
     latex_table = df.to_latex()
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
+    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
     latex_table = latex_table.replace(";", "\;")
     latex_table = latex_table.replace("**", "\hat{}")
     latex_table = latex_table.replace("*", "\cdot")
@@ -29,14 +30,15 @@ def formate_latex_table_error(df):
     latex_table = latex_table.replace("underline", "\\underline")
     latex_table = latex_table.replace("pm", "\pm")
     latex_table = latex_table.replace("runtime", "Running Time [sec]")
-    latex_table = latex_table.replace("width", "Width")
-    latex_table = latex_table.replace("viscosity", "Viscosity")
-    latex_table = latex_table.replace("avg vel", "AvgVel")
-    latex_table = latex_table.replace("frictioncoef ", "FrictionCoef")
-    latex_table = latex_table.replace("drop length", "DropLength")
-    latex_table = latex_table.replace("adv", "Adv")
-    latex_table = latex_table.replace("rec", "Rec")
-    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
+    latex_table = latex_table.replace("width", "w")
+    latex_table = latex_table.replace("viscosity", "\\eta")
+    latex_table = latex_table.replace("avg vel", "v")
+    latex_table = latex_table.replace("friction coef", "\\beta")
+    latex_table = latex_table.replace("drop length", "d")
+    latex_table = latex_table.replace("adv", "\\theta_{as}")
+    latex_table = latex_table.replace("rec", "\\theta_{rs}")
+    latex_table = latex_table.replace("c ", "c_")
+
     return latex_table
 
 def formate_latex_constants(df):
@@ -44,6 +46,7 @@ def formate_latex_constants(df):
     #df['equation'] = df['equation'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
     latex_table = df.to_latex()
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
+    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
     latex_table = latex_table.replace(";", "\;")
     latex_table = latex_table.replace("**", "\hat{}")
     latex_table = latex_table.replace("*", "\cdot")
@@ -70,9 +73,9 @@ def formate_latex_constants(df):
     latex_table = latex_table.replace("width", "Width")
     latex_table = latex_table.replace("viscosity", "Viscosity")
     latex_table = latex_table.replace("avg vel", "AvgVel")
-    latex_table = latex_table.replace("frictioncoef ", "FrictionCoef")
+    latex_table = latex_table.replace("friction_coef ", "FrictionCoef")
     latex_table = latex_table.replace("drop length", "DropLength")
     latex_table = latex_table.replace("adv", "Adv")
     latex_table = latex_table.replace("rec", "Rec")
-    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
+
     return latex_table
