@@ -4,9 +4,9 @@ import pandas as pd
 import os
 
 friction_coefficient_map = {
-    '90-Glycerol-hydrophobic': 1.388,
-    '70-Glycerol-hydrophobic': 0.703,
-    '50-Glycerol-hydrophobic': 0.026
+    '90-Glycerol-hydrophobic': 11.59,
+    '70-Glycerol-hydrophobic': 0.507,
+    '50-Glycerol-hydrophobic': 0.0254
 }
 
 def update_friction_coefficient_superhydro(row):
