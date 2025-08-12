@@ -76,3 +76,6 @@ def mean_std_in_error(args,equation_dict, setup, metric):
     for fold in range(args.n_folds):
         error_in_folds.append(equation_dict[fold][setup][metric])
     return np.mean(error_in_folds), np.std(error_in_folds)
+
+def get_first_key(d):
+    return list(d.keys())[0]
