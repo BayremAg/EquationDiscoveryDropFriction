@@ -10,15 +10,15 @@ class ConfigEquationDiscovery:
             parser = ArgumentParser(description="Parser for equations for each dataset")
         parser.add_argument("--run_equation_discovery", type=str, default=True,
                             help='Should new ED be run?')
-        parser.add_argument("--equation_discovere", type=str, default='NGED',
-                            choices=['PySR', 'NGED'],
+        parser.add_argument("--equation_discoverer", type=str, default='MGMT',
+                            choices=['PySR', 'MGMT'],
                             help='Which equation discoverer software to use')
 
         parser.add_argument("--iterations_ed", type=int, default=100,
                             help='PYSR Parameter: Number of iterations')
 
         parser.add_argument("--num_rows_for_ed", type=int, default=9999,
-                            help='PYSR Parameter: Max number of rows used in equation discovery')
+                            help=' Max number of rows used in equation discovery')
 
         parser.add_argument("--number_of_runs", type=int, default=1,
                             help='How often to run the equation discovery')

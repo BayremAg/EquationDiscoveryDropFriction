@@ -33,12 +33,12 @@ def run(args):
         filtered_dfs = prepare_dataset(args, files)
         for i in range(args.number_of_runs):
             print(f"Iteration: {i} of  {args.number_of_runs}")
-            if args.equation_discovere == "PySR":
-                best_models[i] = run_equation_discovery(
+            if args.equation_discoverer == "PySR":
+                best_models[i] = run_pysr(
                     filtered_dfs,
                     args
                 )
-            elif args.equation_discovere == "NGED":
+            elif args.equation_discoverer == "MGMT":
                 best_models[i] = run_NGED(
                     filtered_dfs,
                     args
@@ -48,8 +48,8 @@ def run(args):
 
 
 
-def run_equation_discovery(df, args):
-    model, variables_to_feature_dict = run_pysr(args, df)
+def run_pysr(df, args):
+    model, variables_to_feature_dict = __run_pysr(args, df)
     found_equations = test_found_equations(
         args=args,
         df=df,
@@ -96,7 +96,7 @@ def symplify_equation(best_model, input_features, variables_to_feature_dict):
     return equation
 
 
-def run_pysr(args, df):
+def __run_pysr(args, df):
     unit_dict = get_unit_dict(args)
     variables_to_feature_dict = {f"x{i}": feature for i, feature in enumerate(args.features)}
     X, y, category = prepare_data_for_eq(args, df)
