@@ -19,7 +19,7 @@ class Get_residual_of_equation(unittest.TestCase):
         self.args.max_branching_factor = 2
         self.args.max_depth_of_tree = 10
         self.args.max_constants_in_tree = 5
-        self.args.max_len_datasets = 10
+        self.args.num_rows_for_ed = 10
         self.args.max_elements_in_best_list = 10
         self.args.max_num_nodes_in_syntax_tree = 30
 

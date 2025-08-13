@@ -17,7 +17,7 @@ class ConfigEquationDiscovery:
         parser.add_argument("--iterations_ed", type=int, default=100,
                             help='PYSR Parameter: Number of iterations')
 
-        parser.add_argument("--num_rows_for_ed", type=int, default=9999,
+        parser.add_argument("--num_rows_for_ed", type=int, default=500,
                             help=' Max number of rows used in equation discovery')
 
         parser.add_argument("--number_of_runs", type=int, default=1,
