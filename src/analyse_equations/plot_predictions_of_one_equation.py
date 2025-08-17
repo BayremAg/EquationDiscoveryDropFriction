@@ -4,18 +4,16 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.ticker import ScalarFormatter
 
 from definitions import ROOT_DIR
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
-from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
+from src.config.config_analyse_equations import ConfigPlotBestEquation
 from src.analyse_equations.utils import get_first_key
-from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
-from src.equation_discovery.evaluate_equation import map_equation_to_syntax_tree
+from src.config.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
-from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.config.config_load_dataset import ConfigLoadData
 from src.preprocess_data.preprocess_data import prepare_dataset, split_train_test_sajjad
-from src.utils.config_hyperparameter import ConfigHyperparameter
+from src.config.config_hyperparameter import ConfigHyperparameter
 
 
 def run():

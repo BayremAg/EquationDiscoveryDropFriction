@@ -5,15 +5,15 @@ import random
 
 from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
 from src.equation_discovery.NGED_adapter import run_NGED
-from src.equation_discovery.config_MGMT import ConfigMGMT
-from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
+from src.config.config_MGMT import ConfigMGMT
+from src.config.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
-from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.config.config_load_dataset import ConfigLoadData
 from src.preprocess_data.preprocess_data import prepare_dataset, get_unit_dict
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
 from definitions import ROOT_DIR
 from src.equation_discovery.evaluate_equation import infix_to_prefix, evaluate_equation
-from src.utils.config_hyperparameter import ConfigHyperparameter
+from src.config.config_hyperparameter import ConfigHyperparameter
 from pysr import PySRRegressor, ParametricExpressionSpec
 import numpy as np
 import json

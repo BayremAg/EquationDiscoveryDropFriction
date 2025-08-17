@@ -1,31 +1,17 @@
-import traceback
-
 from matplotlib import pyplot as plt
 
-from src.SyntaxTree.src.equation_classes.Dimension_Array import UnitError
-from src.SyntaxTree.src.utils.error import MaxDepthError
-from src.analyse_equations.add_information_to_equations import add_propagate_error, add_units, add_performance_per_system, add_proposed_equations, fit_and_evaluate
 from src.analyse_equations.analyse_equations import set_pandas_options, add_all_data_error
-from src.analyse_equations.create_constant_table import create_constant_table
-from src.analyse_equations.plot_error_per_system import plot_error_per_system
-from src.analyse_equations.plot_histogram_for_features import histogram_for_features
-from src.analyse_equations.plot_abs_difference_between_equation import abs_difference_between_equation
-from src.analyse_equations.plot_predictions_of_one_equation import plot_prediction
-from src.analyse_equations.utils import save_proposed_equation, get_data_folds, load_proposed_equations, mean_std_in_error
+from src.analyse_equations.utils import get_data_folds
 
-from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
-from src.equation_discovery.evaluate_equation import map_equation_to_syntax_tree
+from src.config.config_equations_for_each_dataset import ConfigEquationDiscovery
 
-from src.preprocess_data.preprocess_data import prepare_dataset, get_unit_dict
-from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
-from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.preprocess_data.preprocess_data import prepare_dataset
+from src.config.config_analyse_equations import ConfigPlotBestEquation
+from src.config.config_load_dataset import ConfigLoadData
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
-from src.utils.config_hyperparameter import ConfigHyperparameter
-import pandas as pd
+from src.config.config_hyperparameter import ConfigHyperparameter
 import logging
 import numpy as np
-
-from src.utils.save_tables import formate_latex_table_error
 
 logger = logging.getLogger(__name__)
 

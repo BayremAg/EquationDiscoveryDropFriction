@@ -10,14 +10,14 @@ from src.analyse_equations.plot_abs_difference_between_equation import abs_diffe
 from src.analyse_equations.plot_predictions_of_one_equation import plot_prediction
 from src.analyse_equations.utils import save_proposed_equation, get_data_folds, load_proposed_equations, mean_std_in_error
 
-from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
+from src.config.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.evaluate_equation import map_equation_to_syntax_tree
 
 from src.preprocess_data.preprocess_data import prepare_dataset, get_unit_dict
-from src.analyse_equations.config_analyse_equations import ConfigPlotBestEquation
-from src.preprocess_data.config_load_dataset import ConfigLoadData
+from src.config.config_analyse_equations import ConfigPlotBestEquation
+from src.config.config_load_dataset import ConfigLoadData
 from src.SyntaxTree.src.syntax_tree.config_syntax_tree import ConfigSyntaxTree
-from src.utils.config_hyperparameter import ConfigHyperparameter
+from src.config.config_hyperparameter import ConfigHyperparameter
 import pandas as pd
 import logging
 
