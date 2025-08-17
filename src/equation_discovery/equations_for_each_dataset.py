@@ -5,7 +5,7 @@ import random
 
 from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
 from src.equation_discovery.NGED_adapter import run_NGED
-from src.equation_discovery.config_NGED import ConfigNGED
+from src.equation_discovery.config_MGMT import ConfigMGMT
 from src.equation_discovery.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
 from src.preprocess_data.config_load_dataset import ConfigLoadData
@@ -196,6 +196,6 @@ if __name__ == '__main__':
     ConfigHyperparameter.arguments_parser(parser)
     ConfigSyntaxTree.arguments_parser(parser)
     ConfigEquationDiscovery.arguments_parser(parser)
-    ConfigNGED.arguments_parser(parser)
+    ConfigMGMT.arguments_parser(parser)
     args = parser.parse_args()
     run(args)
