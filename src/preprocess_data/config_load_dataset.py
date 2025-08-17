@@ -40,7 +40,7 @@ class ConfigLoadData:
         parser.add_argument("--ROOT_DIR", type=Path,
                             default=ROOT_DIR,
                             help='Path to Project root')
-        parser.add_argument('-features', nargs='+',
+        parser.add_argument('--features', nargs='+',
                             #  'id','time','tilt_angle','gamma','m','m*','viscosity','static_adv','static_rec','friction_coef',
                             #'row_id','col_id','sheet_name', 'mid', 'rec', 'adv'
                             default = ['drop_length', 'y_center',

@@ -4,7 +4,7 @@ import time
 import numpy as np
 
 
-class ConfigNGED:
+class ConfigMGMT:
     @staticmethod
     def arguments_parser(parser=None) -> ArgumentParser:
         if not parser:
@@ -38,6 +38,10 @@ class ConfigNGED:
             type=str,
             default="",
             help="Path to a replay_buffer which should be loaded.",
+        )
+        parser.add_argument(
+            "--max_elements_in_list", type=int, default=200 ,
+            help="The maximum number of equations saved in best list."
         )
         parser.add_argument(
             "--temp_0", type=np.float32, default=1, help="Initial MCTS temperature."
@@ -108,8 +112,8 @@ class ConfigNGED:
                  "replay.",
         )
 
-        parser.add_argument("--num_iterations", type=int, default=100,
-                            help='Number of iterations')
+        parser.add_argument("--num_mcts_sims", type=int, default=2_000_000, # 150000
+                            help='Number of MCTS simulations')
         parser.add_argument("--wandb", type=str, default="disabled",
                             help='Weights and Biases logging')
         parser.add_argument("--test_frequency", type=int, default=3,
@@ -126,8 +130,6 @@ class ConfigNGED:
                             help='Number of cold start iterations')
         parser.add_argument("--equation_preprocess_class", type=str, default="PandasPreprocessDropFriction",
                             help='Class for equation preprocessing')
-        parser.add_argument("--max_len_datasets", type=int, default=100,
-                            help='Maximum length of datasets')
         parser.add_argument("--class_equation_encoder", type=str, default="Transformer_Encoder_String",
                             help='Class for equation encoder')
         parser.add_argument("--embedding_dim_encoder_equation", type=int, default=8,
@@ -220,8 +222,7 @@ class ConfigNGED:
                             help='Class for critic decoder')
         parser.add_argument("--critic_decoder_normalize_way", type=str, default="tanh",
                             help='Normalization way for critic decoder')
-        parser.add_argument("--num_mcts_sims", type=int, default=80000,
-                            help='Number of MCTS simulations')
+
         parser.add_argument("--mcts_engine", type=str, default="Endgame",
                             help='MCTS engine')
         parser.add_argument("--c1", type=float, default=1.41421356237,

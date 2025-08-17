@@ -3,8 +3,8 @@ import traceback
 from src.SyntaxTree.src.equation_classes.Dimension_Array import UnitError
 from src.SyntaxTree.src.utils.error import MaxDepthError
 from src.analyse_equations.add_information_to_equations import add_propagate_error, add_units, add_performance_per_system, add_proposed_equations, fit_and_evaluate
-from src.analyse_equations.create_constant_table import create_constant_table
-from src.analyse_equations.plot_error_per_system import plot_error_per_system
+from src.analyse_equations.create_constant_table import create_constant_table, save_constant_table
+from src.analyse_equations.plot_error_per_system import plot_error_per_system, save_system_error_heatmap, heatmap_error_per_system
 from src.analyse_equations.plot_histogram_for_features import histogram_for_features
 from src.analyse_equations.plot_abs_difference_between_equation import abs_difference_between_equation
 from src.analyse_equations.plot_predictions_of_one_equation import plot_prediction
@@ -25,6 +25,7 @@ from src.utils.save_tables import formate_latex_table_error
 
 logger = logging.getLogger(__name__)
 
+
 def run():
     set_pandas_options()
 
@@ -44,7 +45,7 @@ def run():
         'rec': 0.03298672,
         'avg_vel': 0.0021,
         'width': 0.00005,
-        'y_center':0.000003,
+        'y_center': 0.000003,
         'middle_angle': 0.03141593,
         'x_center': 0.0000042,
         'static_adv': 0.01570796,
@@ -55,7 +56,6 @@ def run():
     proposed_equations = load_proposed_equations(args)
     add_proposed_equations(args, proposed_equations)
 
-    #files_test, files_train = get_train_test_files(args, proposed_equations)
     folds_dict = get_data_folds(args, proposed_equations)
     all_files = []
     for excel_name, files in folds_dict.items():
@@ -80,24 +80,42 @@ def run():
     df_error = create_error_table(args, num_variables, proposed_equations, metric='error')
     create_error_table(args, num_variables, proposed_equations, metric='error_mse')
     create_error_table(args, num_variables, proposed_equations, metric='err_rel')
-
+    ########################################
+    ###### create heat map local ##############
+    ########################################
+    indices = [0, 1, 2]
+    metric = 'err_rel'
+    pd_dict = heatmap_error_per_system(
+        all_data_dfs,
+        args,
+        df_error,
+        proposed_equations,
+        indices,
+        metric
+    )
+    save_system_error_heatmap(args, pd_dict)
     ########################################
     ###### create constant table ##############
     ########################################
 
     index = 2
-    create_constant_table(all_data_dfs, args, df_error, index, proposed_equations, logger)
-
+    pd_constants = create_constant_table(
+        all_data_dfs,
+        args,
+        df_error.loc[index].loc['equation'],
+        proposed_equations
+    )
+    save_constant_table(args, logger, pd_constants)
     ########################################
     ############# print units ##############
     ########################################
-    index =  2
+    index = 2
     print_units_of_one_equation(args, df_error, index, proposed_equations)
 
     ########################################
     ###### plot prediction #################
     ########################################
-    index =  2
+    index = 2
     equation = proposed_equations[df_error.loc[index].loc['equation']]
     tree = map_equation_to_syntax_tree(args, df_error.loc[index].loc['equation'], infix=False, catch_exceptions=False)
     tree.constants_in_tree = equation['all_data']['train']['constants']
@@ -131,7 +149,6 @@ def add_all_data_error(all_data_dfs, args, proposed_equations):
             del proposed_equations[equation]
             logger.debug(traceback.format_exc())
             logger.debug(e)
-
 
 
 def add_n_fold_error(args, folds_dict, measurement_error_dic, proposed_equations):
@@ -227,14 +244,11 @@ def set_pandas_options():
     pd.set_option('display.float_format', '{:.2e}'.format)
 
 
-
-
-
-def proposed_equation_to_df(args, proposed_equations, num_variables, metric = 'error'):
+def proposed_equation_to_df(args, proposed_equations, num_variables, metric='error'):
     pd_dict = {}
     i = 0
     for equation, equation_dict in proposed_equations.items():
-        if int(equation_dict['all_data']['train']['num_constants']) <= num_variables\
+        if int(equation_dict['all_data']['train']['num_constants']) <= num_variables \
                 or 'manuel' in equation_dict:
             mean_train_fold, std_train_fold = mean_std_in_error(args, equation_dict, 'train', metric)
             mean_test_fold, std_test_fold = mean_std_in_error(args, equation_dict, 'test', metric)
