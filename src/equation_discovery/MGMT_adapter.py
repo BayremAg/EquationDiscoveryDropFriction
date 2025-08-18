@@ -10,7 +10,7 @@ from src.HerNeuralMCTS.src.neural_nets.equation.equation_rule_predictor_skeleton
 from src.HerNeuralMCTS.src.utils.get_grammar import get_grammar_from_string
 
 
-def run_NGED(filtered_dfs, args):
+def run_MGMT(filtered_dfs, args):
 
 
     """
@@ -69,7 +69,7 @@ def run_NGED(filtered_dfs, args):
     },
    ...
     """
-    args.experiment_name = f"NGED_{'_'.join(args.features)}"
+    args.experiment_name = f"MGMT_{'_'.join(args.features)}"
     grammar = get_grammar_from_string(
         string=get_grammars(args.grammar_search), args=args
     )

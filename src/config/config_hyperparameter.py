@@ -10,7 +10,7 @@ class ConfigHyperparameter():
 
         parser.add_argument("--seed", type=int,
                             default=0,
-                            help='Seed for expeiment')
+                            help='Seed for experiment')
 
         parser.add_argument("--logging_level", type=int, default=20,
                             help="CRITICAL = 50, ERROR = 40, "
