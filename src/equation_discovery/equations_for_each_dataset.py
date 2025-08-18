@@ -4,7 +4,7 @@ from pathlib import Path
 import random
 
 from src.SyntaxTree.src.equation_classes.node import replace_floats_by_c
-from src.equation_discovery.NGED_adapter import run_NGED
+from src.equation_discovery.MGMT_adapter import run_MGMT
 from src.config.config_MGMT import ConfigMGMT
 from src.config.config_equations_for_each_dataset import ConfigEquationDiscovery
 from src.equation_discovery.fit_constant import fit_constants
@@ -39,7 +39,7 @@ def run(args):
                     args
                 )
             elif args.equation_discoverer == "MGMT":
-                best_models[i] = run_NGED(
+                best_models[i] = run_MGMT(
                     filtered_dfs,
                     args
                 )

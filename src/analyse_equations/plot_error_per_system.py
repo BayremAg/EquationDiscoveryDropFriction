@@ -96,4 +96,5 @@ def heatmap_error_per_system(all_data_dfs, args, df_error, proposed_equations, i
             for j in range(len(correlations.index)):
                 index = correlations.index[j]
                 pd_dict[equation][f"c_{i}_{index}"] = correlations.loc[index]
+
     return pd_dict

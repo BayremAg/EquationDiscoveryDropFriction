@@ -158,7 +158,7 @@ def add_n_fold_error(args, folds_dict, measurement_error_dic, proposed_equations
     equations_with_other_error = 0
     for fold_id in range(args.n_folds):
         logger.info(f"Fold {fold_id}")
-        files_test, files_train = get_currend_fold(fold_id, folds_dict)
+        files_test, files_train = get_current_fold(fold_id, folds_dict)
 
         filtered_dfs_train = prepare_dataset(args, files_train)
         filtered_dfs_test = prepare_dataset(args, files_test)
@@ -200,7 +200,7 @@ def add_n_fold_error(args, folds_dict, measurement_error_dic, proposed_equations
     return filtered_dfs_test, filtered_dfs_train, tree
 
 
-def get_currend_fold(fold_id, folds_dict):
+def get_current_fold(fold_id, folds_dict):
     train_folds = list(folds_dict.keys())
     test_folds = [train_folds.pop(fold_id)]
     files_train = []
