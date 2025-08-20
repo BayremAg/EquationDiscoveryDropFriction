@@ -4,6 +4,7 @@ from src.SyntaxTree.src.equation_classes.Dimension_Array import UnitError
 from src.SyntaxTree.src.utils.error import MaxDepthError
 from src.analyse_equations.add_information_to_equations import add_propagate_error, add_units, add_performance_per_system, add_proposed_equations, fit_and_evaluate
 from src.analyse_equations.create_constant_table import create_constant_table, save_constant_table
+from src.analyse_equations.example_evaluation import save_example_evaluation_dict, get_example_evaluation_dict
 from src.analyse_equations.plot_error_per_system import plot_error_per_system, save_system_error_heatmap, heatmap_error_per_system
 from src.analyse_equations.plot_histogram_for_features import histogram_for_features
 from src.analyse_equations.plot_abs_difference_between_equation import abs_difference_between_equation
@@ -72,6 +73,14 @@ def run():
     ########################################
     all_data_dfs = prepare_dataset(args, all_files)
     add_all_data_error(all_data_dfs, args, proposed_equations)
+
+
+    ########################################
+    ###### example evaluation dict #########
+    ########################################
+
+    example_evaluation_dict = get_example_evaluation_dict(all_data_dfs, args, proposed_equations)
+    save_example_evaluation_dict(args, example_evaluation_dict)
 
     ########################################
     ###### create error table ##############
@@ -216,7 +225,7 @@ def create_error_table(args, num_variables, proposed_equations, metric):
     df['rank'] = range(len(df))
     save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_equations_{metric}.tex'
     save_path.parent.mkdir(parents=True, exist_ok=True)
-    latex_table = formate_latex_table_error(df)  # df.drop('infix', axis=1))
+    latex_table = formate_latex_table_error(args, df)  # df.drop('infix', axis=1))
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     logger.info(f"table with errors saved @{save_path}")
