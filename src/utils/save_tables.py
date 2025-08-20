@@ -1,10 +1,10 @@
 import re
-def formate_latex_table_error(df):
+import sympy as sp
+
+def formate_latex_table_error(args, df):
     df = df.set_index(['rank']).drop(['equation'], axis=1)
+    df['infix'] = df.apply(lambda row: equation_to_latex(args, row['infix']), axis=1)
     df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
-    #df['equation'] = df['equation'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
-    if 'infix' in list(df.columns):
-        df['infix'] = df['infix'].apply(lambda x: '$' + re.sub(r'\s+', r';', x)  + '$') # x.replace(' ', '\;')
 
     latex_table = df.to_latex()
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
@@ -32,16 +32,19 @@ def formate_latex_table_error(df):
     latex_table = latex_table.replace("runtime", "Running Time [sec]")
     latex_table = latex_table.replace("width", "w")
     latex_table = latex_table.replace("viscosity", "\\eta")
-    latex_table = latex_table.replace("avg vel", "v")
-    latex_table = latex_table.replace("friction coef", "\\beta")
-    latex_table = latex_table.replace("drop length", "d")
+    latex_table = latex_table.replace("avgvel", "v")
+    latex_table = latex_table.replace("frictioncoef", "\\beta")
+    latex_table = latex_table.replace("droplength", "d")
     latex_table = latex_table.replace("adv", "\\theta_{as}")
     latex_table = latex_table.replace("rec", "\\theta_{rs}")
     latex_table = latex_table.replace("c ", "c_")
+    latex_table = latex_table.replace("ycenter", "y_c")
+    latex_table = latex_table.replace("\\frac", "\\displaystyle\\frac")
+
 
     return latex_table
 
-def formate_latex_constants(df):
+def formate_latex_constants(args, df):
     df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
     #df['equation'] = df['equation'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
     latex_table = df.to_latex()
@@ -79,3 +82,21 @@ def formate_latex_constants(df):
     latex_table = latex_table.replace("rec", "Rec")
 
     return latex_table
+
+
+def equation_to_latex(args, equation):
+    try:
+        equation = replace_features_with_symbols(args, equation)
+        equation1 = sp.sympify(equation)
+        equation1 = sp.simplify(equation1)
+        latex_str = f"$ {sp.latex(equation1)} $"
+        return latex_str
+    except:
+        return f"$ { equation} $"
+
+def replace_features_with_symbols(args, features):
+    features = features.replace("avg_vel", "avgvel")
+    features = features.replace("friction_coef", "frictioncoef")
+    features = features.replace("drop_length", "droplength")
+    features = features.replace("y_center", "ycenter")
+    return features
