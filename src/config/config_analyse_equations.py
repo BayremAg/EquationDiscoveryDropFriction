@@ -33,4 +33,6 @@ class ConfigPlotBestEquation:
         parser.add_argument("--error_per_dataset", type=str2bool, default=True,
                             help="Calculate one error per dataset and average over it or calculate error per data sample and average than.")
 
+        parser.add_argument("--plot_prediction_max_len_dataset",type=int, default=20)
+
         return parser
