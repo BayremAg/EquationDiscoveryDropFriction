@@ -1,4 +1,5 @@
 import random
+from collections import defaultdict
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -44,7 +45,6 @@ def run():
 
 
 def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree):
-    args.plot_prediction_max_len_dataset = 20
     filtered_dfs_test = get_short_and_sorted_df(args, filtered_dfs_test)
     filtered_dfs_train= get_short_and_sorted_df(args, filtered_dfs_train)
 
@@ -89,7 +89,9 @@ def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree):
                  rotation=90
                  )
     fig.tight_layout()
-    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/equations/prediction_{equation_infix}.pdf'
+    equation_infix.replace('/', ':')
+    save_path = args.ROOT_DIR / (f"plots/{args.exp_name}/equations/prediction_"
+                                 f"{equation_infix.replace('/', ':')}.pdf")
     print(f"Saving prediction plot to: {save_path}")
     Path(save_path).parent.mkdir(exist_ok=True, parents=True)
     fig.savefig(save_path)
@@ -99,21 +101,22 @@ def sci_notation(x, pos):
     return '{:.1e}'.format(x)
 
 def get_short_and_sorted_df(args, filtered_dfs_test):
-    short_data = {}
+    short_data = defaultdict(lambda: defaultdict(dict))
     for index, row in filtered_dfs_test.iterrows():
-        if row['excel_name'] not in short_data:
-            short_data[row['excel_name']] = {}
-        if row['Video ID'] not in short_data[row['excel_name']]:
-            short_data[row['excel_name']][row['Video ID']] = {}
-        if (len(short_data[row['excel_name']][row['Video ID']]) <
-                args.plot_prediction_max_len_dataset):
-            short_data[row['excel_name']][row['Video ID']][index] = row
+        short_data[row['excel_name']][row['Video ID']][index] = row
+
+    for excel_name, video_dicts in short_data.items():
+        for video_id, video_dict in video_dicts.items():
+            num_elements = len(video_dict)
+            if num_elements > args.plot_prediction_max_len_dataset:
+                sample_indices = np.round(np.linspace(0, num_elements - 1, args.plot_prediction_max_len_dataset)).astype(int)
+                sample_keys = np.array(list(video_dict.keys()))[sample_indices]
+                short_data[excel_name][video_id] = {key: video_dict[key] for key in sample_keys}
     short_sorted_list = []
     short_sorted_list_excel_name = []
     current_excel_name = ''
     tilt_angles = []
-    excel_name_list = list(short_data.keys())
-    excel_name_list.sort()
+    excel_name_list = sorted(short_data.keys())
     for excel_name in excel_name_list:
         excel_dict = short_data[excel_name]
         if current_excel_name != excel_name:
