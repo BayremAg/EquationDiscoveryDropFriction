@@ -95,10 +95,12 @@ def run():
     df_error = create_error_table(args, num_variables, proposed_equations, metric='error')
     create_error_table(args, num_variables, proposed_equations, metric='error_mse')
     create_error_table(args, num_variables, proposed_equations, metric='err_rel')
+
+    indices_best_equations = list(df_error.index)
     ########################################
     ###### create heat map local ##############
     ########################################
-    indices = [0, 1, 2]
+    indices = indices_best_equations[:3]
     metric = 'err_rel'
     pd_dict = heatmap_error_per_system(
         all_data_dfs,
@@ -113,7 +115,7 @@ def run():
     ###### create constant table ##############
     ########################################
 
-    index = 2
+    index = indices_best_equations[0]
     pd_constants = create_constant_table(
         all_data_dfs,
         args,
@@ -124,13 +126,13 @@ def run():
     ########################################
     ############# print units ##############
     ########################################
-    index = 2
+    index = indices_best_equations[0]
     print_units_of_one_equation(args, df_error, index, proposed_equations)
 
     ########################################
     ###### plot prediction #################
     ########################################
-    index = 2
+    index = indices_best_equations[0]
     equation = proposed_equations[df_error.loc[index].loc['equation']]
     tree = map_equation_to_syntax_tree(args, df_error.loc[index].loc['equation'], infix=False, catch_exceptions=False)
     tree.constants_in_tree = equation['all_data']['train']['constants']
@@ -150,8 +152,8 @@ def run():
     ###### difference between two eq #######
     ########################################
 
-    index_0 = 2
-    index_1 = 4
+    index_0 = indices_best_equations[0]
+    index_1 = indices_best_equations[1]
     abs_difference_between_equation(args, proposed_equations, df_error, all_data_dfs, index_0, index_1)
 
 
