@@ -24,6 +24,8 @@ def evaluate_equation(args, tree, X_df):
         output['num_operations'] = tree.num_inner_nodes()
         output['num_constants'] = tree.num_constants_in_complete_tree
         output['constants'] = tree.constants_in_tree
+        if 'intercept' in X_df.columns:
+            output['intercept'] = X_df.groupby(args.system_id_column)['intercept'].first().to_dict()
         return output
     except Exception as e:
         print(f'Error in evaluating syntax tree {e}')
