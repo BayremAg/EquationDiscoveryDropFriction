@@ -45,7 +45,7 @@ def run():
     plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree)
 
 
-def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree):
+def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree, equation_id=''):
     filtered_dfs_test = get_short_and_sorted_df(args, filtered_dfs_test)
     filtered_dfs_train= get_short_and_sorted_df(args, filtered_dfs_train)
 
