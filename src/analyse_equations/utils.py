@@ -26,8 +26,9 @@ def new_line_in_label(labels):
 def save_proposed_equation(args, folds, proposed_equations):
     for key, values in folds.items():
         proposed_equations[key] = [str(f) for f in values]
-    print(f"Proposed Equations are saved to: {args.save_path}")
-    with open(args.save_path, 'w') as input_file:
+    save_path = args.save_path /'equation_set_.json'
+    print(f"Proposed Equations are saved to: {save_path}")
+    with open(save_path, 'w') as input_file:
         json.dump(proposed_equations, input_file, indent=2, )
     for key in folds.keys():
         del proposed_equations[key]
@@ -62,9 +63,10 @@ def get_data_folds(args, proposed_equations):
 
 
 def load_proposed_equations(args):
-    if args.save_path.exists():
+    save_path = args.save_path / 'equation_set.json'
+    if save_path.exists():
         print(f'Load proposed equations from: {args.save_path}')
-        with open(args.save_path, 'r') as input_file:
+        with open(save_path, 'r') as input_file:
             proposed_equations = json.load(input_file)
     else:
         proposed_equations = {}
