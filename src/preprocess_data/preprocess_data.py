@@ -14,7 +14,7 @@ def load_Sajjad(args, path):
     df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001  # gamma is given as mN in the Dataset
     df['viscosity'] = df.loc[:, 'viscosity'].to_numpy() * 0.001
     df = df.rename(columns={'velocity': 'avg_vel',
-                            'middle_angle':'mid'})
+                            'middle_angle': 'mid'})
     df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy())
     df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
     df['mid'] = np.deg2rad(df.loc[:, 'mid'].to_numpy())
@@ -48,44 +48,45 @@ def load_Sajjad(args, path):
     return df
 
 
-
 def prepare_dataset(args, files):
     other_files = random.sample(files, len(files))
     filtered_dfs = []
     for f in other_files:
-        df= load_Sajjad(args, f)
+        df = load_Sajjad(args, f)
         filtered_df = filter_moving_average(df, args)
         filtered_dfs.append(filtered_df)
     filtered_dfs = pd.concat(filtered_dfs, axis=0, ignore_index=True)
     return filtered_dfs
 
+
 def filter_moving_average(df, args):
     # delete rows +- adjacent rows which are outside a corridor around the current exponential moving average
     rows_to_keep = RowsToKeep()
-    y_array= df['y'].to_numpy()
-    ema =  np.median(y_array[:20])
+    y_array = df['y'].to_numpy()
+    ema = np.median(y_array[:20])
     q90 = df['y'].quantile(0.9)
     q10 = df['y'].quantile(0.1)
-    iqr = q90 - q10   #
+    iqr = q90 - q10  #
     i = 0
     while i < len(y_array):
-        diff =np.abs( y_array[i]  - ema )   # np.expand_dims(y_array,axis=1)
+        diff = np.abs(y_array[i] - ema)  # np.expand_dims(y_array,axis=1)
         if diff > iqr * args.corridor_width:
             i_next = delete_adjacent_rows(args, i, rows_to_keep)
         else:
             rows_to_keep.add(i)
-            i_next = i+ 1
+            i_next = i + 1
         if rows_to_keep.contains(i - args.delete_adjacent_rows_number):
             ema = calc_delayed_ema(args, ema, i, y_array)
         i = i_next
     index = rows_to_keep.get_index()
     if len(index) / len(y_array) < 0.8:
         print(f"For the dataset: {df.iloc[0]['id']}, {df.iloc[0]['excel_name']}, "
-              f"{np.rad2deg(df.iloc[0]['tilt_angle'])}° \n    only {round(len(index) / len(y_array),2)*100} % of the records are used.\n"
+              f"{np.rad2deg(df.iloc[0]['tilt_angle'])}° \n    only {round(len(index) / len(y_array), 2) * 100} % of the records are used.\n"
               f"    the iqr is: {iqr:.2E}")
 
         plot_data(y_array, index, df, args)
     return df.iloc[index]
+
 
 def plot_data(y_array, index, df, args):
     # Create a figure with two subplots
@@ -141,10 +142,12 @@ class RowsToKeep():
 
     def get_index(self):
         return list(self.rows_to_keep.keys())
+
+
 def load_xiaomei_single_dataset(args, path):
-    df = pd.read_csv(path,index_col=0)
+    df = pd.read_csv(path, index_col=0)
     df.columns = [s.strip() for s in df.columns]
-    df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001 # gamma is given as mN in the Dataset
+    df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001  # gamma is given as mN in the Dataset
     df['viscosity'] = df.loc[:, 'viscosity'].to_numpy() * 0.001
     df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy())
     df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
@@ -152,6 +155,7 @@ def load_xiaomei_single_dataset(args, path):
     df.rename(columns={args.target: 'y'}, inplace=True)
 
     return df
+
 
 def get_unit_dict(args):
     df_units = pd.read_csv(args.ROOT_DIR / args.path_to_units)
@@ -168,7 +172,7 @@ def split_train_test(files):
     train_files = []
     test_files = []
     for file in files:
-        id = '_'.join(file.name.split('_')[1:] )
+        id = '_'.join(file.name.split('_')[1:])
         if id in id_seen:
             train_files.append(file)
         else:
@@ -192,7 +196,6 @@ def split_n_folds(files, args):
     return fold_dict
 
 
-
 def distribute_other_files(args, fold_dict, system_dict):
     rest_files = []
     for excel_name, files in system_dict.items():
@@ -213,10 +216,7 @@ def add_one_file_from_each_system_to_fold_dict(args, fold_dict, system_dict):
 
 def split_train_test_sajjad(files):
     np.random.shuffle(files)
-    split_idx =int( len(files)* 0.66666)  # avoid 0 or full split
+    split_idx = int(len(files) * 0.66666)  # avoid 0 or full split
     train_files = files[:split_idx]
     test_files = files[split_idx:]
     return train_files, test_files
-
-
-
