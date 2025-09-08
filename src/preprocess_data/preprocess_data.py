@@ -105,7 +105,7 @@ def plot_data(y_array, index, df, args):
 
     # Display the plots
     plt.tight_layout()
-    plt.savefig(args.ROOT_DIR/"plots/filtering_of_data.pdf")
+    plt.savefig(args.ROOT_DIR / "plots/filtering_of_data.pdf")
 
 
 def calc_delayed_ema(args, ema, i, y_array):

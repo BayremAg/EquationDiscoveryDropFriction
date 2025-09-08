@@ -26,7 +26,7 @@ def histogram_for_features(args, filtered_dfs_test, tree):
         fig.tight_layout()
         cbar = fig.colorbar(im, ax=axs, orientation='horizontal', fraction=.1)
         cbar.set_label('Intensity')
-        fig.savefig(args.ROOT_DIR / f"plots/{args.exp_name}/histogram.pdf")
+        fig.savefig(args.save_path / f"histogram.pdf")
         plt.show()
     except Exception as e:
         print(f'Error in drawing histogram {e}')

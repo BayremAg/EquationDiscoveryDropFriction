@@ -25,8 +25,6 @@ class ConfigPlotBestEquation:
                                 'results/Aug_2025/12_Aug_2025_16:45:00_best_models_ID_error_per_dataset.json',
                             ])
 
-        parser.add_argument("--save_set_folder", type=str, default='Sajjad_Smoothed',
-                            help='Where to save the equation set')
 
         parser.add_argument("--n_folds", type=int, default=3)
         

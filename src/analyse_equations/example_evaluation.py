@@ -1,12 +1,10 @@
 import json
 
-from src.analyse_equations.analyse_equations import logger
 from src.equation_discovery.evaluate_equation import map_equation_to_syntax_tree
 
 
-def save_example_evaluation_dict(args, example_evaluation_dict):
-    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/example_evaluation.json'
-    save_path.parent.mkdir(parents=True, exist_ok=True)
+def save_example_evaluation_dict(args, example_evaluation_dict, logger):
+    save_path = args.save_path / 'example_evaluation.json'
     json.dump(example_evaluation_dict, open(save_path, 'w'), indent=4)
     logger.info(f"Example Evaluation is saved @ {save_path}")
 

@@ -1,4 +1,5 @@
 import traceback
+from pathlib import Path
 
 from src.SyntaxTree.src.equation_classes.Dimension_Array import UnitError
 from src.SyntaxTree.src.utils.error import MaxDepthError
@@ -36,7 +37,10 @@ def run():
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args = parser.parse_args()
-    args.save_path = args.ROOT_DIR / f'results/{args.save_set_folder}/equation_set_{args.exp_name}.json'
+    args.save_path = args.ROOT_DIR / (f'results/'
+                                      f'{Path(*Path(args.path_to_datasets).parts[1:])}'
+                                      f'/{args.exp_name}')
+    args.save_path.mkdir(parents=True, exist_ok=True)
     args.unit_dict = get_unit_dict(args)
     args.unit_dict['y'] = args.unit_dict[args.target]
     args.unit_dimension = 5
@@ -78,9 +82,11 @@ def run():
     ########################################
     ###### example evaluation dict #########
     ########################################
-
-    example_evaluation_dict = get_example_evaluation_dict(all_data_dfs, args, proposed_equations)
-    save_example_evaluation_dict(args, example_evaluation_dict)
+    num_variables = 2
+    example_evaluation_dict = get_example_evaluation_dict(all_data_dfs, args,
+                                                          proposed_equations,
+                                                          num_variables)
+    save_example_evaluation_dict(args, example_evaluation_dict, logger)
 
     ########################################
     ###### create error table ##############
@@ -223,8 +229,7 @@ def create_error_table(args, num_variables, proposed_equations, metric):
     df = proposed_equation_to_df(args, proposed_equations, num_variables, metric)
     df = df.sort_values(f'train all error {metric}')
     df['rank'] = range(len(df))
-    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_equations_{metric}.tex'
-    save_path.parent.mkdir(parents=True, exist_ok=True)
+    save_path = args.save_path / f'table_with_equations_{metric}.tex'
     latex_table = formate_latex_table_error(args, df)  # df.drop('infix', axis=1))
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
