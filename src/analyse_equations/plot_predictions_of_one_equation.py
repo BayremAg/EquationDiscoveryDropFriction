@@ -27,6 +27,7 @@ def run():
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args = parser.parse_args()
+    args.save_path = args.ROOT_DIR / f'plots/delete_me'
     np.random.seed(args.seed)
     random.seed(args.seed)
 
@@ -89,10 +90,8 @@ def plot_prediction(args, filtered_dfs_test, filtered_dfs_train, tree):
                  rotation=90
                  )
     fig.tight_layout()
-    equation_infix.replace('/', ':')
-    save_path = args.ROOT_DIR / (f"plots/{args.exp_name}/equations/prediction_"
-                                 f"{equation_infix.replace('/', ':')}.pdf")
-    print(f"Saving prediction plot to: {save_path}")
+    save_path = args.save_path / f"equations/predictions/{equation_id}__{equation_infix.replace('/', ':')}.pdf"
+    print(f"Saving prediction plot @: {save_path}")
     Path(save_path).parent.mkdir(exist_ok=True, parents=True)
     fig.savefig(save_path)
     plt.show()

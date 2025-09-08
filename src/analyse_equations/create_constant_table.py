@@ -18,7 +18,7 @@ def create_constant_table(all_data_dfs, args, equation, proposed_equations):
 
 def save_constant_table(args, logger, pd_constants):
     latex_table = formate_latex_constants(args, pd_constants)
-    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/table_with_constants.tex'
+    save_path = args.save_path / 'table_with_constants.tex'
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     logger.info(f"table with constants saved @ {save_path}")

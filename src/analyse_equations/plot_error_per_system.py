@@ -47,7 +47,7 @@ def plot_error_per_system(args, df, index, proposed_equations):
     #     labels=[f"{e:0.2e}"[:-4] for e in mean_abs_error])
     # ax2.set_ylabel('MSE')
     fig.tight_layout()
-    plt.savefig(args.ROOT_DIR / f"plots/{args.exp_name}/error_per_system.pdf")
+    plt.savefig(args.save_path / "error_per_system.pdf")
     plt.show()
 
 
@@ -72,8 +72,8 @@ def save_system_error_heatmap(args, pd_dict):
     ax.tick_params(axis='y', which='both', length=0)
 
     fig.tight_layout()
-    save_path = args.ROOT_DIR / f'plots/{args.exp_name}/error_per_system_heatmap.pdf'
-    print(f"Heatmap saved to {save_path}")
+    save_path = args.save_path / 'error_per_system_heatmap.pdf'
+    print(f"Heatmap saved @ {save_path}")
     fig.savefig(save_path)
     fig.show()
 
