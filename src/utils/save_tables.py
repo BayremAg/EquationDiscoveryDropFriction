@@ -2,13 +2,13 @@ import re
 import sympy as sp
 
 def formate_latex_table_error(args, df):
+    df['id'] = df.index
     df = df.set_index(['rank']).drop(['equation'], axis=1)
     df['infix'] = df.apply(lambda row: equation_to_latex(args, row['infix']), axis=1)
     df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
 
     latex_table = df.to_latex()
-    latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
-    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
+
     latex_table = latex_table.replace(";", "\;")
     latex_table = latex_table.replace("**", "\hat{}")
     latex_table = latex_table.replace("*", "\cdot")
@@ -37,9 +37,12 @@ def formate_latex_table_error(args, df):
     latex_table = latex_table.replace("droplength", "d")
     latex_table = latex_table.replace("adv", "\\theta_{as}")
     latex_table = latex_table.replace("rec", "\\theta_{rs}")
+    latex_table = latex_table.replace("mid", "\\theta_{mid}")
     latex_table = latex_table.replace("c ", "c_")
     latex_table = latex_table.replace("ycenter", "y_c")
     latex_table = latex_table.replace("\\frac", "\\displaystyle\\frac")
+    latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
+    latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
 
 
     return latex_table

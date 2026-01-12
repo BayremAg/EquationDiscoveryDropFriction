@@ -27,7 +27,7 @@ def run():
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args = parser.parse_args()
-    args.save_path = args.ROOT_DIR / f'plots/delete_me'
+    args.save_path = args.ROOT_DIR / f'results/Nov_2025'
     np.random.seed(args.seed)
     random.seed(args.seed)
 

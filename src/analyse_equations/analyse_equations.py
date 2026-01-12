@@ -36,7 +36,7 @@ def run():
     parser = ConfigEquationDiscovery.arguments_parser(parser)
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
     args.save_path = args.ROOT_DIR / (f'results/'
                                       f'{Path(*Path(args.path_to_datasets).parts[1:])}'
                                       f'/{args.exp_name}')
@@ -82,7 +82,7 @@ def run():
     ########################################
     ###### example evaluation dict #########
     ########################################
-    num_variables = 2
+    num_variables = 1
     example_evaluation_dict = get_example_evaluation_dict(all_data_dfs, args,
                                                           proposed_equations,
                                                           num_variables)

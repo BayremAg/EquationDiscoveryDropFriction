@@ -79,7 +79,7 @@ def filter_moving_average(df, args):
             ema = calc_delayed_ema(args, ema, i, y_array)
         i = i_next
     index = rows_to_keep.get_index()
-    if len(index) / len(y_array) < 0.8:
+    if len(index) / len(y_array) < 1:
         print(f"For the dataset: {df.iloc[0]['id']}, {df.iloc[0]['excel_name']}, "
               f"{np.rad2deg(df.iloc[0]['tilt_angle'])}° \n    only {round(len(index) / len(y_array), 2) * 100} % of the records are used.\n"
               f"    the iqr is: {iqr:.2E}")

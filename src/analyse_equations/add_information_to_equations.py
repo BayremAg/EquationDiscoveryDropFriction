@@ -94,10 +94,11 @@ def add_proposed_equations(args, proposed_equations):
         proposed_equations['/ * adv * c - adv rec drop_length'] = {'manuel':True}
         proposed_equations['* * c - adv rec exp sin rec'] = {'manuel':True}
         proposed_equations['*  c sin - adv rec'] = {'manuel':True}
+        proposed_equations[" * c  / width drop_length   "] = {'manuel': True}
         proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei','manuel':True}
         proposed_equations[' + c * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki', 'manuel':True}
         proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width ','manuel':True}
-
+    total_equations = 0
     for i, path in enumerate(args.paths_to_load_results):
         print(f'Loading {i}/{len(args.paths_to_load_results)} results from: ' + path)
         with open(args.ROOT_DIR / path, 'r') as input_file:
@@ -108,6 +109,7 @@ def add_proposed_equations(args, proposed_equations):
                         for i, equation_dict in values.items():
                             train_dict = equation_dict['train']
                             if 'prefix' in train_dict:
+                                total_equations +=1
                                 prefix = simplify_prefix(args, train_dict)
                                 if not prefix in proposed_equations:
                                     if train_dict['error'] < 7e-9:
@@ -115,3 +117,4 @@ def add_proposed_equations(args, proposed_equations):
                                         proposed_equations[prefix] = {'train': train_dict}
                     except Exception as e:
                         pass
+    print(f'Total equations: {total_equations}')
