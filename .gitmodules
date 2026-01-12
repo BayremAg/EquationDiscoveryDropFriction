@@ -1,3 +1,9 @@
 [submodule "src/SyntaxTree"]
 	path = src/SyntaxTree
 	url = https://github.com/wwjbrugger/SyntaxTree.git
+[submodule "src/DSO"]
+	path = src/DSO
+	url = https://github.com/wwjbrugger/deep-symbolic-optimization.git
+[submodule "src/HerNeuralMCTS"]
+	path = src/HerNeuralMCTS
+	url = git@github.com:wwjbrugger/her-neural-mcts.git
