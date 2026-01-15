@@ -17,7 +17,8 @@ git submodule update --init --recursive
 ```
 If it doesn't work, we can also download it manually.
 ```
- git submodule add https://github.com/wwjbrugger/SyntaxTree.git Syntax
+ git submodule add https://github.com/wwjbrugger/SyntaxTree.git SyntaxTree
+ git submodule add git@github.com:wwjbrugger/her-neural-mcts.git HerNeuralMCTS
 ```
 # Virtual Enviroment 
 
@@ -52,3 +53,18 @@ The results are stored in `\results`
 
 2. To compare the equations with each other, there is the folder `\analyse_equations` the two scripts `analyse_equations.py` and `analyse_equations.ipynb` contain more or less the same code depending on whether you prefer to work with pure python or with notebooks.
 The most important parameters can be changed in `src/analyse_equations/config_analyse_equations.py`.
+
+### Environment 
+equation_discovery_drop_friction/bin/python3
+venv_Robot_Scientist/bin/python3.10
+Python 3.9 (her-neural-mcts_env_3_9)
+EquationDiscoveryDropFriction_3_9
+
+python -m pip install -r requirements3_9.txt
+conda activate EquatationDiscoveryDropFriction_3_9
+
+#  * c  * width  -  cos rec  cos adv  
+
+# Equation Discovery: 
+##MGMT
+Model are saved in: {Project_Root}/saved_models/NGED_{Input_Features}
