@@ -100,12 +100,33 @@ def run():
     df_error = create_error_table(args, num_variables, proposed_equations, metric='error')
     create_error_table(args, num_variables, proposed_equations, metric='error_mse')
     create_error_table(args, num_variables, proposed_equations, metric='err_rel')
+    create_error_table(args, num_variables, proposed_equations, metric='err_percent')
 
     indices_best_equations = list(df_error.index)
     ########################################
     ###### create heat map local ##############
     ########################################
     indices = indices_best_equations[:3]
+    metric = 'error'
+    pd_dict = heatmap_error_per_system(
+        all_data_dfs,
+        args,
+        df_error,
+        proposed_equations,
+        indices,
+        metric
+    )
+    save_system_error_heatmap(args, pd_dict, metric=metric)
+    metric = 'error_mse'
+    pd_dict = heatmap_error_per_system(
+        all_data_dfs,
+        args,
+        df_error,
+        proposed_equations,
+        indices,
+        metric
+    )
+    save_system_error_heatmap(args, pd_dict, metric=metric)
     metric = 'err_rel'
     pd_dict = heatmap_error_per_system(
         all_data_dfs,
@@ -115,7 +136,17 @@ def run():
         indices,
         metric
     )
-    save_system_error_heatmap(args, pd_dict)
+    save_system_error_heatmap(args, pd_dict, metric=metric)
+    metric = 'err_percent'
+    pd_dict = heatmap_error_per_system(
+        all_data_dfs,
+        args,
+        df_error,
+        proposed_equations,
+        indices,
+        metric
+    )
+    save_system_error_heatmap(args, pd_dict, metric=metric)
     ########################################
     ###### create constant table ##############
     ########################################
