@@ -58,6 +58,7 @@ def get_data_folds(args, proposed_equations):
         files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()
                  if f.is_file()
                  ]
+        files.sort()
         fold_dict = split_n_folds(files, args)
     return fold_dict
 
