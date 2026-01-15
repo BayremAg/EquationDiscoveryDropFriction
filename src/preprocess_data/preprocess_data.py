@@ -48,14 +48,18 @@ def load_Sajjad(args, path):
     return df
 
 
-def prepare_dataset(args, files):
-    other_files = random.sample(files, len(files))
+def prepare_dataset(args, files, print_len_frame = True):
+    if print_len_frame :
+        i = 0
     filtered_dfs = []
-    for f in other_files:
+    for f in files:
         df = load_Sajjad(args, f)
         filtered_df = filter_moving_average(df, args)
         filtered_dfs.append(filtered_df)
+        i += len(df)
     filtered_dfs = pd.concat(filtered_dfs, axis=0, ignore_index=True)
+    if print_len_frame :
+        print(f"Len should be {i} len is {len(filtered_dfs)}")
     return filtered_dfs
 
 
