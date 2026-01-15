@@ -81,10 +81,18 @@ def evaluate_average_error_per_dataset(args, filtered_dfs_train, tree, method):
     average_error_per_video = np.mean([v['error'] for v in error_per_video.values()])
     average_error_mse_per_video = np.mean([v['error_mse'] for v in error_per_video.values()])
     average_error_rel_per_video = np.mean([v['err_rel'] for v in error_per_video.values()])
-    err_dict = error_per_video[video_id]
-    err_dict['error'] = average_error_per_video
-    err_dict['error_mse'] = average_error_mse_per_video
-    err_dict['err_rel'] = average_error_rel_per_video
+    average_err_percent_per_video = np.mean([v['err_percent'] for v in error_per_video.values()])
+    err_dict = {
+        'constants' : error_per_video[video_id]['constants'],
+        'err_percent': average_err_percent_per_video,
+        'err_rel': average_error_rel_per_video,
+        'error': average_error_per_video,
+        'error_mse': average_error_mse_per_video,
+        'infix': error_per_video[video_id]['infix'],
+        'num_constants': error_per_video[video_id]['num_constants'],
+        'num_operations': error_per_video[video_id]['num_operations'],
+        'prefix': error_per_video[video_id]['prefix']
+    }
     return err_dict
 
 
