@@ -9,7 +9,7 @@ class ConfigPlotBestEquation:
         if not parser:
             parser = ArgumentParser(description="Parser for options which equation to plot")
 
-        parser.add_argument('--paths_to_load_results', nargs='+',
+        parser.add_argument('--paths_to_load_results', nargs='*',
                             help='List of strings',
                             default=[
                                 'results/Sajjad_Smoothed/02_Jun_2025_23:47:32_best_models_NGED.json',
