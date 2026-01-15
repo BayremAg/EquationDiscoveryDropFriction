@@ -44,7 +44,7 @@ def run():
     np.random.seed(args.seed)
     args.save_path = args.ROOT_DIR / (f'results/'
                                       f'{Path(*Path(args.path_to_datasets).parts[1:])}'
-                                      f'/{args.exp_name}')
+                                      f'/{args.exp_name}_py')
     args.save_path.mkdir(parents=True, exist_ok=True)
     args.unit_dict = get_unit_dict(args)
     args.unit_dict['y'] = args.unit_dict[args.target]
