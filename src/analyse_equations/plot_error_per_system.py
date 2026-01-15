@@ -51,7 +51,7 @@ def plot_error_per_system(args, df, index, proposed_equations):
     plt.show()
 
 
-def save_system_error_heatmap(args, pd_dict):
+def save_system_error_heatmap(args, pd_dict, metric=''):
     pd_constants_values = pd.DataFrame(pd_dict)
     pd_constants_values = pd_constants_values.rename(columns=dict_pre_to_infix)
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -61,9 +61,9 @@ def save_system_error_heatmap(args, pd_dict):
                 ax=ax, cbar=False)
     sns.heatmap(pd_constants_values, alpha=0.0, fmt=".2e", cmap='Oranges',
                 cbar=False, annot=True, mask=mask)
-    sns.heatmap(np.abs(pd_constants_values), mask=np.logical_not(mask),
-                cmap='Purples', linewidths=1.5, ax=ax, cbar=False)
-    sns.heatmap(pd_constants_values, alpha=0.0, fmt=".2", cmap='Purples',
+    sns.heatmap(pd_constants_values, mask=np.logical_not(mask),
+                cmap='BrBG', linewidths=1.5, ax=ax, cbar=False)
+    sns.heatmap(pd_constants_values, alpha=0.0, fmt=".2", cmap='BrBG',
                 cbar=False, annot=True, mask=np.logical_not(mask))
     ax.xaxis.tick_top()
     ax.set_xticklabels(rotation=45, labels=[label.get_text() for label in ax.get_xticklabels()],
@@ -72,7 +72,7 @@ def save_system_error_heatmap(args, pd_dict):
     ax.tick_params(axis='y', which='both', length=0)
 
     fig.tight_layout()
-    save_path = args.save_path / 'error_per_system_heatmap.pdf'
+    save_path = args.save_path / f'error_per_system_heatmap_{metric}.pdf'
     print(f"Heatmap saved @ {save_path}")
     fig.savefig(save_path)
     fig.show()
