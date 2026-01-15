@@ -1,3 +1,5 @@
+import random
+import numpy as np
 import traceback
 from pathlib import Path
 
@@ -37,6 +39,9 @@ def run():
     parser = ConfigPlotBestEquation.arguments_parser(parser)
     parser = ConfigSyntaxTree.arguments_parser(parser)
     args, unknown = parser.parse_known_args()
+
+    random.seed(args.seed)
+    np.random.seed(args.seed)
     args.save_path = args.ROOT_DIR / (f'results/'
                                       f'{Path(*Path(args.path_to_datasets).parts[1:])}'
                                       f'/{args.exp_name}')
