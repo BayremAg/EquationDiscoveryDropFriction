@@ -17,7 +17,7 @@ class ConfigLoadData:
                             help='Column name which gives the system id')
 
         parser.add_argument("--path_to_datasets", type=str,
-                            default='data/Aug_2025',
+                            default='data/Nov_2025/unmodified',
                             help='Path to the folder with the data sets we would like to fit inside ')
 
         parser.add_argument("--path_to_units", type=str,
