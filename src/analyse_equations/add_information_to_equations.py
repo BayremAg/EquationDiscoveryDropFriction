@@ -58,7 +58,7 @@ def fit_and_evaluate(args, equation, filtered_dfs_test, filtered_dfs_train, prop
                                                       method=evaluate_equation
                                                       )
         err_dict_test =  evaluate_average_error_per_dataset(args,
-                                                      filtered_dfs_train,
+                                                      filtered_dfs_test,
                                                       tree,
                                                       method=test_equation
                                                       )
