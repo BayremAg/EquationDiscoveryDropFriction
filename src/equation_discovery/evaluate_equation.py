@@ -6,7 +6,7 @@ from src.SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
 from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 import traceback
 
-from src.equation_discovery.rewards import ReMSe
+from src.equation_discovery.rewards import ReRMSE
 
 
 def evaluate_equation(args, tree, X_df):
@@ -14,7 +14,7 @@ def evaluate_equation(args, tree, X_df):
         y_pred = tree.evaluate_subtree(-1, X_df)
         err = mean_absolute_error(y_pred, X_df.loc[:, 'y'])
         err_mse = mean_squared_error(y_pred, X_df.loc[:, 'y'])
-        err_rel = ReMSe(y_pred=y_pred, y_true=X_df.loc[:, 'y'].to_numpy())
+        err_rel = ReRMSE(y_pred=y_pred, y_true=X_df.loc[:, 'y'].to_numpy())
         err_percent = mean_absolute_percentage_error(
             y_pred=y_pred,
             y_true=X_df.loc[:, 'y'].to_numpy(),
