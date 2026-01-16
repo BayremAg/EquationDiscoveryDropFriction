@@ -104,7 +104,7 @@ def add_proposed_equations(args, proposed_equations):
         proposed_equations['*  c sin - adv rec'] = {'manuel':True}
         proposed_equations[" * c  / width drop_length   "] = {'manuel': True}
         proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei','manuel':True}
-        proposed_equations[' + c * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki', 'manuel':True}
+        proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki', 'manuel':True}
         proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width ','manuel':True}
     total_equations = 0
     for i, path in enumerate(args.paths_to_load_results):
