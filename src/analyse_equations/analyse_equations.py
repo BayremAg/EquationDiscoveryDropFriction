@@ -25,7 +25,7 @@ from src.config.config_hyperparameter import ConfigHyperparameter
 import pandas as pd
 import logging
 
-from src.utils.save_tables import formate_latex_table_error
+from src.utils.save_tables import formate_latex_table_error, replace_for_latex, equation_to_latex
 
 logger = logging.getLogger(__name__)
 
@@ -98,11 +98,11 @@ def run():
     ########################################
     num_variables = 1
     df_error = create_error_table(args, num_variables, proposed_equations, metric='error')
-    create_error_table(args, num_variables, proposed_equations, metric='error_mse')
-    create_error_table(args, num_variables, proposed_equations, metric='err_rel')
-    create_error_table(args, num_variables, proposed_equations, metric='err_percent')
-    create_error_table(args, num_variables, proposed_equations, metric='err_r2')
-
+    df_error_mse = create_error_table(args, num_variables, proposed_equations, metric='error_mse')
+    df_err_rel = create_error_table(args, num_variables, proposed_equations, metric='err_rel')
+    df_percent_error = create_error_table(args, num_variables, proposed_equations, metric='err_percent')
+    df_r2_error = create_error_table(args, num_variables, proposed_equations,
+                                     metric='err_r2', ascending=False)
     indices_best_equations = list(df_error.index)
     ########################################
     ###### create heat map local ##############
@@ -148,8 +148,7 @@ def run():
         metric
     )
     save_system_error_heatmap(args, pd_dict, metric=metric)
-    
-    save_system_error_heatmap(args, pd_dict, metric=metric)
+
     metric = 'err_r2'
     pd_dict = heatmap_error_per_system(
         all_data_dfs,
@@ -159,7 +158,8 @@ def run():
         indices,
         metric
     )
-    save_system_error_heatmap(args, pd_dict, metric=metric)
+    save_system_error_heatmap(args, pd_dict, metric=metric, fmt_error='.4', fmt_const='.2',
+                              round_to_digits=2, reverse_color_map=True, kwags={'vmin': -2, 'vmax': 1})
     ########################################
     ###### create constant table ##############
     ########################################
@@ -276,12 +276,12 @@ def get_current_fold(fold_id, folds_dict):
     return files_test, files_train
 
 
-def create_error_table(args, num_variables, proposed_equations, metric):
+def create_error_table(args, num_variables, proposed_equations, metric, ascending=True):
     df = proposed_equation_to_df(args, proposed_equations, num_variables, metric)
-    df = df.sort_values(f'train all error {metric}')
-    df['rank'] = range(len(df))
+    df = df.sort_values(f'train all error {metric}', ascending = ascending)
+    df[f'rank_{metric}'] = range(1, len(df)+1, 1)
     save_path = args.save_path / f'table_with_equations_{metric}.tex'
-    latex_table = formate_latex_table_error(args, df)  # df.drop('infix', axis=1))
+    latex_table = formate_latex_table_error(args, df, metric)  # df.drop('infix', axis=1))
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     logger.info(f"table with errors saved @{save_path}")
@@ -329,6 +329,17 @@ def proposed_equation_to_df(args, proposed_equations, num_variables, metric='err
     df = pd.DataFrame(pd_dict)
     return df.T
 
-
+def use_same_exponent_in_column(df, column, exponent):
+    divisor = 10 ** exponent
+    df[f"{column} * 10^{exponent}"] = df[column].apply(
+        lambda x: f"{x / divisor:.1f}"
+    )
+    columns = list(df.columns)
+    index = columns.index(column)
+    columns.pop(index)
+    columns.pop(-1)
+    columns.insert(index, f"{column} * 10^{exponent}")
+    df = df[columns]
+    return df
 if __name__ == '__main__':
     run()
