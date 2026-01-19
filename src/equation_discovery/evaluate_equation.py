@@ -1,7 +1,7 @@
 import re
 
 import numpy as np
-from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error, r2_score
 from src.SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
 from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 import traceback
@@ -20,11 +20,13 @@ def evaluate_equation(args, tree, X_df):
             y_true=X_df.loc[:, 'y'].to_numpy(),
             multioutput='uniform_average'
         ) *100
+        err_r2 = r2_score( X_df.loc[:, 'y'], y_pred)
         output = {}
         output['error'] = err
         output['error_mse'] = err_mse
         output['err_rel'] = err_rel
         output['err_percent'] = err_percent
+        output['err_r2'] = err_r2
         output['infix'] = tree.rearrange_equation_infix_notation()[-1]
         output['prefix'] = tree.rearrange_equation_prefix_notation()[-1]
         output['num_operations'] = tree.num_inner_nodes()
