@@ -1,12 +1,17 @@
 import re
 import sympy as sp
 
-def formate_latex_table_error(args, df):
+def formate_latex_table_error(args, df, metric):
     df['id'] = df.index
-    df = df.set_index(['rank']).drop(['equation'], axis=1)
+    df = df.set_index([f'rank_{metric}']).drop(['equation'], axis=1)
     df['infix'] = df.apply(lambda row: equation_to_latex(args, row['infix']), axis=1)
     df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
+    latex_table = replace_for_latex(df)
 
+    return latex_table
+
+
+def replace_for_latex(df):
     latex_table = df.to_latex()
 
     latex_table = latex_table.replace(";", "\;")
@@ -43,13 +48,10 @@ def formate_latex_table_error(args, df):
     latex_table = latex_table.replace("\\frac", "\\displaystyle\\frac")
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
     latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
-
-
     return latex_table
 
 def formate_latex_constants(args, df):
     df = df.map(lambda x: f'{x:.2e}' if isinstance(x, (int, float)) else x)
-    #df['equation'] = df['equation'].apply(lambda x: '$' + x.replace(' ', '\;') + '$')
     latex_table = df.to_latex()
     latex_table = latex_table.replace("tabular}", "tabularx}{\\textwidth}")
     latex_table = latex_table.replace("\\end{tabularx}{\\textwidth}", "\end{tabularx}")
