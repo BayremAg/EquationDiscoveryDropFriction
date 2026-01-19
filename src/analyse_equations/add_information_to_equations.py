@@ -45,7 +45,14 @@ def add_performance_per_system(args, equation, filtered_dfs_test, proposed_equat
     test_error_system = {}
     for id in system_ids:
         df_system = filtered_dfs_test[filtered_dfs_test[system_id_column] == id]
-        test_error_system[id] = test_equation(args, tree, df_system)
+        if args.error_per_dataset:
+            test_error_system[id] = evaluate_average_error_per_dataset(args,
+                                               df_system,
+                                               tree,
+                                               method=test_equation
+                                               )
+        else:
+            test_error_system[id] = test_equation(args, tree, df_system)
     proposed_equations[equation]['test_error_system'] = test_error_system
 
 def fit_and_evaluate(args, equation, filtered_dfs_test, filtered_dfs_train, proposed_equations, fold_id):
