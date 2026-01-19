@@ -272,7 +272,7 @@ def create_error_table(args, num_variables, proposed_equations, metric):
     with open(save_path, "w") as text_file:
         text_file.write(latex_table)
     logger.info(f"table with errors saved @{save_path}")
-    print(df)
+    #print(df)
     return df
 
 
