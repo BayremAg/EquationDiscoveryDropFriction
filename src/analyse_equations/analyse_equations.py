@@ -104,6 +104,31 @@ def run():
     df_r2_error = create_error_table(args, num_variables, proposed_equations,
                                      metric='err_r2', ascending=False)
     indices_best_equations = list(df_error.index)
+
+    ########################################
+    ###### combine MAE and R2 table ########
+    ########################################
+
+    merged_df = df_error.merge(df_r2_error, on='id',  suffixes=('', '_drop'))
+    merged_df = merged_df.loc[:, ~merged_df.columns.str.endswith('_drop')]
+    merged_df = merged_df.drop(columns=['fold mean train error', 'id', 'fold mean train err_r2', 'equation'])
+
+    merged_df = use_same_exponent_in_column(merged_df, 'fold mean test error',
+                                            exponent=-6)
+    merged_df = use_same_exponent_in_column(merged_df, 'train all error error',
+                                            exponent=-6)
+    merged_df = use_same_exponent_in_column(merged_df, 'calc. std',
+                                            exponent=-7)
+    merged_df['fold mean test err_r2'] = merged_df['fold mean test err_r2'].astype(float).round(2)
+    merged_df['train all error err_r2'] = merged_df['train all error err_r2'].astype(float).round(2)
+
+    merged_df['infix'] = merged_df.apply(lambda row: equation_to_latex(args, row['infix']), axis=1)
+
+    merged_latex = replace_for_latex(merged_df)
+    save_path = args.save_path / f'table_with_equations_MAE_R2_combined.tex'
+    with open(save_path, "w") as text_file:
+        text_file.write(merged_latex)
+    logger.info(f"table with errors saved @{save_path}")
     ########################################
     ###### create heat map local ##############
     ########################################
