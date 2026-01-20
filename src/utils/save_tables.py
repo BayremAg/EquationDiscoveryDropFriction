@@ -28,6 +28,8 @@ def replace_for_latex(df):
     latex_table = latex_table.replace("lllll", "lRRRR")
     latex_table = latex_table.replace("varnothing", "$\\varnothing$")
     latex_table = latex_table.replace("phantom", "\\phantom")
+    latex_table = latex_table.replace(".0000 ", "\phantom{.0000} ")
+    latex_table = latex_table.replace(".000 ", "\phantom{.000} ")
     latex_table = latex_table.replace(".00 ", "\phantom{.00} ")
     latex_table = latex_table.replace(".0 ", "\phantom{.0} ")
 
