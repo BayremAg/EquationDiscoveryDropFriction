@@ -166,7 +166,7 @@ def get_unit_dict(args):
     units = {}
     for i in range(len(df_units["Variable"])):
         val = [df_units["m"][i], df_units["s"][i], df_units["kg"][i], df_units["T"][i], df_units["V"][i]]
-        val = np.array(val)
+        val = np.array(val,dtype=np.float64 )
         units[df_units["Variable"][i]] = val
     return units
 
