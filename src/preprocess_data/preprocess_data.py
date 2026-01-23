@@ -148,18 +148,6 @@ class RowsToKeep():
         return list(self.rows_to_keep.keys())
 
 
-def load_xiaomei_single_dataset(args, path):
-    df = pd.read_csv(path, index_col=0)
-    df.columns = [s.strip() for s in df.columns]
-    df['gamma'] = df.loc[:, 'gamma'].to_numpy() * 0.001  # gamma is given as mN in the Dataset
-    df['viscosity'] = df.loc[:, 'viscosity'].to_numpy() * 0.001
-    df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy())
-    df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
-    df['tilt_angle'] = np.deg2rad(df.loc[:, 'tilt_angle'].to_numpy())
-    df.rename(columns={args.target: 'y'}, inplace=True)
-
-    return df
-
 
 def get_unit_dict(args):
     df_units = pd.read_csv(args.ROOT_DIR / args.path_to_units)
