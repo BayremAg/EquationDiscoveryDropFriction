@@ -17,6 +17,7 @@ dict_pre_to_infix = {
     ' * c  / drop_length width  ' : '$\\dfrac{c \\cdot d }{w}$',
     ' / drop_length  * c  * rec y_center   ':  '$\\dfrac{ d }{ c \\cdot \\theta_{rs} \\cdot y_c}$',
     '+ c * friction_coef * width * viscosity avg_vel' : '$c + \\beta \cdot w \cdot \\eta \cdot v$',
+    ' * c  / drop_length rec  ': '$\\dfrac{ c \\cdot d }{\\theta_{rs}}$',
     ' * 2  *  ** drop_length 2   + avg_vel c   ' : '$2 \\cdot d^2  (v + c)$',
     ' / drop_length  * c rec  ' : '$\\dfrac{ d }{c \\cdot \\theta_{rs}}$',
     ' + c * c * width - cos rec  cos adv ' : '$c + c \cdot w  \cdot (\\cos \\theta_{rs} - \\cos \\theta_{ad})$',
