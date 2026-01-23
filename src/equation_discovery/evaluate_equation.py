@@ -6,7 +6,7 @@ from src.SyntaxTree.src.equation_classes.infix_to_prefix import InfixToPrefix
 from src.SyntaxTree.src.syntax_tree.syntax_tree import SyntaxTree
 import traceback
 
-from src.equation_discovery.rewards import ReRMSE
+from src.equation_discovery.rewards import ReRMSE,  R2_y_true_mean_precomputed
 
 
 def evaluate_equation(args, tree, X_df):
@@ -20,7 +20,8 @@ def evaluate_equation(args, tree, X_df):
             y_true=X_df.loc[:, 'y'].to_numpy(),
             multioutput='uniform_average'
         ) *100
-        err_r2 = r2_score( X_df.loc[:, 'y'], y_pred)
+        #err_r2 = r2_score( X_df.loc[:, 'y'], y_pred)
+        err_r2 = R2_y_true_mean_precomputed(args, X_df, y_pred)
         output = {}
         output['error'] = err
         output['error_mse'] = err_mse

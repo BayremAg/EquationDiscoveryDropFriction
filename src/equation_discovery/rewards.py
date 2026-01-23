@@ -10,6 +10,15 @@ def ReRMSE(y_pred, y_true):
 
     return float(rermse)
 
+def R2_y_true_mean_precomputed(args, X_df, y_pred):
+    y_true = X_df.loc[:, 'y'].to_numpy()
+
+    ss_res = np.sum((y_true - y_pred)**2)
+    y_true_mean = X_df.loc[:, args.system_id_column].replace(args.liquid_surface_mean).to_numpy()
+    ss_tot = np.sum((y_true - y_true_mean)**2)
+    r2 = 1 - (ss_res/ss_tot)
+    return float(r2)
+
 
 
 def Mse(y_pred, y_true):
