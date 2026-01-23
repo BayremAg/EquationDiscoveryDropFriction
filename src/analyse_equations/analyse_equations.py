@@ -50,16 +50,15 @@ def run():
     args.unit_dict['y'] = args.unit_dict[args.target]
     args.unit_dimension = 5
     measurement_error_dic = {
-        'drop_length': 0.000042,
-        'adv': 0.07696902,
-        'rec': 0.03298672,
-        'avg_vel': 0.0021,
-        'width': 0.00005,
-        'y_center': 0.000003,
-        'middle_angle': 0.03141593,
-        'x_center': 0.0000042,
-        'static_adv': 0.01570796,
-        'static_rec': 0.01570796
+        'drop_length': 4.2e-5,  # m
+        'adv': np.rad2deg(3),
+        'rec': np.rad2deg(3),
+        'mid': np.rad2deg(3),
+        'avg_vel': 5e-3,
+        'width': 5e-5,
+        'y_center': 5e-5,
+        'static_adv': np.rad2deg(3),
+        'static_rec': np.rad2deg(3)
     }
     logging.basicConfig(level=logging.INFO)
 
