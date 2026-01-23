@@ -39,7 +39,7 @@ def replace_for_latex(df):
     latex_table = latex_table.replace("runtime", "Running Time [sec]")
     latex_table = latex_table.replace("width", "w")
     latex_table = latex_table.replace("viscosity", "\\eta")
-    latex_table = latex_table.replace("avgvel", "v")
+    latex_table = latex_table.replace("avgvel", "U")
     latex_table = latex_table.replace("frictioncoef", "\\beta")
     latex_table = latex_table.replace("droplength", "d")
     latex_table = latex_table.replace("adv", "\\theta_{as}")
