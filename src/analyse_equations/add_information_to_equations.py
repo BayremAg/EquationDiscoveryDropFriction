@@ -9,23 +9,41 @@ from src.equation_discovery.fit_constant import fit_constants
 def add_propagate_error(args, equation, all_data_dfs, measurement_error_dic, proposed_equations, tree, logger):
     fold_id = 0
     if 'constants' in proposed_equations[equation][fold_id]['train']:
-        equation_infix = tree.start_node.parent_node.math_class.infix_notation(
-            call_node_id=-1,
-            kwargs=proposed_equations[equation][fold_id]['train']['constants']['average']
-        )
+        materials = list(proposed_equations[equation][fold_id]['train']['constants'].keys())
+        materials.remove('average')
+        materials.remove('num_fitted_constants')
+        prop_error = []
+        derivative_dict = {}
+        for m in materials:
+            equation_infix = tree.start_node.parent_node.math_class.infix_notation(
+                call_node_id=-1,
+                kwargs=proposed_equations[equation][fold_id]['train']['constants'][m]
+            )
+            e = propagate_error(args,
+                            equation_infix=equation_infix,
+                            measurement_error_dic=measurement_error_dic,
+                            df=all_data_dfs[all_data_dfs[args.system_id_column] == m],
+                            logger=logger)
+            prop_error.append(e['mean_error'])
+
+        derivative_dict['derivative'] = e['derivative']
+        derivative_dict['equation_infix'] = e['equation_infix']
+        derivative_dict['mean_error'] = np.mean(prop_error)
+
+
     else:
         equation_infix = tree.start_node.parent_node.math_class.infix_notation(
             call_node_id=-1,
             kwargs={}
-        )
-    proposed_equations[equation]['error_propagation'] = (
-        propagate_error(args,
-                        equation_infix=equation_infix,
-                        measurement_error_dic=measurement_error_dic,
-                        df=all_data_dfs,
-                        logger=logger)
+            )
+        derivative_dict = (
+            propagate_error(args,
+                            equation_infix=equation_infix,
+                            measurement_error_dic=measurement_error_dic,
+                            df=all_data_dfs,
+                            logger=logger)
     )
-    pass
+    proposed_equations[equation]['error_propagation'] = derivative_dict
 
 
 def add_units(args, equation, filtered_dfs_train, proposed_equations, tree):
