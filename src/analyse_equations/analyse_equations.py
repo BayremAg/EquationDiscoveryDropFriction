@@ -70,6 +70,11 @@ def run():
     all_files = []
     for excel_name, files in folds_dict.items():
         all_files.extend(files)
+    ########################################
+    ##### Mean per liquid surface #########
+    ########################################
+
+    mean_per_liquid_surface(all_files, args)
 
     ########################################
     ######## Cross Validation ##############
@@ -229,6 +234,17 @@ def run():
     index_0 = indices_best_equations[0]
     index_1 = indices_best_equations[1]
     abs_difference_between_equation(args, proposed_equations, df_error, all_data_dfs, index_0, index_1)
+
+
+def mean_per_liquid_surface(all_files, args):
+    args.liquid_surface_mean = {}
+    filtered_dfs = prepare_dataset(args, all_files)
+    for liquid_surface in filtered_dfs.loc[:, args.system_id_column].unique():
+        liquid_surface_df = filtered_dfs[filtered_dfs[args.system_id_column] == liquid_surface]
+        liquid_surface_mean = liquid_surface_df.loc[:, 'y'].mean()
+        args.liquid_surface_mean[liquid_surface] = liquid_surface_mean
+    print('Mean of the surface liquid combinations:')
+    print(pd.Series(args.liquid_surface_mean))
 
 
 def add_all_data_error(all_data_dfs, args, proposed_equations):
