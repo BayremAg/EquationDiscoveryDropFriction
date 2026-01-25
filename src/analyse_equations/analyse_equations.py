@@ -347,6 +347,7 @@ def set_pandas_options():
     pd.set_option('display.max_rows', None)  # Ensure all rows are displayed
     pd.set_option('display.max_colwidth', None)
     pd.set_option('display.float_format', '{:.2e}'.format)
+    pd.set_option('future.no_silent_downcasting', True)
 
 
 def proposed_equation_to_df(args, proposed_equations, num_variables, metric='error'):
