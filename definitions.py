@@ -1,7 +1,7 @@
 import pathlib
 
 ROOT_DIR = pathlib.Path(__file__).parent.resolve()
-colors = ['aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral',
+colors = ['aqua',  'black', 'blue', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral',
           'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkorange',
           'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey',
           'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'greenyellow', 'grey', 'honeydew', 'hotpink',
@@ -16,7 +16,8 @@ colors = ['aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'bisque', 'black', 
 dict_pre_to_infix = {
     ' * c  / drop_length width  ' : '$\\dfrac{c \\cdot d }{w}$',
     ' / drop_length  * c  * rec y_center   ':  '$\\dfrac{ d }{ c \\cdot \\theta_{rs} \\cdot y_c}$',
-    '+ c * friction_coef * width * viscosity avg_vel' : '$c + \\beta \cdot w \cdot \\eta \cdot v$',
+    '+ c * friction_coef * width * viscosity avg_vel' : '$c + \\beta \cdot w \\cdot \\eta \\cdot v$',
+    '+ c * c * width avg_vel' : '$c +  c \\cdot w \\cdot v$',
     ' * c  / drop_length rec  ': '$\\dfrac{ c \\cdot d }{\\theta_{rs}}$',
     ' * 2  *  ** drop_length 2   + avg_vel c   ' : '$2 \\cdot d^2  (v + c)$',
     ' / drop_length  * c rec  ' : '$\\dfrac{ d }{c \\cdot \\theta_{rs}}$',
@@ -32,6 +33,8 @@ dict_pre_to_infix = {
     " * c  **  + adv  sin  **  ** rec 2  3   2  ": "$ c_0 *( \\theta_{ad}  +   sin (\\theta_{rs}^6 ))^2$",
     " /  ** c 27   ** mid 27  ": "$\\dfrac{c_0}{\\theta_{mid}^{27}} $",
     " / drop_length  *  ** c 6   ** rec 2   ": "$\\dfrac{d}{c \cdot \\theta_{rs}^2}$",
+    " / c width ":  "$\\dfrac{c}{w}$",
+    " * c  / y_center  ** mid 2   ":  "$\\dfrac{c \cdot y_c}{\\theta_{mid}^2}$",
     'friction_coef':  '$\\beta^f$',
     'viscosity':  '$\\eta$',
     'gamma': '$\\gamma$',
