@@ -52,14 +52,14 @@ def plot_error_per_system(args, df, index, proposed_equations):
 
 
 def save_system_error_heatmap(args, pd_dict, metric='', fmt_error = '.2e', fmt_const='.2', round_to_digits=False,
-                              reverse_color_map = False, multiplier_error = False, kwags={}):
+                              reverse_color_map = False, multiplier_error = False, kwags={}, figsize=(9, 6)):
     pd_constants_values = pd.DataFrame(pd_dict)
     if multiplier_error:
         pd_constants_values[:-3] = pd_constants_values[:-3] * multiplier_error
     if round_to_digits:
         pd_constants_values = pd_constants_values.round(round_to_digits)
     pd_constants_values = pd_constants_values.rename(columns=dict_pre_to_infix)
-    fig, ax = plt.subplots(figsize=(9, 6))
+    fig, ax = plt.subplots(figsize=figsize)
     mask = np.zeros(pd_constants_values.shape)
     mask[-3:, :] = True
     if reverse_color_map:
