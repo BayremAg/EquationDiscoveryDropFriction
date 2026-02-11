@@ -16,6 +16,15 @@ excel_name_map = {
     'vis=5.97, fric=11.60, adv=148.00, rec=148.00':'90-Glycerol-hydrophobic',
 }
 
+def replace_viscosity(df):
+    df.loc[df[args.system_id_column] == '50-Glycerol-hydrophobic', 'viscosity(mPa.s)'] = 5.97
+    df.loc[df[args.system_id_column] == '50-Glycerol-hydrophobic', 'friction_coef'] = 11.60
+
+    df.loc[df[args.system_id_column] == '90-Glycerol-hydrophobic', 'viscosity(mPa.s)'] = 142.41
+    df.loc[df[args.system_id_column] == '90-Glycerol-hydrophobic', 'friction_coef'] = 0.03
+    return df
+
+
 def replace_excel_name(row):
     if row[args.system_id_column] in excel_name_map:
         return excel_name_map[row[args.system_id_column]]
@@ -30,6 +39,7 @@ def split_dataset(args):
                                             f"adv={float(row['static_adv(degree)']):.2f}, "
                                             f"rec={float(row['static_rec(degree)']):.2f}", axis=1)
     df[args.system_id_column] = df.apply(replace_excel_name, axis=1)
+    replace_viscosity(df)
     print(f"Unique values: {df[args.system_id_column].unique()}")
     if args.reduce_bias:
         df = remove_bias(args, df)
@@ -48,8 +58,8 @@ if __name__ == '__main__':
             pass
     args = Namespace()
     args.system_id_column = 'excel_name'
-    args.reduce_bias = True
+    args.reduce_bias = False
     args.path_to_excel = ROOT_DIR / 'data/updated_friction_data_2.xlsx'
-    args.output_folder = ROOT_DIR / f"data/Aug_2025/{'reduced_bias' if args.reduce_bias else 'unmodified'}"
+    args.output_folder = ROOT_DIR / f"data/Nov_2025/{'reduced_bias' if args.reduce_bias else 'unmodified'}"
     # Load the CSV file
     split_dataset(args)

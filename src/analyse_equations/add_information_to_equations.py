@@ -133,7 +133,8 @@ def add_proposed_equations(args, proposed_equations):
         proposed_equations['+ c * friction_coef * width * viscosity avg_vel'] = {'infix': 'xiaomei','manuel':True}
         proposed_equations[' * c * width - cos rec  cos adv '] = {'infix': 'furmidge_kawasaki', 'manuel':True}
         proposed_equations["/ * c - adv  rec width"] = {'infix': 'Ruediger c*(adv - rec)/width ','manuel':True}
-    total_equations = 0
+        proposed_equations["* c * - adv rec * width sin / + adv rec 2 "] = {'infix' : 'Mc_Hale', 'manuel':True}
+    total_equations = 9
     for i, path in enumerate(args.paths_to_load_results):
         print(f'Loading {i}/{len(args.paths_to_load_results)} results from: ' + path)
         with open(args.ROOT_DIR / path, 'r') as input_file:

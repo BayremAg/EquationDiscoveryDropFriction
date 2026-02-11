@@ -26,7 +26,7 @@ def new_line_in_label(labels):
 def save_proposed_equation(args, folds, proposed_equations):
     for key, values in folds.items():
         proposed_equations[key] = [str(f) for f in values]
-    save_path = args.save_path /'equation_set_.json'
+    save_path = args.save_path /'equation_set.json'
     print(f"Proposed Equations are saved to: {save_path}")
     with open(save_path, 'w') as input_file:
         json.dump(proposed_equations, input_file, indent=2, )

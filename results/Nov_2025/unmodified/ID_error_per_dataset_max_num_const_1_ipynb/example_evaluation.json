@@ -1,0 +1,2878 @@
+{
+    "0": {
+        "equation": "/ * c - adv rec drop_length",
+        "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  /  ( drop_length )  ) ",
+        "prediction": 0.00018541675301657953,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 1.891721529941645e-06
+            }
+        }
+    },
+    "1": {
+        "equation": "/ * adv * c - adv rec drop_length",
+        "infix": "( (  ( adv )  * ( c_0 * (  ( adv )  -  ( rec )  )  )  )  /  ( drop_length )  ) ",
+        "prediction": 0.00018174596430723552,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 258.0,
+                "value": 9.866307168983725e-07
+            }
+        }
+    },
+    "2": {
+        "equation": "* * c - adv rec exp sin rec",
+        "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  *  exp (  sin (  ( rec )  ) ) ) ",
+        "prediction": 0.00019079188638050903,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.000138949133951059
+            }
+        }
+    },
+    "3": {
+        "equation": "*  c sin - adv rec",
+        "infix": "( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) ) ",
+        "prediction": 0.0001915524266936084,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0003881647000080652
+            }
+        }
+    },
+    "4": {
+        "equation": " * c  / width drop_length   ",
+        "infix": "( c_0 * (  ( width )  /  ( drop_length )  )  ) ",
+        "prediction": 0.0001517141320366482,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00022025888818194198
+            }
+        }
+    },
+    "5": {
+        "equation": "+ c * friction_coef * width * viscosity avg_vel",
+        "infix": "( c_0 +  (  ( friction_coef )  * (  ( width )  * (  ( viscosity )  *  ( avg_vel )  )  )  )  ) ",
+        "prediction": 0.00019760764759622725,
+        "values": {
+            "viscosity": 0.00092,
+            "width": 0.0036268155631288,
+            "friction_coef": 96.0,
+            "avg_vel": 0.273717425596094
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00010993038588160202
+            }
+        }
+    },
+    "6": {
+        "equation": " * c * width - cos rec  cos adv ",
+        "infix": "( c_0 * (  ( width )  * (  cos ( ( rec )  ) -  cos ( ( adv )  ) )  )  ) ",
+        "prediction": 0.000180558771107933,
+        "values": {
+            "width": 0.0036268155631288,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.09766842437068501
+            }
+        }
+    },
+    "7": {
+        "equation": "/ * c - adv  rec width",
+        "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  /  ( width )  ) ",
+        "prediction": 0.00020400263431323014,
+        "values": {
+            "width": 0.0036268155631288,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 1.43362843004328e-06
+            }
+        }
+    },
+    "8": {
+        "equation": "* c * - adv rec * width sin / + adv rec 2 ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( width )  *  sin ( ( (  ( adv )  +   ( rec )  )  /  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.0001808098634488109,
+        "values": {
+            "width": 0.0036268155631288,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0967224392094934
+            }
+        }
+    },
+    "9": {
+        "equation": " * c  /  ** drop_length 3  y_center  ",
+        "infix": "( c_0 * (    ( drop_length )   ** (  ( 3 )  )  /  ( y_center )  )  ) ",
+        "prediction": 0.00020358442565289025,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.388510671124711
+            }
+        }
+    },
+    "10": {
+        "equation": " /  ** drop_length 3   * c y_center  ",
+        "infix": "(    ( drop_length )   ** (  ( 3 )  )  / ( c_0 *  ( y_center )  )  ) ",
+        "prediction": 0.0002035844256500476,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.7201961215061822
+            }
+        }
+    },
+    "11": {
+        "equation": " * c  *  ** drop_length 2   / width y_center   ",
+        "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  * (  ( width )  /  ( y_center )  )  )  ) ",
+        "prediction": 0.0001844665703953643,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.8265423659444595
+            }
+        }
+    },
+    "12": {
+        "equation": " *  ** drop_length 2   / width  * c y_center   ",
+        "infix": "(    ( drop_length )   ** (  ( 2 )  )  * (  ( width )  / ( c_0 *  ( y_center )  )  )  ) ",
+        "prediction": 0.0001844665704048439,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 769.0,
+                "value": 0.5474825104489354
+            }
+        }
+    },
+    "13": {
+        "equation": " * 3  * c  ** drop_length 2   ",
+        "infix": "(  ( 3 )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00019139384757234495,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 2.3011289982510252
+            }
+        }
+    },
+    "14": {
+        "equation": " * 3  /  ** drop_length 2  c  ",
+        "infix": "(  ( 3 )  * (    ( drop_length )   ** (  ( 2 )  )  / c_0 )  ) ",
+        "prediction": 0.00019139384785989553,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 768.0,
+                "value": 0.43456929153369855
+            }
+        }
+    },
+    "15": {
+        "equation": " * c  /  ** drop_length 2   log  adv   ",
+        "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  /  log (  ( adv )  ) )  ) ",
+        "prediction": 0.0001961244715417115,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.9384103768627972
+            }
+        }
+    },
+    "16": {
+        "equation": " * 4  /  ** drop_length 2  c  ",
+        "infix": "(  ( 4 )  * (    ( drop_length )   ** (  ( 2 )  )  / c_0 )  ) ",
+        "prediction": 0.00019139384758487434,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 768.0,
+                "value": 0.5794257228775306
+            }
+        }
+    },
+    "17": {
+        "equation": " * 4  * c  ** drop_length 2   ",
+        "infix": "(  ( 4 )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00019139384757620477,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.725846748723074
+            }
+        }
+    },
+    "18": {
+        "equation": " * c  * drop_length  / width  log  rec    ",
+        "infix": "( c_0 * (  ( drop_length )  * (  ( width )  /  log (  ( rec )  ) )  )  ) ",
+        "prediction": 0.00019540216760864805,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.377196655645339
+            }
+        }
+    },
+    "19": {
+        "equation": " /  ** mid 9   *  ** c 9  rec  ",
+        "infix": "(    ( mid )   ** (  ( 9 )  )  / (   c_0  ** (  ( 9 )  )  *  ( rec )  )  ) ",
+        "prediction": 0.00010593379539676659,
+        "values": {
+            "mid": 1.3042956260215237,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 3.484047001649716
+            }
+        }
+    },
+    "20": {
+        "equation": " /  ** c 27  rec ",
+        "infix": "(   c_0  ** (  ( 27 )  )  /  ( rec )  ) ",
+        "prediction": 0.00018624054719905344,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.7359351656083477
+            }
+        }
+    },
+    "21": {
+        "equation": " * avg_vel c ",
+        "infix": "(  ( avg_vel )  * c_0 ) ",
+        "prediction": 0.0002266861320312833,
+        "values": {
+            "avg_vel": 0.273717425596094
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 512.0,
+                "value": 0.000828175741963131
+            }
+        }
+    },
+    "22": {
+        "equation": "c",
+        "infix": "c_0",
+        "prediction": 0.00017563760728981801,
+        "values": {},
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 0.0,
+                "value": 0.00017563760728981801
+            }
+        }
+    },
+    "23": {
+        "equation": " * c y_center ",
+        "infix": "( c_0 *  ( y_center )  ) ",
+        "prediction": 0.00016870500297966678,
+        "values": {
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.16944340169113659
+            }
+        }
+    },
+    "24": {
+        "equation": " / c rec ",
+        "infix": "( c_0 /  ( rec )  ) ",
+        "prediction": 0.0001862405470872076,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0002539030979764825
+            }
+        }
+    },
+    "25": {
+        "equation": " / 1  *  ** c 2   **  - mid  cos rec 2   ",
+        "infix": "(  ( 1 )  / (   c_0  ** (  ( 2 )  )  *   (  ( mid )  -  cos ( ( rec )  ) )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00021245699436237556,
+        "values": {
+            "mid": 1.3042956260215237,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 62.46641567097
+            }
+        }
+    },
+    "26": {
+        "equation": " * c  / y_center  ** rec 3   ",
+        "infix": "( c_0 * (  ( y_center )  /    ( rec )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.000198185709553903,
+        "values": {
+            "y_center": 0.000995642210295,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.504371245466016
+            }
+        }
+    },
+    "27": {
+        "equation": " *  ** c 2   ** drop_length 2  ",
+        "infix": "(   c_0  ** (  ( 2 )  )  *    ( drop_length )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00019139384757800414,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 2.627429731687833
+            }
+        }
+    },
+    "28": {
+        "equation": " /  ** c 6   ** rec 2  ",
+        "infix": "(   c_0  ** (  ( 6 )  )  /    ( rec )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00019570332637643806,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.2671761095482692
+            }
+        }
+    },
+    "29": {
+        "equation": " / c  ** rec 3  ",
+        "infix": "( c_0 /    ( rec )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00020371930632681484,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0005161946181550827
+            }
+        }
+    },
+    "30": {
+        "equation": " * adv c ",
+        "infix": "(  ( adv )  * c_0 ) ",
+        "prediction": 0.00017214203182660387,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 512.0,
+                "value": 9.159432064045346e-05
+            }
+        }
+    },
+    "31": {
+        "equation": " * c drop_length ",
+        "infix": "( c_0 *  ( drop_length )  ) ",
+        "prediction": 0.00018390301967560331,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.03492657373653836
+            }
+        }
+    },
+    "32": {
+        "equation": " * y_center  /  cos mid  ** c 2   ",
+        "infix": "(  ( y_center )  * (  cos ( ( mid )  ) /   c_0  ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00021709292146626337,
+        "values": {
+            "mid": 1.3042956260215237,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 769.0,
+                "value": 1.0990096074891533
+            }
+        }
+    },
+    "33": {
+        "equation": " * y_center  /  cos mid c  ",
+        "infix": "(  ( y_center )  * (  cos ( ( mid )  ) / c_0 )  ) ",
+        "prediction": 0.0002170929214664017,
+        "values": {
+            "mid": 1.3042956260215237,
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 768.0,
+                "value": 1.2078221173526933
+            }
+        }
+    },
+    "34": {
+        "equation": " * c  cos mid ",
+        "infix": "( c_0 *  cos ( ( mid )  ) ) ",
+        "prediction": 0.00022174555074032184,
+        "values": {
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.000841995118642562
+            }
+        }
+    },
+    "35": {
+        "equation": " * c  / y_center mid  ",
+        "infix": "( c_0 * (  ( y_center )  /  ( mid )  )  ) ",
+        "prediction": 0.00017762701759630687,
+        "values": {
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.23269216563796252
+            }
+        }
+    },
+    "36": {
+        "equation": " *  ** c 2  drop_length ",
+        "infix": "(   c_0  ** (  ( 2 )  )  *  ( drop_length )  ) ",
+        "prediction": 0.00018390301969772562,
+        "values": {
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.18688652637560524
+            }
+        }
+    },
+    "37": {
+        "equation": " /  ** c 4   ** rec 4  ",
+        "infix": "(   c_0  ** (  ( 4 )  )  /    ( rec )   ** (  ( 4 )  )  ) ",
+        "prediction": 0.00021002104598793795,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.16411922801562084
+            }
+        }
+    },
+    "38": {
+        "equation": " * adv  / c  ** rec 3   ",
+        "infix": "(  ( adv )  * ( c_0 /    ( rec )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00020085361490965387,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.0002707961946230341
+            }
+        }
+    },
+    "39": {
+        "equation": " / c  ** rec 2  ",
+        "infix": "( c_0 /    ( rec )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00019570332620883038,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0003637355333975424
+            }
+        }
+    },
+    "40": {
+        "equation": " * adv  / c rec  ",
+        "infix": "(  ( adv )  * ( c_0 /  ( rec )  )  ) ",
+        "prediction": 0.00018287050311369994,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.000132653600455771
+            }
+        }
+    },
+    "41": {
+        "equation": " / c  ** mid 9  ",
+        "infix": "( c_0 /    ( mid )   ** (  ( 9 )  )  ) ",
+        "prediction": 0.00022761464451814142,
+        "values": {
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.002486477544995253
+            }
+        }
+    },
+    "42": {
+        "equation": " / c mid ",
+        "infix": "( c_0 /  ( mid )  ) ",
+        "prediction": 0.00018438889918948766,
+        "values": {
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00024049763469977245
+            }
+        }
+    },
+    "43": {
+        "equation": " * adv  /  ** c 2   ** rec 2   ",
+        "infix": "(  ( adv )  * (   c_0  ** (  ( 2 )  )  /    ( rec )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00019254411639887346,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 0.013799066192563072
+            }
+        }
+    },
+    "44": {
+        "equation": " *  ** adv 2   ** c 6  ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  *   c_0  ** (  ( 6 )  )  ) ",
+        "prediction": 0.00016855464909971358,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.19045132406521198
+            }
+        }
+    },
+    "45": {
+        "equation": " / c  * rec  sin adv  ",
+        "infix": "( c_0 / (  ( rec )  *  sin (  ( adv )  ) )  ) ",
+        "prediction": 0.00018394735584138466,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0002389300065248616
+            }
+        }
+    },
+    "46": {
+        "equation": " * c  * y_center  cos mid  ",
+        "infix": "( c_0 * (  ( y_center )  *  cos ( ( mid )  ) )  ) ",
+        "prediction": 0.00021709292146646186,
+        "values": {
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.8279364863694323
+            }
+        }
+    },
+    "47": {
+        "equation": " /  ** c 2   ** rec 2  ",
+        "infix": "(   c_0  ** (  ( 2 )  )  /    ( rec )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00019570332620774228,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.019071851860674675
+            }
+        }
+    },
+    "48": {
+        "equation": " * c  / y_center  ** mid 2   ",
+        "infix": "( c_0 * (  ( y_center )  /    ( mid )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00018618726663556623,
+        "values": {
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.31812569736075735
+            }
+        }
+    },
+    "49": {
+        "equation": " * c  / y_center rec  ",
+        "infix": "( c_0 * (  ( y_center )  /  ( rec )  )  ) ",
+        "prediction": 0.0001796118479834941,
+        "values": {
+            "y_center": 0.000995642210295,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.24593788968209362
+            }
+        }
+    },
+    "50": {
+        "equation": " *  ** c 2  y_center ",
+        "infix": "(   c_0  ** (  ( 2 )  )  *  ( y_center )  ) ",
+        "prediction": 0.0001687050030518067,
+        "values": {
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.41163503466492285
+            }
+        }
+    },
+    "51": {
+        "equation": " * adv  * c  exp  *  - 0 1  * 2 rec    ",
+        "infix": "(  ( adv )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  * (  ( 2 )  *  ( rec )  )  )  ) )  ) ",
+        "prediction": 0.00020006702596110052,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.0016267125421575458
+            }
+        }
+    },
+    "52": {
+        "equation": " / c  ** rec 4  ",
+        "infix": "( c_0 /    ( rec )   ** (  ( 4 )  )  ) ",
+        "prediction": 0.00021002104585105962,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00072550074305117
+            }
+        }
+    },
+    "53": {
+        "equation": " * c  / drop_length rec  ",
+        "infix": "( c_0 * (  ( drop_length )  /  ( rec )  )  ) ",
+        "prediction": 0.0001936658090418836,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.05014340703429101
+            }
+        }
+    },
+    "54": {
+        "equation": " * c  * y_center  sin mid  ",
+        "infix": "( c_0 * (  ( y_center )  *  sin (  ( mid )  ) )  ) ",
+        "prediction": 0.00016602672252796782,
+        "values": {
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.17285547949867308
+            }
+        }
+    },
+    "55": {
+        "equation": " /  ** c 4   + rec  cos  / adv rec   ",
+        "infix": "(   c_0  ** (  ( 4 )  )  / (  ( rec )  +   cos ((  ( adv )  /  ( rec )  )  ) )  ) ",
+        "prediction": 0.00018965408983480093,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.1310324350609296
+            }
+        }
+    },
+    "56": {
+        "equation": " /  ** y_center 3   ** c 3  ",
+        "infix": "(    ( y_center )   ** (  ( 3 )  )  /   c_0  ** (  ( 3 )  )  ) ",
+        "prediction": 0.0001546784309653666,
+        "values": {
+            "y_center": 0.000995642210295
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.01854784171078239
+            }
+        }
+    },
+    "57": {
+        "equation": " * c  / y_center  *  ** mid 2   **  - mid 1 2    ",
+        "infix": "( c_0 * (  ( y_center )  / (    ( mid )   ** (  ( 2 )  )  *   (  ( mid )  -  ( 1 )  )   ** (  ( 2 )  )  )  )  ) ",
+        "prediction": 0.00022240823294473894,
+        "values": {
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0351877141014033
+            }
+        }
+    },
+    "58": {
+        "equation": " * c  sin  * mid rec  ",
+        "infix": "( c_0 *  sin ( (  ( mid )  *  ( rec )  )  ) ) ",
+        "prediction": 0.00019083507316437138,
+        "values": {
+            "mid": 1.3042956260215237,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00019501264212673793
+            }
+        }
+    },
+    "59": {
+        "equation": " /  ** c 3   ** rec 3  ",
+        "infix": "(   c_0  ** (  ( 3 )  )  /    ( rec )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00020371930634643888,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.08021787578626545
+            }
+        }
+    },
+    "60": {
+        "equation": " /  ** c 27   ** mid 27  ",
+        "infix": "(   c_0  ** (  ( 27 )  )  /    ( mid )   ** (  ( 27 )  )  ) ",
+        "prediction": 0.00012826349881582872,
+        "values": {
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.935904870970011
+            }
+        }
+    },
+    "61": {
+        "equation": " / drop_length  *  ** c 6   ** rec 3   ",
+        "infix": "(  ( drop_length )  / (   c_0  ** (  ( 6 )  )  *    ( rec )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00020887803594494758,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 1.4665373775398278
+            }
+        }
+    },
+    "62": {
+        "equation": " / drop_length  *  ** c 6   ** rec 2   ",
+        "infix": "(  ( drop_length )  / (   c_0  ** (  ( 6 )  )  *    ( rec )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.0002020815296256905,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 1.5528152549421428
+            }
+        }
+    },
+    "63": {
+        "equation": " /  ** c 6   ** rec 3  ",
+        "infix": "(   c_0  ** (  ( 6 )  )  /    ( rec )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00020371930633062189,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.28322760420585663
+            }
+        }
+    },
+    "64": {
+        "equation": " / drop_length  * c  * rec y_center   ",
+        "infix": "(  ( drop_length )  / ( c_0 * (  ( rec )  *  ( y_center )  )  )  ) ",
+        "prediction": 0.00019963879031604582,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "y_center": 0.000995642210295,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 19430.80911809296
+            }
+        }
+    },
+    "65": {
+        "equation": " / drop_length  * c rec  ",
+        "infix": "(  ( drop_length )  / ( c_0 *  ( rec )  )  ) ",
+        "prediction": 0.00019366580903923836,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 19.942801240645654
+            }
+        }
+    },
+    "66": {
+        "equation": " * adv  /  ** drop_length 2  c  ",
+        "infix": "(  ( adv )  * (    ( drop_length )   ** (  ( 2 )  )  / c_0 )  ) ",
+        "prediction": 0.00018810478481134102,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 768.0,
+                "value": 0.27700288299697245
+            }
+        }
+    },
+    "67": {
+        "equation": " *  ** c 2   * drop_length  cos mid  ",
+        "infix": "(   c_0  ** (  ( 2 )  )  * (  ( drop_length )  *  cos ( ( mid )  ) )  ) ",
+        "prediction": 0.00022498745776479027,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "mid": 1.3042956260215237
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 2.0,
+                "value": 0.4028005413211175
+            }
+        }
+    },
+    "68": {
+        "equation": " *  ** adv 2   * c drop_length  ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  ( drop_length )  )  ) ",
+        "prediction": 0.00017695556953832033,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.009514689099766755
+            }
+        }
+    },
+    "69": {
+        "equation": " * adv  * c drop_length  ",
+        "infix": "(  ( adv )  * ( c_0 *  ( drop_length )  )  ) ",
+        "prediction": 0.0001804870629745374,
+        "values": {
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.018238739581490786
+            }
+        }
+    },
+    "70": {
+        "equation": " *  ** adv 2  c ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * c_0 ) ",
+        "prediction": 0.0001685546490855575,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 512.0,
+                "value": 4.772038929897389e-05
+            }
+        }
+    },
+    "71": {
+        "equation": " *  ** adv 3   ** c 3  ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  *   c_0  ** (  ( 3 )  )  ) ",
+        "prediction": 0.00016488983998813324,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.029177377426989667
+            }
+        }
+    },
+    "72": {
+        "equation": " *  ** adv 2   /  ** c 2  width  ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  /  ( width )  )  ) ",
+        "prediction": 0.00018271774866877435,
+        "values": {
+            "width": 0.0036268155631288,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 0.0004331464149346444
+            }
+        }
+    },
+    "73": {
+        "equation": " / c width ",
+        "infix": "( c_0 /  ( width )  ) ",
+        "prediction": 0.0001897940024892522,
+        "values": {
+            "width": 0.0036268155631288
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 6.883478420165261e-07
+            }
+        }
+    },
+    "74": {
+        "equation": " * adv  * c  * drop_length  + adv 1    ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  * (  ( adv )  +   ( 1 )  )  )  )  ) ",
+        "prediction": 0.00017817987561999553,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.006253252225143385
+            }
+        }
+    },
+    "75": {
+        "equation": " *  ** adv 2   * c  ** drop_length 2   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00018467564449245198,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.8858498538568065
+            }
+        }
+    },
+    "76": {
+        "equation": " * c  sin rec ",
+        "infix": "( c_0 *  sin (  ( rec )  ) ) ",
+        "prediction": 0.00017351752755841046,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00017732083447310866
+            }
+        }
+    },
+    "77": {
+        "equation": " * c rec ",
+        "infix": "( c_0 *  ( rec )  ) ",
+        "prediction": 0.0001642182504474088,
+        "values": {
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00012045578430816275
+            }
+        }
+    },
+    "78": {
+        "equation": " * c  /  exp adv drop_length  ",
+        "infix": "( c_0 * (  exp (  ( adv )  ) /  ( drop_length )  )  ) ",
+        "prediction": 0.0001599375506455297,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.2857953578536237e-07
+            }
+        }
+    },
+    "79": {
+        "equation": " * c  exp adv ",
+        "infix": "( c_0 *  exp (  ( adv )  ) ) ",
+        "prediction": 0.00016887259926951642,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.5783847523256853e-05
+            }
+        }
+    },
+    "80": {
+        "equation": " * c  *  ** drop_length 2   exp adv  ",
+        "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  *  exp (  ( adv )  ) )  ) ",
+        "prediction": 0.0001849756093727958,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.018678757348867
+            }
+        }
+    },
+    "81": {
+        "equation": " *  ** adv 3  c ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * c_0 ) ",
+        "prediction": 0.00016488983998892386,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 512.0,
+                "value": 2.483926608858563e-05
+            }
+        }
+    },
+    "82": {
+        "equation": " *  ** adv 3   * c  * drop_length width   ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 * (  ( drop_length )  *  ( width )  )  )  ) ",
+        "prediction": 0.00015927746861486763,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.2564374159392462
+            }
+        }
+    },
+    "83": {
+        "equation": " *  ** adv 4   /  ** c 2   sin rec  ",
+        "infix": "(    ( adv )   ** (  ( 4 )  )  * (   c_0  ** (  ( 2 )  )  /  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.0001633030480006545,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 0.0035789215584111312
+            }
+        }
+    },
+    "84": {
+        "equation": " *  ** adv 2   *  ** c 2   ** drop_length 2   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00018467564448720864,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 1.3732624853986448
+            }
+        }
+    },
+    "85": {
+        "equation": " *  ** adv 2   ** c 2  ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  *   c_0  ** (  ( 2 )  )  ) ",
+        "prediction": 0.00016855464908592123,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.006907994593156314
+            }
+        }
+    },
+    "86": {
+        "equation": " *  ** adv 2   * c width  ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  ( width )  )  ) ",
+        "prediction": 0.00015401687005722466,
+        "values": {
+            "width": 0.0036268155631288,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.012022812242765586
+            }
+        }
+    },
+    "87": {
+        "equation": " *  ** adv 3   * c  ** drop_length 2   ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00018112324679580395,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.9841318898230249
+            }
+        }
+    },
+    "88": {
+        "equation": " * adv  * c  - adv rec  ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( adv )  -  ( rec )  )  )  ) ",
+        "prediction": 0.00018884285913602382,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.0001946962321034834
+            }
+        }
+    },
+    "89": {
+        "equation": " / 1  *  ** adv 2   * c  ** drop_length 2    ",
+        "infix": "(  ( 1 )  / (    ( adv )   ** (  ( 2 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  )  ) ",
+        "prediction": 0.00016420420663373035,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 769.0,
+                "value": 62188948.006738484
+            }
+        }
+    },
+    "90": {
+        "equation": " /  ** adv 3  c ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  / c_0 ) ",
+        "prediction": 0.00016488983999111102,
+        "values": {
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 512.0,
+                "value": 40258.838422213485
+            }
+        }
+    },
+    "91": {
+        "equation": " * c  *  - adv rec  sin rec  ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.00019077701262706887,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00037776160775187666
+            }
+        }
+    },
+    "92": {
+        "equation": " * c  * rec  - adv rec  ",
+        "infix": "( c_0 * (  ( rec )  * (  ( adv )  -  ( rec )  )  )  ) ",
+        "prediction": 0.00018328951982746541,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00026050690000312696
+            }
+        }
+    },
+    "93": {
+        "equation": " * c  /  **  +  ** adv 2   sin  ** rec 2   2  rec  ",
+        "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
+        "prediction": 0.0001839215018787204,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.243198511881812e-05
+            }
+        }
+    },
+    "94": {
+        "equation": " * c  /  **  +  ** adv 2   sin rec  2  rec  ",
+        "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   sin (  ( rec )  ) )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
+        "prediction": 0.00017437076486924547,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.1683770839967477e-05
+            }
+        }
+    },
+    "95": {
+        "equation": " * c  /  +  ** adv 4  rec  rec  ",
+        "infix": "( c_0 * ( (    ( adv )   ** (  ( 4 )  )  +   ( rec )  )  /  ( rec )  )  ) ",
+        "prediction": 0.00017248081787975318,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.699111499785818e-05
+            }
+        }
+    },
+    "96": {
+        "equation": " *  ** adv 4   / c rec  ",
+        "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 /  ( rec )  )  ) ",
+        "prediction": 0.00017208743171802623,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.8804829437663763e-05
+            }
+        }
+    },
+    "97": {
+        "equation": " * adv  * c  **  + adv  cos rec  3   ",
+        "infix": "(  ( adv )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00018393308125592145,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.0791293283239624e-05
+            }
+        }
+    },
+    "98": {
+        "equation": " * c  **  + adv  cos rec  3  ",
+        "infix": "( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00018748721882218248,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.0673009077942276e-05
+            }
+        }
+    },
+    "99": {
+        "equation": " *  ** adv 3   / c rec  ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 /  ( rec )  )  ) ",
+        "prediction": 0.00017577857092788033,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 3.609977988359085e-05
+            }
+        }
+    },
+    "100": {
+        "equation": " * c  -  ** adv 2   ** rec 2  ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  -    ( rec )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.00018655902856283457,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00011147676815766099
+            }
+        }
+    },
+    "101": {
+        "equation": " * adv  * c  *  +  cos rec 1   exp adv   ",
+        "infix": "(  ( adv )  * ( c_0 * ( (  cos ( ( rec )  ) +   ( 1 )  )  *  exp (  ( adv )  ) )  )  ) ",
+        "prediction": 0.00017880996196958398,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.2045180824944029e-05
+            }
+        }
+    },
+    "102": {
+        "equation": " * c  *  - adv rec  + adv  + rec  sin rec    ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( adv )  +  (  ( rec )  +   sin (  ( rec )  ) )  )  )  ) ",
+        "prediction": 0.000187533431496669,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 8.60820258436465e-05
+            }
+        }
+    },
+    "103": {
+        "equation": " *  ** adv 3   * c  exp  *  - 0 1 rec   ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
+        "prediction": 0.0001802952214188891,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00010617100256878995
+            }
+        }
+    },
+    "104": {
+        "equation": " * c  *  **  + adv  cos rec  3   sin rec  ",
+        "infix": "( c_0 * (   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  *  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.00018569212951685663,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.0923866520893294e-05
+            }
+        }
+    },
+    "105": {
+        "equation": " * c  /  +  *  - 0 1 adv  rec  drop_length  ",
+        "infix": "( c_0 * ( ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  /  ( drop_length )  )  ) ",
+        "prediction": 0.00018541675302293127,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": -1.8917215300064487e-06
+            }
+        }
+    },
+    "106": {
+        "equation": " * c  /  -  ** adv 3   ** rec 3  adv  ",
+        "infix": "( c_0 * ( (    ( adv )   ** (  ( 3 )  )  -    ( rec )   ** (  ( 3 )  )  )  /  ( adv )  )  ) ",
+        "prediction": 0.0001843611597678394,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 8.441816127104928e-05
+            }
+        }
+    },
+    "107": {
+        "equation": " *  ** adv 2   * c  +  * rec  cos rec  1   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * ( (  ( rec )  *  cos ( ( rec )  ) )  +   ( 1 )  )  )  ) ",
+        "prediction": 0.0001852495382844695,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 4.094712981671018e-05
+            }
+        }
+    },
+    "108": {
+        "equation": " * adv  * c  **  + adv  cos rec  2   ",
+        "infix": "(  ( adv )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 2 )  )  )  ) ",
+        "prediction": 0.0001803994047619764,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 2.2071816338061185e-05
+            }
+        }
+    },
+    "109": {
+        "equation": " * adv  * c  + adv  cos rec   ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( adv )  +   cos ( ( rec )  ) )  )  ) ",
+        "prediction": 0.00017645956441060884,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 4.502331829753644e-05
+            }
+        }
+    },
+    "110": {
+        "equation": " * adv  * c  sin  - adv rec  ",
+        "infix": "(  ( adv )  * ( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) )  ) ",
+        "prediction": 0.00018798925848800442,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00020269499983540214
+            }
+        }
+    },
+    "111": {
+        "equation": " * c  sin  - adv rec ",
+        "infix": "( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) ) ",
+        "prediction": 0.0001915524266936084,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0003881647000080652
+            }
+        }
+    },
+    "112": {
+        "equation": " * adv  * c  /  **  + adv  sin  ** rec 2   2  rec   ",
+        "infix": "(  ( adv )  * ( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  /  ( rec )  )  )  ) ",
+        "prediction": 0.00019213753234777726,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.730143021418078e-05
+            }
+        }
+    },
+    "113": {
+        "equation": " * c  -  **  + adv  sin  ** rec 2   2   sin rec ",
+        "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  -  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.00018776117541626064,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.653046446983435e-05
+            }
+        }
+    },
+    "114": {
+        "equation": " * c  **  + adv  sin  ** rec 2   2  ",
+        "infix": "( c_0 *   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00018606091605390693,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.309668063233046e-05
+            }
+        }
+    },
+    "115": {
+        "equation": " *  ** adv 3   / c  +  exp rec  cos  ** rec 3    ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (   ( rec )   ** (  ( 3 )  )  ) )  )  ) ",
+        "prediction": 0.00018008158494910083,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 8.377491276937049e-05
+            }
+        }
+    },
+    "116": {
+        "equation": " * c  -  exp adv  exp rec ",
+        "infix": "( c_0 * (  exp (  ( adv )  ) -  exp (  ( rec )  ) )  ) ",
+        "prediction": 0.00018269083158186888,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 6.918929199607149e-05
+            }
+        }
+    },
+    "117": {
+        "equation": " * c  - adv rec ",
+        "infix": "( c_0 * (  ( adv )  -  ( rec )  )  ) ",
+        "prediction": 0.0001923975423842072,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0003727991202409311
+            }
+        }
+    },
+    "118": {
+        "equation": " * c  /  **  + adv  sin  ** rec 2   3  rec  ",
+        "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  /  ( rec )  )  ) ",
+        "prediction": 0.00019941783999538235,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.189048010568674e-05
+            }
+        }
+    },
+    "119": {
+        "equation": " *  ** adv 3   / c  +  exp rec  cos  **  ** rec 2  2    ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.00021349766445326416,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 9.512228633478828e-05
+            }
+        }
+    },
+    "120": {
+        "equation": " * c  *  +  *  - 0 1 adv  rec   sin rec  ",
+        "infix": "( c_0 * ( ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  *  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.00019077701263311072,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": -0.00037776160776384024
+            }
+        }
+    },
+    "121": {
+        "equation": " * adv  * c  +  *  - 0 1 adv  rec   ",
+        "infix": "(  ( adv )  * ( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  )  ) ",
+        "prediction": 0.0001888428591462555,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": -0.0001946962321140322
+            }
+        }
+    },
+    "122": {
+        "equation": " * c  exp  -  * 2 adv  rec ",
+        "infix": "( c_0 *  exp ( ( (  ( 2 )  *  ( adv )  )  -  ( rec )  )  ) ) ",
+        "prediction": 0.0001772837522002145,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.6155590863449717e-05
+            }
+        }
+    },
+    "123": {
+        "equation": " * c  /  **  + adv  * rec  cos rec   3  drop_length  ",
+        "infix": "( c_0 * (   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  /  ( drop_length )  )  ) ",
+        "prediction": 0.00018585080802104929,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 9.70710913666e-08
+            }
+        }
+    },
+    "124": {
+        "equation": " * c  **  + adv  * rec  cos rec   3  ",
+        "infix": "( c_0 *   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00019304310645213194,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.9149034424845203e-05
+            }
+        }
+    },
+    "125": {
+        "equation": " * c  -  ** adv 2  rec ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  -  ( rec )  )  ) ",
+        "prediction": 0.00017107033158069403,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 7.887702462976958e-05
+            }
+        }
+    },
+    "126": {
+        "equation": " * c  /  **  + adv  sin  ** rec 2   3   sin rec  ",
+        "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  /  sin (  ( rec )  ) )  ) ",
+        "prediction": 0.00019238847115991446,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 8.233874617473183e-06
+            }
+        }
+    },
+    "127": {
+        "equation": " * c  + adv  **  + adv  sin  ** rec 2   3   ",
+        "infix": "( c_0 * (  ( adv )  +    (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00018921620400021825,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 7.647039175852461e-06
+            }
+        }
+    },
+    "128": {
+        "equation": " * c  **  + adv  sin  ** rec 2   3  ",
+        "infix": "( c_0 *   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  ) ",
+        "prediction": 0.00019060204364681473,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 8.336220132783815e-06
+            }
+        }
+    },
+    "129": {
+        "equation": " * c  *  - adv rec  + rec  sin  ** rec 2    ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( rec )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.00019449523788661724,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0001622891140162627
+            }
+        }
+    },
+    "130": {
+        "equation": " *  - 0 1  * adv  * c  sin  - adv rec   ",
+        "infix": "( (  ( 0 )  -  ( 1 )  )  * (  ( adv )  * ( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) )  )  ) ",
+        "prediction": 0.00018798925848923984,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 769.0,
+                "value": -0.0002026949998367342
+            }
+        }
+    },
+    "131": {
+        "equation": " * c  * rec  +  *  - 0 1 adv  rec   ",
+        "infix": "( c_0 * (  ( rec )  * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  )  ) ",
+        "prediction": 0.00018328951982959685,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": -0.00026050690000615633
+            }
+        }
+    },
+    "132": {
+        "equation": " *  ** adv 3   / c  +  *  - 0 1 rec   exp rec   ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  +   exp (  ( rec )  ) )  )  ) ",
+        "prediction": 0.00018256236644697077,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 7.001309007649503e-05
+            }
+        }
+    },
+    "133": {
+        "equation": " * c  *  exp adv  *  sin adv  sin  - adv rec   ",
+        "infix": "( c_0 * (  exp (  ( adv )  ) * (  sin (  ( adv )  ) *  sin ( (  ( adv )  -  ( rec )  )  ) )  )  ) ",
+        "prediction": 0.00018715069842779007,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 6.0775002249983016e-05
+            }
+        }
+    },
+    "134": {
+        "equation": " * c  -  ** adv 3   ** rec 3  ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  -    ( rec )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00018064872373589396,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.401320308548095e-05
+            }
+        }
+    },
+    "135": {
+        "equation": " *  ** adv 2   / c  + rec  cos  **  ** rec 2  2    ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  ( rec )  +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.0002500987489730259,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 2.9161045447150116e-05
+            }
+        }
+    },
+    "136": {
+        "equation": " * c  +  *  - 0 1 adv  rec  ",
+        "infix": "( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  ) ",
+        "prediction": 0.0001923975423859039,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": -0.0003727991202442187
+            }
+        }
+    },
+    "137": {
+        "equation": " * c  *  - adv rec  + adv rec   ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( adv )  +   ( rec )  )  )  ) ",
+        "prediction": 0.00018655902856503905,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00011147676815897827
+            }
+        }
+    },
+    "138": {
+        "equation": " * c  +  *  - 0 1  ** adv 2   rec  ",
+        "infix": "( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *    ( adv )   ** (  ( 2 )  )  )  +   ( rec )  )  ) ",
+        "prediction": 0.00017107033157934287,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": -7.887702462914659e-05
+            }
+        }
+    },
+    "139": {
+        "equation": " * c  -  ** adv 3   -  ** rec 3   sin  * adv rec  ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  - (    ( rec )   ** (  ( 3 )  )  -  sin ( (  ( adv )  *  ( rec )  )  ) )  )  ) ",
+        "prediction": 0.0001879656835388044,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.040585807585786e-05
+            }
+        }
+    },
+    "140": {
+        "equation": " *  ** adv 3   / c  + rec  cos  **  ** rec 2  2    ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  ( rec )  +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.0002497355998214858,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.549364664231077e-05
+            }
+        }
+    },
+    "141": {
+        "equation": " *  ** adv 2   / c  +  exp rec  cos  * adv rec    ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos ((  ( adv )  *  ( rec )  )  ) )  )  ) ",
+        "prediction": 0.00018345321816993682,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00015957076836906322
+            }
+        }
+    },
+    "142": {
+        "equation": " *  ** adv 2   / c  +  exp rec  cos  ** rec 3    ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (   ( rec )   ** (  ( 3 )  )  ) )  )  ) ",
+        "prediction": 0.00018370911409121494,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00016061783279361307
+            }
+        }
+    },
+    "143": {
+        "equation": " * c  +  ** adv 2   sin  ** rec 3   ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  +   sin (    ( rec )   ** (  ( 3 )  )  ) )  ) ",
+        "prediction": 0.00019228505671886864,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.6862851868527e-05
+            }
+        }
+    },
+    "144": {
+        "equation": " * c  +  ** adv 2   cos rec  ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  +   cos ( ( rec )  ) )  ) ",
+        "prediction": 0.00017301223557055322,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.628304718543876e-05
+            }
+        }
+    },
+    "145": {
+        "equation": " *  - 0 1  * c  *  - adv rec  + rec  sin  ** rec 2     ",
+        "infix": "( (  ( 0 )  -  ( 1 )  )  * ( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( rec )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )  )  )  ) ",
+        "prediction": 0.0001944952378897016,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": -0.00016228911401883631
+            }
+        }
+    },
+    "146": {
+        "equation": " * c  + adv  **  + adv  * rec  cos rec   3   ",
+        "infix": "( c_0 * (  ( adv )  +    (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.00018984386781764886,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.587258992865916e-05
+            }
+        }
+    },
+    "147": {
+        "equation": " * c  -  ** adv 3   -  ** rec 3   cos rec ",
+        "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  - (    ( rec )   ** (  ( 3 )  )  -  cos ( ( rec )  ) )  )  ) ",
+        "prediction": 0.00018393337749170698,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.2671753538402275e-05
+            }
+        }
+    },
+    "148": {
+        "equation": " *  ** adv 2   * c  cos  **  / rec adv  2   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  cos (  (  ( rec )  /  ( adv )  )   ** (  ( 2 )  )  ) )  ) ",
+        "prediction": 0.00017403031630890817,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 5.6978588692916425e-05
+            }
+        }
+    },
+    "149": {
+        "equation": " *  ** adv 2   * c  +  cos rec 1   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * (  cos ( ( rec )  ) +   ( 1 )  )  )  ) ",
+        "prediction": 0.00018207704985540222,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 4.274348280062301e-05
+            }
+        }
+    },
+    "150": {
+        "equation": " *  ** adv 3   * c drop_length  ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *  ( drop_length )  )  ) ",
+        "prediction": 0.00017332422351364025,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00495873899909574
+            }
+        }
+    },
+    "151": {
+        "equation": " * adv  * c  exp  *  - 0 1 rec   ",
+        "infix": "(  ( adv )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
+        "prediction": 0.0001872817728533996,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.0003895417148692051
+            }
+        }
+    },
+    "152": {
+        "equation": " *  ** adv 4   * c  /  sin  ** rec 2   ** rec 2    ",
+        "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 * (  sin (    ( rec )   ** (  ( 2 )  )  ) /    ( rec )   ** (  ( 2 )  )  )  )  ) ",
+        "prediction": 0.00020184438340959798,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 3.135970702403882e-05
+            }
+        }
+    },
+    "153": {
+        "equation": " *  ** adv 2   *  ** c 2   /  sin  ** rec 2   ** rec 2    ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  * (  sin (    ( rec )   ** (  ( 2 )  )  ) /    ( rec )   ** (  ( 2 )  )  )  )  ) ",
+        "prediction": 0.00020809574768626397,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 514.0,
+                "value": 0.0106863069748335
+            }
+        }
+    },
+    "154": {
+        "equation": " *  ** adv 2   * c  /  sin rec rec   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * (  sin (  ( rec )  ) /  ( rec )  )  )  ) ",
+        "prediction": 0.0001773833363920811,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 6.996586991155662e-05
+            }
+        }
+    },
+    "155": {
+        "equation": " / 1  *  ** adv 4   *  ** c 4  rec   ",
+        "infix": "(  ( 1 )  / (    ( adv )   ** (  ( 4 )  )  * (   c_0  ** (  ( 4 )  )  *  ( rec )  )  )  ) ",
+        "prediction": 0.00019814209197323857,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 770.0,
+                "value": 4.150390829540042
+            }
+        }
+    },
+    "156": {
+        "equation": " *  ** adv 3   / c  * drop_length rec   ",
+        "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  ( drop_length )  *  ( rec )  )  )  ) ",
+        "prediction": 0.00016734198682779675,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.8095743096920953e-07
+            }
+        }
+    },
+    "157": {
+        "equation": " *  ** adv 4   * c  sin  **  / 1 rec  2   ",
+        "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 *  sin (   (  ( 1 )  /  ( rec )  )   ** (  ( 2 )  )  ) )  ) ",
+        "prediction": 0.00018066668329516555,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 2.8258664794895412e-05
+            }
+        }
+    },
+    "158": {
+        "equation": " * c  *  - adv rec  exp adv  ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  exp (  ( adv )  ) )  ) ",
+        "prediction": 0.00018549070974638164,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 5.487645619040414e-05
+            }
+        }
+    },
+    "159": {
+        "equation": " * c  exp  - adv rec ",
+        "infix": "( c_0 *  exp ( (  ( adv )  -  ( rec )  )  ) ) ",
+        "prediction": 0.0001841494343600523,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00010990963465902113
+            }
+        }
+    },
+    "160": {
+        "equation": " *  ** adv 4   * c  exp  *  - 0 1 rec   ",
+        "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
+        "prediction": 0.00017663837605811391,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 5.5346273718871836e-05
+            }
+        }
+    },
+    "161": {
+        "equation": " * adv  * c  * drop_length  - adv rec   ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  * (  ( adv )  -  ( rec )  )  )  )  ) ",
+        "prediction": 0.00019508845523053193,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.038199323612319515
+            }
+        }
+    },
+    "162": {
+        "equation": " * c  **  + adv  sin  **  ** rec 2  3   2  ",
+        "infix": "( c_0 *   (  ( adv )  +   sin (      ( rec )   ** (  ( 2 )  )   ** (  ( 3 )  )  ) )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00011607173426826779,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 2.8553835867533482e-05
+            }
+        }
+    },
+    "163": {
+        "equation": " / c  * adv  +  * adv rec  1   ",
+        "infix": "( c_0 / (  ( adv )  * ( (  ( adv )  *  ( rec )  )  +   ( 1 )  )  )  ) ",
+        "prediction": 0.0001891009740664259,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0012659886330934256
+            }
+        }
+    },
+    "164": {
+        "equation": " * adv  * c  * drop_length  exp adv   ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  *  exp (  ( adv )  ) )  )  ) ",
+        "prediction": 0.00017364528079153775,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 0.00267916996344719
+            }
+        }
+    },
+    "165": {
+        "equation": " * c  * drop_length  /  +  ** adv 4  1  adv   ",
+        "infix": "( c_0 * (  ( drop_length )  * ( (    ( adv )   ** (  ( 4 )  )  +   ( 1 )  )  /  ( adv )  )  )  ) ",
+        "prediction": 0.00017434389139600522,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.004617776917372862
+            }
+        }
+    },
+    "166": {
+        "equation": " * c  / drop_length width  ",
+        "infix": "( c_0 * (  ( drop_length )  /  ( width )  )  ) ",
+        "prediction": 0.00019727839315968,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "width": 0.0036268155631288
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00013588518690370516
+            }
+        }
+    },
+    "167": {
+        "equation": " * c  * drop_length  /  sin rec rec   ",
+        "infix": "( c_0 * (  ( drop_length )  * (  sin (  ( rec )  ) /  ( rec )  )  )  ) ",
+        "prediction": 0.00019193540620845995,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.05078464213365889
+            }
+        }
+    },
+    "168": {
+        "equation": " *  ** adv 2   * c  +  * adv  cos rec  1   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * ( (  ( adv )  *  cos ( ( rec )  ) )  +   ( 1 )  )  )  ) ",
+        "prediction": 0.000190304369753331,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 3.884049789244831e-05
+            }
+        }
+    },
+    "169": {
+        "equation": " * c  **  + adv  * rec  cos rec   2  ",
+        "infix": "( c_0 *   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00018791597375279097,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 4.0267878876982556e-05
+            }
+        }
+    },
+    "170": {
+        "equation": " * c  * drop_length  /  +  ** adv 6  1   ** adv 3    ",
+        "infix": "( c_0 * (  ( drop_length )  * ( (    ( adv )   ** (  ( 6 )  )  +   ( 1 )  )  /    ( adv )   ** (  ( 3 )  )  )  )  ) ",
+        "prediction": 0.00017376583863285304,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.004861061914227831
+            }
+        }
+    },
+    "171": {
+        "equation": " * adv  * c  /  sin  - adv rec drop_length   ",
+        "infix": "(  ( adv )  * ( c_0 * (  sin ( (  ( adv )  -  ( rec )  )  ) /  ( drop_length )  )  )  ) ",
+        "prediction": 0.00018072145177146554,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 1.0260123393701102e-06
+            }
+        }
+    },
+    "172": {
+        "equation": " * c  /  **  +  ** adv 2  rec  2  rec  ",
+        "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   ( rec )  )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
+        "prediction": 0.00017014683656352321,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 9.679090293810913e-06
+            }
+        }
+    },
+    "173": {
+        "equation": " * c  **  +  ** adv 2   cos rec  2  ",
+        "infix": "( c_0 *   (    ( adv )   ** (  ( 2 )  )  +   cos ( ( rec )  ) )   ** (  ( 2 )  )  ) ",
+        "prediction": 0.00017004628150942618,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.2169070084156597e-05
+            }
+        }
+    },
+    "174": {
+        "equation": " * adv  * c  + adv  sin  **  ** rec 3  3    ",
+        "infix": "(  ( adv )  * ( c_0 * (  ( adv )  +   sin (      ( rec )   ** (  ( 3 )  )   ** (  ( 3 )  )  ) )  )  ) ",
+        "prediction": 0.00010688246336924935,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 4.219291606090105e-05
+            }
+        }
+    },
+    "175": {
+        "equation": " * c  * drop_length  +  ** adv 3   cos  ** rec 2    ",
+        "infix": "( c_0 * (  ( drop_length )  * (    ( adv )   ** (  ( 3 )  )  +   cos (   ( rec )   ** (  ( 2 )  )  ) )  )  ) ",
+        "prediction": 0.00017840306065640199,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.005332041353811157
+            }
+        }
+    },
+    "176": {
+        "equation": " * c  *  - adv rec  /  sin rec drop_length   ",
+        "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  sin (  ( rec )  ) /  ( drop_length )  )  )  ) ",
+        "prediction": 0.0001836046370023915,
+        "values": {
+            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 1.914292491942937e-06
+            }
+        }
+    },
+    "177": {
+        "equation": " * c  cos  **  / rec adv  3  ",
+        "infix": "( c_0 *  cos (  (  ( rec )  /  ( adv )  )   ** (  ( 3 )  )  ) ) ",
+        "prediction": 0.00018019550461821325,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.00019416961535975843
+            }
+        }
+    },
+    "178": {
+        "equation": " / c  * adv rec  ",
+        "infix": "( c_0 / (  ( adv )  *  ( rec )  )  ) ",
+        "prediction": 0.00018947119419123463,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.0004854621025167514
+            }
+        }
+    },
+    "179": {
+        "equation": " / c  *  ** adv 4  rec  ",
+        "infix": "( c_0 / (    ( adv )   ** (  ( 4 )  )  *  ( rec )  )  ) ",
+        "prediction": 0.0001981420919747397,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 1.0,
+                "value": 0.003370109567965696
+            }
+        }
+    },
+    "180": {
+        "equation": " *  ** adv 2   * c  **  + adv  cos rec  3   ",
+        "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  )  ) ",
+        "prediction": 0.0001802676586423166,
+        "values": {
+            "rec": 1.3633073030954517,
+            "adv": 1.87939634928168
+        },
+        "constants": {
+            "num_fitted_constants": 1,
+            "c_0": {
+                "node_id": 513.0,
+                "value": 5.627468708269683e-06
+            }
+        }
+    }
+}
