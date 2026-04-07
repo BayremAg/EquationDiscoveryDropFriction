@@ -1,0 +1,160 @@
+\begin{tabularx}{\textwidth}{lllrrrrlrr}
+\toprule
+  &  fold mean test error \cdot 10^-6  &  train all error error \cdot 10^-6  &  rank error  &  fold mean test err r2  &  train all error err r2  &  rank err r2  &  calc. std \cdot 10^-6  &  error rank no duplicates  &  rank error r2 no duplicates  \\ 
+infix  &    &    &    &    &    &    &    &    &    \\ 
+\\theta_{mid}rule
+$ \displaystyle\frac{c_{0} d}{w} $  &  9.3  &  9\phantom{.0}  &  1  &  0.290000  &  0.400000  &  1  &  1.3  &  1\phantom{.000000}  &  1\phantom{.000000}  \\ 
+$ \displaystyle\frac{d}{c_{0} \theta_{rs} y_c} $  &  9.5  &  9.2  &  2  &  0.160000  &  0.270000  &  4  &  8949.7  &  2\phantom{.000000}  &  4\phantom{.000000}  \\ 
+$ U \beta \eta w + c_{0} $  &  9.6  &  9.3  &  3  &  -1.440000  &  -1.050000  &  117  &  1.6  &  3\phantom{.000000}  &  97\phantom{.000000}  \\ 
+$ \displaystyle\frac{d}{c_{0} \theta_{rs}} $  &  10.1  &  9.8  &  5  &  0.090000  &  0.240000  &  8  &  9114.3  &  4\phantom{.000000}  &  7\phantom{.000000}  \\ 
+$ c_{0}^{2} d^{2} $  &  10.1  &  9.8  &  8  &  -0.360000  &  0\phantom{.000000}  &  36  &  1.5  &  5\phantom{.000000}  &  27\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d \sin{\left(\theta_{rs} \right)}}{\theta_{rs}} $  &  10.2  &  9.9  &  11  &  -0.560000  &  -0.190000  &  59  &  9486.5  &  6\phantom{.000000}  &  45\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d^{2}}{\log{\left(\theta_{as} \right)}} $  &  10.3  &  10\phantom{.0}  &  12  &  -0.500000  &  -0.120000  &  47  &  3521.5  &  7\phantom{.000000}  &  36\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} d^{2}}{c_{0}} $  &  10.5  &  10.2  &  13  &  -0.400000  &  -0.020000  &  39  &  7123.1  &  8\phantom{.000000}  &  29\phantom{.000000}  \\ 
+$ c_{0} \sin{\left(\theta_{mid} \theta_{rs} \right)} $  &  10.7  &  10.5  &  14  &  -0.010000  &  0.070000  &  23  &  26481\phantom{.0}  &  9\phantom{.000000}  &  18\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3}\right) $  &  10.7  &  10.5  &  15  &  0.010000  &  0.030000  &  28  &  33511.9  &  10\phantom{.000000}  &  23\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} \left(\theta_{as} \cos{\left(\theta_{rs} \right)} + 1\right) $  &  10.7  &  10.6  &  16  &  -0.890000  &  -0.550000  &  96  &  34894.5  &  11\phantom{.000000}  &  79\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{rs}^{2}} $  &  11.4  &  10.7  &  18  &  0.090000  &  0.170000  &  16  &  18340.9  &  12\phantom{.000000}  &  12\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} e^{- 2 \theta_{rs}} $  &  11.1  &  10.8  &  21  &  -0.420000  &  -0.300000  &  71  &  29907.9  &  13\phantom{.000000}  &  57\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0}^{2}}{\theta_{rs}^{2}} $  &  11.5  &  10.8  &  22  &  0.140000  &  0.190000  &  13  &  19726.9  &  14\phantom{.000000}  &  10\phantom{.000000}  \\ 
+$ c_{0} d^{2} e^{\theta_{as}} $  &  11.1  &  10.9  &  23  &  -0.670000  &  -0.180000  &  58  &  14350.9  &  15\phantom{.000000}  &  44\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} d^{2} $  &  11.2  &  10.9  &  25  &  -0.580000  &  -0.150000  &  49  &  14265.7  &  16\phantom{.000000}  &  38\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  11.3  &  11.1  &  26  &  -6.930000  &  -6.410000  &  131  &  29228.9  &  17\phantom{.000000}  &  111\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  11.7  &  11.3  &  27  &  -0.270000  &  -0.180000  &  54  &  31035.7  &  18\phantom{.000000}  &  42\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0}}{\theta_{rs}^{3}} $  &  11.8  &  11.3  &  28  &  -0.160000  &  -0.100000  &  45  &  28527.9  &  19\phantom{.000000}  &  34\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  11.6  &  11.4  &  29  &  -13.600000  &  -13.180000  &  134  &  43220.5  &  20\phantom{.000000}  &  114\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} y_c}{\theta_{rs}^{3}} $  &  12.2  &  11.5  &  30  &  -0.240000  &  -0.140000  &  48  &  28053.9  &  21\phantom{.000000}  &  37\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} \left(\theta_{rs} \cos{\left(\theta_{rs} \right)} + 1\right) $  &  11.8  &  11.6  &  31  &  -0.740000  &  -0.420000  &  89  &  29451.3  &  22\phantom{.000000}  &  72\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} \sin{\left(\theta_{rs} \right)} $  &  12\phantom{.0}  &  11.6  &  32  &  -0.420000  &  -0.380000  &  84  &  26134.1  &  23\phantom{.000000}  &  68\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2}}{\theta_{rs}} $  &  11.8  &  11.6  &  33  &  -1.800000  &  -1.230000  &  119  &  42736.8  &  24\phantom{.000000}  &  99\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2} $  &  11.9  &  11.8  &  34  &  -1.560000  &  -1.010000  &  115  &  31375.6  &  25\phantom{.000000}  &  95\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d^{2} w}{y_c} $  &  12.2  &  11.8  &  35  &  -0.340000  &  0.010000  &  30  &  4.2  &  26\phantom{.000000}  &  25\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{rs}^{3}} $  &  12.3  &  11.9  &  39  &  -0.280000  &  -0.180000  &  56  &  27458\phantom{.0}  &  27\phantom{.000000}  &  43\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2}}{\theta_{rs}} $  &  12.2  &  11.9  &  40  &  -0.810000  &  -0.520000  &  95  &  35979.3  &  28\phantom{.000000}  &  78\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}^{4}}{\theta_{rs} + \cos{\left(\displaystyle\frac{\theta_{as}}{\theta_{rs}} \right)}} $  &  12.8  &  11.9  &  41  &  0.160000  &  0.240000  &  6  &  14694.3  &  29\phantom{.000000}  &  6\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0} d^{2} $  &  12.2  &  11.9  &  42  &  -0.890000  &  -0.370000  &  83  &  21470.8  &  30\phantom{.000000}  &  67\phantom{.000000}  \\ 
+$ c_{0} \left(\left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2} - \sin{\left(\theta_{rs} \right)}\right) $  &  12.3  &  12\phantom{.0}  &  43  &  -1.980000  &  -1.340000  &  120  &  37622.5  &  31\phantom{.000000}  &  100\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{3} \right)}} $  &  12.3  &  12.1  &  44  &  -0.310000  &  -0.250000  &  67  &  33476.5  &  32\phantom{.000000}  &  53\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}\right) $  &  12.4  &  12.1  &  45  &  -3.100000  &  -2.080000  &  125  &  41855\phantom{.0}  &  33\phantom{.000000}  &  105\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  12.6  &  12.2  &  46  &  -0.610000  &  -0.470000  &  92  &  36694.7  &  34\phantom{.000000}  &  75\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} e^{- \theta_{rs}} $  &  13\phantom{.0}  &  12.3  &  47  &  0.100000  &  0.170000  &  18  &  16163.1  &  35\phantom{.000000}  &  13\phantom{.000000}  \\ 
+$ c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  12.7  &  12.5  &  48  &  -26.900000  &  -26.370000  &  150  &  48360.8  &  36\phantom{.000000}  &  129\phantom{.000000}  \\ 
+$ c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  12.7  &  12.5  &  49  &  -26.900000  &  -26.370000  &  151  &  48360.8  &  37\phantom{.000000}  &  130\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{as} \theta_{rs} \right)}} $  &  13\phantom{.0}  &  12.5  &  50  &  0.020000  &  0.070000  &  26  &  inf  &  38\phantom{.000000}  &  21\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}}{\sin{\left(\theta_{rs} \right)}} $  &  13.1  &  12.7  &  51  &  -6.120000  &  -3.960000  &  129  &  46026.7  &  39\phantom{.000000}  &  109\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} y_c}{\theta_{mid}^{2}} $  &  13.6  &  12.7  &  52  &  0.160000  &  0.270000  &  3  &  20192.8  &  40\phantom{.000000}  &  3\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{w} $  &  13.7  &  12.9  &  53  &  0.240000  &  0.330000  &  2  &  1.1  &  41\phantom{.000000}  &  2\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{- \theta_{rs} + e^{\theta_{rs}}} $  &  13.5  &  12.9  &  54  &  -0.130000  &  -0.080000  &  43  &  27760.9  &  42\phantom{.000000}  &  32\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3}}{d} $  &  13.3  &  12.9  &  55  &  -13.300000  &  -13.090000  &  133  &  43509\phantom{.0}  &  43\phantom{.000000}  &  113\phantom{.000000}  \\ 
+$ c_{0} e^{\theta_{as} - \theta_{rs}} $  &  13.6  &  12.9  &  56  &  0.020000  &  0.080000  &  22  &  20566.4  &  44\phantom{.000000}  &  17\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d w}{\log{\left(\theta_{rs} \right)}} $  &  13.9  &  12.9  &  57  &  -0.500000  &  -0.260000  &  69  &  4585.7  &  45\phantom{.000000}  &  55\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{3} \right)}} $  &  13.2  &  13\phantom{.0}  &  58  &  -0.390000  &  -0.360000  &  81  &  37744.1  &  46\phantom{.000000}  &  65\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3} $  &  13.5  &  13\phantom{.0}  &  59  &  -3.770000  &  -2.580000  &  127  &  47186.4  &  47\phantom{.000000}  &  107\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) e^{\sin{\left(\theta_{rs} \right)}} $  &  13.2  &  13.1  &  60  &  -27.110000  &  -26.590000  &  165  &  51314.5  &  48\phantom{.000000}  &  140\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\theta_{rs} \right)} $  &  13.2  &  13.1  &  62  &  -27.210000  &  -26.680000  &  170  &  51288.9  &  49\phantom{.000000}  &  144\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) $  &  13.2  &  13.1  &  63  &  -27.010000  &  -26.480000  &  156  &  51256.4  &  50\phantom{.000000}  &  134\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{as} + \theta_{rs} + \sin{\left(\theta_{rs} \right)}\right) $  &  13.4  &  13.2  &  65  &  -27.080000  &  -26.530000  &  164  &  46393.7  &  51\phantom{.000000}  &  139\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3}\right)}{\theta_{as}} $  &  13.4  &  13.2  &  66  &  -26.860000  &  -26.320000  &  149  &  47495.1  &  52\phantom{.000000}  &  128\phantom{.000000}  \\ 
+$ c_{0} d $  &  13.9  &  13.2  &  67  &  0.070000  &  0.230000  &  9  &  0.7  &  53\phantom{.000000}  &  8\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{2} - \theta_{rs}^{2}\right) $  &  13.5  &  13.3  &  69  &  -27.080000  &  -26.520000  &  163  &  51892.2  &  54\phantom{.000000}  &  138\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs}^{3} \right)}\right) $  &  14.4  &  13.3  &  71  &  -0.680000  &  -0.410000  &  87  &  26445.3  &  55\phantom{.000000}  &  70\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  13.8  &  13.4  &  72  &  -1.060000  &  -0.850000  &  110  &  42810.8  &  56\phantom{.000000}  &  91\phantom{.000000}  \\ 
+$ \theta_{as}^{4} c_{0} \sin{\left(\displaystyle\frac{1}{\theta_{rs}^{2}} \right)} $  &  14\phantom{.0}  &  13.4  &  73  &  -0.420000  &  -0.320000  &  77  &  34003.8  &  57\phantom{.000000}  &  61\phantom{.000000}  \\ 
+$ c_{0} \theta_{rs} \left(\theta_{as} - \theta_{rs}\right) $  &  13.7  &  13.4  &  74  &  -26.820000  &  -26.280000  &  148  &  45697.8  &  58\phantom{.000000}  &  127\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} \left(\cos{\left(\theta_{rs} \right)} + 1\right) $  &  14.1  &  13.5  &  76  &  -1.050000  &  -0.780000  &  104  &  21111.7  &  59\phantom{.000000}  &  86\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  13.6  &  13.5  &  78  &  -27.250000  &  -26.660000  &  168  &  53754.2  &  60\phantom{.000000}  &  143\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d^{3}}{y_c} $  &  14.7  &  13.5  &  79  &  -1.350000  &  -0.800000  &  107  &  4.3  &  61\phantom{.000000}  &  89\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{as} \theta_{rs}} $  &  14.5  &  13.6  &  81  &  0.040000  &  0.160000  &  20  &  11513.5  &  62\phantom{.000000}  &  15\phantom{.000000}  \\ 
+$ c_{0} e^{\theta_{as}} \sin{\left(\theta_{as} \right)} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  13.8  &  13.6  &  82  &  -26.900000  &  -26.440000  &  153  &  54170.5  &  63\phantom{.000000}  &  132\phantom{.000000}  \\ 
+$ c_{0} d \left(\theta_{as}^{3} + \cos{\left(\theta_{rs}^{2} \right)}\right) $  &  14.3  &  13.7  &  83  &  -0.410000  &  -0.150000  &  51  &  24000.3  &  64\phantom{.000000}  &  39\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3} + \sin{\left(\theta_{as} \theta_{rs} \right)}\right) $  &  14\phantom{.0}  &  13.7  &  84  &  -28.400000  &  -26.400000  &  152  &  54370.5  &  65\phantom{.000000}  &  131\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} d $  &  14.5  &  13.8  &  85  &  -0.010000  &  0.170000  &  19  &  7134.4  &  66\phantom{.000000}  &  14\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{rs}} $  &  14.8  &  13.9  &  86  &  0.130000  &  0.220000  &  11  &  9107.7  &  67\phantom{.000000}  &  9\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0} e^{- \theta_{rs}} $  &  14.6  &  13.9  &  88  &  -0.160000  &  -0.090000  &  44  &  26212.3  &  68\phantom{.000000}  &  33\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  14.6  &  13.9  &  89  &  -0.290000  &  -0.170000  &  53  &  26244.6  &  69\phantom{.000000}  &  41\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right)}{d} $  &  14.4  &  13.9  &  90  &  -27\phantom{.000000}  &  -26.520000  &  160  &  51835\phantom{.0}  &  70\phantom{.000000}  &  137\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\theta_{as} - \theta_{rs}\right) $  &  14.2  &  14\phantom{.0}  &  92  &  -27.360000  &  -26.770000  &  175  &  56663.1  &  71\phantom{.000000}  &  147\phantom{.000000}  \\ 
+$ c_{0} \left(e^{\theta_{as}} - e^{\theta_{rs}}\right) $  &  14.3  &  14.1  &  94  &  -27.250000  &  -26.640000  &  166  &  53501.2  &  72\phantom{.000000}  &  141\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3} + \cos{\left(\theta_{rs} \right)}\right) $  &  14.3  &  14.1  &  95  &  -15.290000  &  -15.270000  &  138  &  57809\phantom{.0}  &  73\phantom{.000000}  &  118\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{rs} \sin{\left(\theta_{as} \right)}} $  &  15.1  &  14.2  &  96  &  -0.220000  &  -0.040000  &  40  &  12736.9  &  74\phantom{.000000}  &  30\phantom{.000000}  \\ 
+$ c_{0} w \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\displaystyle\frac{\theta_{as}}{2} + \displaystyle\frac{\theta_{rs}}{2} \right)} $  &  14.7  &  14.2  &  97  &  -26.960000  &  -26.490000  &  157  &  52453.7  &  75\phantom{.000000}  &  135\phantom{.000000}  \\ 
+$ c_{0} w \left(- \cos{\left(\theta_{as} \right)} + \cos{\left(\theta_{rs} \right)}\right) $  &  14.8  &  14.3  &  98  &  -26.940000  &  -26.470000  &  154  &  51690.5  &  76\phantom{.000000}  &  133\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{mid}} $  &  15.2  &  14.3  &  99  &  0.170000  &  0.260000  &  5  &  9995.7  &  77\phantom{.000000}  &  5\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\cos{\left(\theta_{rs} \right)} + 1\right) e^{\theta_{as}} $  &  14.9  &  14.3  &  100  &  -0.960000  &  -0.800000  &  105  &  26788.4  &  78\phantom{.000000}  &  87\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} d \left(\theta_{as} + 1\right) $  &  15\phantom{.0}  &  14.3  &  101  &  -0.140000  &  0.070000  &  25  &  11922.6  &  79\phantom{.000000}  &  20\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0}^{2}}{w} $  &  15.2  &  14.4  &  102  &  -0.040000  &  0.070000  &  24  &  14118.5  &  80\phantom{.000000}  &  19\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{as}^{4} \theta_{rs}} $  &  15.3  &  14.4  &  103  &  -0.920000  &  -0.610000  &  98  &  29217.2  &  81\phantom{.000000}  &  80\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0}}{\theta_{rs}} $  &  15.3  &  14.4  &  105  &  0.100000  &  0.180000  &  14  &  11627.1  &  82\phantom{.000000}  &  11\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\theta_{rs} \right)}}{d} $  &  14.9  &  14.4  &  106  &  -27.240000  &  -26.760000  &  173  &  51863.2  &  83\phantom{.000000}  &  146\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3}\right) $  &  14.7  &  14.5  &  107  &  -27.260000  &  -26.660000  &  167  &  53544\phantom{.0}  &  84\phantom{.000000}  &  142\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{as} \left(\theta_{as} \theta_{rs} + 1\right)} $  &  15.6  &  14.6  &  108  &  -0.140000  &  0.030000  &  29  &  14161.7  &  85\phantom{.000000}  &  24\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} d $  &  15.3  &  14.6  &  109  &  -0.220000  &  0\phantom{.000000}  &  32  &  14317.9  &  86\phantom{.000000}  &  26\phantom{.000000}  \\ 
+$ c_{0} e^{2 \theta_{as} - \theta_{rs}} $  &  15.4  &  14.8  &  110  &  -0.600000  &  -0.470000  &  91  &  32686.6  &  87\phantom{.000000}  &  74\phantom{.000000}  \\ 
+$ \theta_{as}^{4} c_{0} e^{- \theta_{rs}} $  &  15.6  &  14.9  &  111  &  -0.450000  &  -0.360000  &  82  &  32557.4  &  88\phantom{.000000}  &  66\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{rs} + \sin{\left(\theta_{rs}^{2} \right)}\right) $  &  15.4  &  15\phantom{.0}  &  112  &  -27.120000  &  -26.490000  &  158  &  inf  &  89\phantom{.000000}  &  136\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} - \theta_{rs}\right) e^{\theta_{as}} $  &  15.2  &  15\phantom{.0}  &  114  &  -27.810000  &  -27.150000  &  179  &  62469.8  &  90\phantom{.000000}  &  151\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}}{\theta_{rs}} $  &  15.7  &  15\phantom{.0}  &  115  &  -3.730000  &  -2.690000  &  128  &  55143.6  &  91\phantom{.000000}  &  108\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0} \left(\theta_{as} - \theta_{rs}\right)}{d} $  &  15.5  &  15.1  &  116  &  -27.370000  &  -26.850000  &  177  &  57304.2  &  92\phantom{.000000}  &  149\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d \left(\theta_{as}^{4} + 1\right)}{\theta_{as}} $  &  16\phantom{.0}  &  15.3  &  117  &  -0.480000  &  -0.190000  &  61  &  19833.3  &  93\phantom{.000000}  &  47\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as} c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)}}{d} $  &  15.9  &  15.4  &  118  &  -27.310000  &  -26.780000  &  176  &  54304\phantom{.0}  &  94\phantom{.000000}  &  148\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} d \left(\theta_{as}^{6} + 1\right)}{\theta_{as}^{3}} $  &  16.2  &  15.5  &  119  &  -0.520000  &  -0.230000  &  64  &  20861.8  &  95\phantom{.000000}  &  50\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} d e^{\theta_{as}} $  &  16.2  &  15.5  &  120  &  -0.650000  &  -0.310000  &  72  &  21569.6  &  96\phantom{.000000}  &  58\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0} d $  &  16.3  &  15.6  &  121  &  -0.550000  &  -0.260000  &  68  &  21517.8  &  97\phantom{.000000}  &  54\phantom{.000000}  \\ 
+$ c_{0} \cos{\left(\displaystyle\frac{\theta_{rs}^{3}}{\theta_{as}^{3}} \right)} $  &  16.5  &  15.7  &  122  &  -0.270000  &  -0.190000  &  62  &  9946.5  &  98\phantom{.000000}  &  48\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0} \sin{\left(\theta_{rs} \right)}}{\theta_{rs}} $  &  16.6  &  15.7  &  123  &  -0.330000  &  -0.210000  &  63  &  17401.5  &  99\phantom{.000000}  &  49\phantom{.000000}  \\ 
+$ \displaystyle\frac{d}{c_{0}^{6} \theta_{rs}^{3}} $  &  15.9  &  15.8  &  124  &  -1.030000  &  -0.810000  &  109  &  26881\phantom{.0}  &  100\phantom{.000000}  &  90\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right)}{w} $  &  16.4  &  16.1  &  125  &  -27.230000  &  -26.710000  &  172  &  49665.1  &  101\phantom{.000000}  &  145\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{\theta_{rs}} $  &  17\phantom{.0}  &  16.1  &  126  &  -0.310000  &  -0.190000  &  60  &  23500.6  &  102\phantom{.000000}  &  46\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right) $  &  17.4  &  16.5  &  127  &  -0.160000  &  -0.050000  &  41  &  16096.9  &  103\phantom{.000000}  &  31\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs} \right)}\right)^{2}}{\theta_{rs}} $  &  17.3  &  16.5  &  128  &  -0.410000  &  -0.290000  &  70  &  24950.2  &  104\phantom{.000000}  &  56\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} y_c}{\theta_{rs}} $  &  17.7  &  16.6  &  129  &  -0.070000  &  0.060000  &  27  &  9229.4  &  105\phantom{.000000}  &  22\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{rs}^{4}} $  &  17.1  &  16.8  &  131  &  -1.130000  &  -0.980000  &  114  &  36189.7  &  106\phantom{.000000}  &  94\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} \cos{\left(\displaystyle\frac{\theta_{rs}^{2}}{\theta_{as}^{2}} \right)} $  &  17.7  &  16.9  &  132  &  -0.540000  &  -0.420000  &  88  &  22860.1  &  107\phantom{.000000}  &  71\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} d \left(\theta_{as} - \theta_{rs}\right) $  &  17.4  &  16.9  &  133  &  -27.770000  &  -27.110000  &  178  &  55453.1  &  108\phantom{.000000}  &  150\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} y_c}{\theta_{mid}} $  &  18.2  &  17\phantom{.0}  &  134  &  -0.070000  &  0.080000  &  21  &  10117.6  &  109\phantom{.000000}  &  16\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{4} c_{0}}{\theta_{rs}} $  &  18\phantom{.0}  &  17.1  &  135  &  -0.680000  &  -0.510000  &  94  &  30371.2  &  110\phantom{.000000}  &  77\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as}^{4} + \theta_{rs}\right)}{\theta_{rs}} $  &  18.1  &  17.1  &  136  &  -0.590000  &  -0.430000  &  90  &  27567.4  &  111\phantom{.000000}  &  73\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  19.1  &  18\phantom{.0}  &  137  &  -1.680000  &  -1.480000  &  122  &  39572.7  &  112\phantom{.000000}  &  102\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{2} - \theta_{rs}\right) $  &  19.1  &  18.1  &  139  &  -0.560000  &  -0.400000  &  86  &  24445.1  &  113\phantom{.000000}  &  69\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{2} + \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  19.1  &  18.1  &  140  &  -0.920000  &  -0.680000  &  102  &  29764.7  &  114\phantom{.000000}  &  84\phantom{.000000}  \\ 
+$ \displaystyle\frac{1}{c_{0}^{2} \left(\theta_{mid} - \cos{\left(\theta_{rs} \right)}\right)^{2}} $  &  18.4  &  18.2  &  141  &  -1.020000  &  -0.930000  &  111  &  27358.3  &  115\phantom{.000000}  &  92\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as}^{2} + \cos{\left(\theta_{rs} \right)}\right) $  &  19.4  &  18.2  &  142  &  -0.300000  &  -0.160000  &  52  &  14720.1  &  116\phantom{.000000}  &  40\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \theta_{rs}\right)^{2}}{\theta_{rs}} $  &  19.9  &  18.8  &  143  &  -0.510000  &  -0.350000  &  80  &  20923.2  &  117\phantom{.000000}  &  64\phantom{.000000}  \\ 
+$ c_{0} $  &  20.1  &  18.9  &  144  &  -0.130000  &  0\phantom{.000000}  &  38  &  0\phantom{.0}  &  118\phantom{.000000}  &  28\phantom{.000000}  \\ 
+$ c_{0} \sin{\left(\theta_{rs} \right)} $  &  20.7  &  19.4  &  145  &  -0.540000  &  -0.320000  &  76  &  1609.3  &  119\phantom{.000000}  &  60\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} $  &  20.8  &  19.5  &  146  &  -0.240000  &  -0.110000  &  46  &  7060.5  &  120\phantom{.000000}  &  35\phantom{.000000}  \\ 
+$ c_{0} e^{\theta_{as}} $  &  21.5  &  20.2  &  147  &  -0.530000  &  -0.350000  &  79  &  14216.3  &  121\phantom{.000000}  &  63\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} $  &  21.6  &  20.3  &  148  &  -0.470000  &  -0.310000  &  74  &  14171.4  &  122\phantom{.000000}  &  59\phantom{.000000}  \\ 
+$ \displaystyle\frac{y_c \cos{\left(\theta_{mid} \right)}}{c_{0}} $  &  22.7  &  20.4  &  151  &  -23.990000  &  -23.540000  &  141  &  94828.5  &  123\phantom{.000000}  &  121\phantom{.000000}  \\ 
+$ \displaystyle\frac{y_c \cos{\left(\theta_{mid} \right)}}{c_{0}^{2}} $  &  22.7  &  20.4  &  152  &  -23.990000  &  -23.540000  &  140  &  94834.9  &  124\phantom{.000000}  &  120\phantom{.000000}  \\ 
+$ c_{0} y_c \cos{\left(\theta_{mid} \right)} $  &  22.7  &  20.4  &  153  &  -23.990000  &  -23.540000  &  142  &  94802\phantom{.0}  &  125\phantom{.000000}  &  122\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0} $  &  22.4  &  21.1  &  154  &  -0.820000  &  -0.610000  &  99  &  21311.5  &  126\phantom{.000000}  &  81\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3}}{c_{0}} $  &  22.4  &  21.1  &  155  &  -0.820000  &  -0.610000  &  101  &  21303.4  &  127\phantom{.000000}  &  83\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0}^{3} $  &  22.4  &  21.1  &  156  &  -0.820000  &  -0.610000  &  100  &  21272.7  &  128\phantom{.000000}  &  82\phantom{.000000}  \\ 
+$ \theta_{as}^{3} c_{0} d w $  &  22.8  &  21.5  &  157  &  -1.150000  &  -0.740000  &  103  &  21610.6  &  129\phantom{.000000}  &  85\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{4} c_{0}^{2}}{\sin{\left(\theta_{rs} \right)}} $  &  22.9  &  21.6  &  158  &  -2.200000  &  -1.520000  &  123  &  32035.9  &  130\phantom{.000000}  &  103\phantom{.000000}  \\ 
+$ c_{0}^{2} y_c $  &  23.1  &  21.6  &  159  &  -0.430000  &  -0.230000  &  65  &  3.8  &  131\phantom{.000000}  &  51\phantom{.000000}  \\ 
+$ c_{0} y_c $  &  23.1  &  21.6  &  160  &  -0.430000  &  -0.230000  &  66  &  3.8  &  132\phantom{.000000}  &  52\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{d \theta_{rs}} $  &  23.2  &  21.8  &  161  &  -1.120000  &  -0.800000  &  106  &  23155.7  &  133\phantom{.000000}  &  88\phantom{.000000}  \\ 
+$ c_{0} y_c \sin{\left(\theta_{mid} \right)} $  &  24.5  &  23\phantom{.0}  &  162  &  -0.540000  &  -0.340000  &  78  &  2229.2  &  134\phantom{.000000}  &  62\phantom{.000000}  \\ 
+$ c_{0} \cos{\left(\theta_{mid} \right)} $  &  26\phantom{.0}  &  23.3  &  163  &  -24.760000  &  -24.210000  &  143  &  92257\phantom{.0}  &  135\phantom{.000000}  &  123\phantom{.000000}  \\ 
+$ U c_{0} $  &  25.7  &  23.8  &  164  &  -2.420000  &  -2.190000  &  126  &  2.3  &  136\phantom{.000000}  &  106\phantom{.000000}  \\ 
+$ c_{0} \theta_{rs} $  &  26\phantom{.0}  &  24.4  &  165  &  -0.710000  &  -0.500000  &  93  &  8762.2  &  137\phantom{.000000}  &  76\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} e^{\theta_{as}}}{d} $  &  28\phantom{.0}  &  26.3  &  166  &  -1.520000  &  -1.120000  &  118  &  13899.7  &  138\phantom{.000000}  &  98\phantom{.000000}  \\ 
+$ \theta_{as}^{2} c_{0} w $  &  28.3  &  26.6  &  167  &  -1.200000  &  -0.940000  &  112  &  14146.2  &  139\phantom{.000000}  &  93\phantom{.000000}  \\ 
+$ \displaystyle\frac{y_c^{3}}{c_{0}^{3}} $  &  29.1  &  27.2  &  168  &  -1.620000  &  -1.030000  &  116  &  11.7  &  140\phantom{.000000}  &  96\phantom{.000000}  \\ 
+$ c_{0}^{2} d \cos{\left(\theta_{mid} \right)} $  &  33.8  &  29.9  &  169  &  -26.480000  &  -25.970000  &  146  &  89495.6  &  141\phantom{.000000}  &  126\phantom{.000000}  \\ 
+$ \displaystyle\frac{1}{\theta_{as}^{2} c_{0} d^{2}} $  &  32.1  &  30\phantom{.0}  &  170  &  -3.010000  &  -1.750000  &  124  &  13150.1  &  142\phantom{.000000}  &  104\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{4} c_{0} \sin{\left(\theta_{rs}^{2} \right)}}{\theta_{rs}^{2}} $  &  33.1  &  30.1  &  171  &  -16.490000  &  -14.740000  &  136  &  70357.8  &  143\phantom{.000000}  &  116\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0}^{2} \sin{\left(\theta_{rs}^{2} \right)}}{\theta_{rs}^{2}} $  &  33.4  &  30.3  &  172  &  -15.890000  &  -14.410000  &  135  &  65333.1  &  144\phantom{.000000}  &  115\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} w}{d} $  &  33.2  &  31.2  &  173  &  -1.870000  &  -1.440000  &  121  &  1.3  &  145\phantom{.000000}  &  101\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}}{\theta_{mid}^{9}} $  &  41.3  &  39.7  &  174  &  -11.210000  &  -11.110000  &  132  &  75390.5  &  146\phantom{.000000}  &  112\phantom{.000000}  \\ 
+$ \theta_{as} c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{27} \right)}\right) $  &  43.8  &  43.2  &  175  &  -19.210000  &  -19.020000  &  139  &  92626864372056.5  &  147\phantom{.000000}  &  119\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0} y_c}{\theta_{mid}^{2} \left(\theta_{mid} - 1\right)^{2}} $  &  46.1  &  45\phantom{.0}  &  176  &  -15.440000  &  -15.260000  &  137  &  73993.3  &  148\phantom{.000000}  &  117\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{mid}^{9}}{c_{0}^{9} \theta_{rs}} $  &  50.5  &  48\phantom{.0}  &  177  &  -6.140000  &  -5.680000  &  130  &  80763.7  &  149\phantom{.000000}  &  110\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{3} c_{0}}{\theta_{rs} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  57.8  &  55.2  &  178  &  -25.900000  &  -25.170000  &  144  &  85015.8  &  150\phantom{.000000}  &  124\phantom{.000000}  \\ 
+$ \displaystyle\frac{\theta_{as}^{2} c_{0}}{\theta_{rs} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  58.3  &  55.7  &  179  &  -26.420000  &  -25.740000  &  145  &  82948.2  &  151\phantom{.000000}  &  125\phantom{.000000}  \\ 
+$ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{8} \right)}\right)^{2} $  &  65.2  &  63.8  &  180  &  -35.350000  &  -34.040000  &  180  &  1595742.2  &  152\phantom{.000000}  &  152\phantom{.000000}  \\ 
+$ \displaystyle\frac{c_{0}^{27}}{\theta_{mid}^{27}} $  &  107.2  &  92.2  &  181  &  -109.710000  &  -104.540000  &  181  &  226102.1  &  153\phantom{.000000}  &  153\phantom{.000000}  \\ 
+\bottomrule
+\end{tabularx}

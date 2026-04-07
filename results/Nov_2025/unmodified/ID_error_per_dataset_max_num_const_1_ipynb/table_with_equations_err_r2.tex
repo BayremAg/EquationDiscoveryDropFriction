@@ -1,0 +1,188 @@
+\begin{tabularx}{\textwidth}{lRRRRRl}
+\toprule
+  &  infix  &  fold mean train err r2  &  fold mean test err r2  &  train all error err r2  &  calc. std  &  id  \\ 
+rank err r2  &    &    &    &    &    &    \\ 
+\\theta_{mid}rule
+1  &  $ \displaystyle\frac{c_{0} d}{w} $  &  4.19e-01  &  2.90e-01  &  3.97e-01  &  1.30e-06  &  1.66e+02  \\ 
+2  &  $ \displaystyle\frac{c_{0}}{w} $  &  3.40e-01  &  2.45e-01  &  3.34e-01  &  1.07e-06  &  7.30e+01  \\ 
+3  &  $ \displaystyle\frac{c_{0} y_c}{\theta_{mid}^{2}} $  &  2.87e-01  &  1.61e-01  &  2.74e-01  &  2.02e-02  &  4.80e+01  \\ 
+4  &  $ \displaystyle\frac{d}{c_{0} \theta_{rs} y_c} $  &  2.89e-01  &  1.57e-01  &  2.68e-01  &  8.95e-03  &  6.40e+01  \\ 
+5  &  $ \displaystyle\frac{c_{0}}{\theta_{mid}} $  &  2.67e-01  &  1.67e-01  &  2.64e-01  &  1.00e-02  &  4.20e+01  \\ 
+6  &  $ \displaystyle\frac{c_{0}^{4}}{\theta_{rs} + \cos{\left(\displaystyle\frac{\theta_{as}}{\theta_{rs}} \right)}} $  &  2.44e-01  &  1.62e-01  &  2.42e-01  &  1.47e-02  &  5.50e+01  \\ 
+7  &  $ \displaystyle\frac{c_{0} d}{\theta_{rs}} $  &  2.65e-01  &  9.20e-02  &  2.39e-01  &  9.12e-03  &  5.30e+01  \\ 
+8  &  $ \displaystyle\frac{d}{c_{0} \theta_{rs}} $  &  2.65e-01  &  9.20e-02  &  2.39e-01  &  9.11e-03  &  6.50e+01  \\ 
+9  &  $ c_{0} d $  &  2.51e-01  &  6.55e-02  &  2.30e-01  &  7.28e-07  &  3.10e+01  \\ 
+10  &  $ c_{0}^{2} d $  &  2.51e-01  &  6.55e-02  &  2.30e-01  &  7.30e-07  &  3.60e+01  \\ 
+11  &  $ \displaystyle\frac{c_{0}}{\theta_{rs}} $  &  2.18e-01  &  1.25e-01  &  2.17e-01  &  9.11e-03  &  2.40e+01  \\ 
+12  &  $ \displaystyle\frac{c_{0}^{27}}{\theta_{rs}} $  &  2.18e-01  &  1.25e-01  &  2.17e-01  &  9.05e-03  &  2.00e+01  \\ 
+13  &  $ \displaystyle\frac{\theta_{as} c_{0}^{2}}{\theta_{rs}^{2}} $  &  1.96e-01  &  1.35e-01  &  1.93e-01  &  1.97e-02  &  4.30e+01  \\ 
+14  &  $ \displaystyle\frac{\theta_{as} c_{0}}{\theta_{rs}} $  &  1.76e-01  &  9.60e-02  &  1.78e-01  &  1.16e-02  &  4.00e+01  \\ 
+15  &  $ \displaystyle\frac{c_{0}^{2}}{\theta_{rs}^{2}} $  &  1.80e-01  &  9.30e-02  &  1.72e-01  &  1.83e-02  &  4.70e+01  \\ 
+16  &  $ \displaystyle\frac{c_{0}}{\theta_{rs}^{2}} $  &  1.80e-01  &  9.30e-02  &  1.72e-01  &  1.83e-02  &  3.90e+01  \\ 
+17  &  $ \displaystyle\frac{c_{0}^{6}}{\theta_{rs}^{2}} $  &  1.80e-01  &  9.30e-02  &  1.72e-01  &  1.83e-02  &  2.80e+01  \\ 
+18  &  $ \theta_{as} c_{0} e^{- \theta_{rs}} $  &  1.72e-01  &  9.88e-02  &  1.69e-01  &  1.62e-02  &  1.51e+02  \\ 
+19  &  $ \theta_{as} c_{0} d $  &  1.92e-01  &  -1.17e-02  &  1.67e-01  &  7.13e-03  &  6.90e+01  \\ 
+20  &  $ \displaystyle\frac{c_{0}}{\theta_{as} \theta_{rs}} $  &  1.66e-01  &  3.88e-02  &  1.59e-01  &  1.15e-02  &  1.78e+02  \\ 
+21  &  $ \displaystyle\frac{c_{0} y_c}{\theta_{mid}} $  &  8.19e-02  &  -6.71e-02  &  8.00e-02  &  1.01e-02  &  3.50e+01  \\ 
+22  &  $ c_{0} e^{\theta_{as} - \theta_{rs}} $  &  7.56e-02  &  1.61e-02  &  7.53e-02  &  2.06e-02  &  1.59e+02  \\ 
+23  &  $ c_{0} \sin{\left(\theta_{mid} \theta_{rs} \right)} $  &  8.35e-02  &  -5.76e-03  &  7.27e-02  &  2.65e-02  &  5.80e+01  \\ 
+24  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0}^{2}}{w} $  &  7.99e-02  &  -3.73e-02  &  7.02e-02  &  1.41e-02  &  7.20e+01  \\ 
+25  &  $ \theta_{as} c_{0} d \left(\theta_{as} + 1\right) $  &  9.89e-02  &  -1.39e-01  &  6.76e-02  &  1.19e-02  &  7.40e+01  \\ 
+26  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{as} \theta_{rs} \right)}} $  &  6.57e-02  &  2.28e-02  &  6.60e-02  &  inf  &  1.41e+02  \\ 
+27  &  $ \displaystyle\frac{c_{0} y_c}{\theta_{rs}} $  &  5.28e-02  &  -6.91e-02  &  5.64e-02  &  9.23e-03  &  4.90e+01  \\ 
+28  &  $ c_{0} \left(\theta_{as} + \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3}\right) $  &  2.98e-02  &  7.63e-03  &  2.86e-02  &  3.35e-02  &  1.46e+02  \\ 
+29  &  $ \displaystyle\frac{c_{0}}{\theta_{as} \left(\theta_{as} \theta_{rs} + 1\right)} $  &  3.99e-02  &  -1.36e-01  &  2.71e-02  &  1.42e-02  &  1.63e+02  \\ 
+30  &  $ \displaystyle\frac{c_{0} d^{2} w}{y_c} $  &  6.88e-02  &  -3.36e-01  &  8.96e-03  &  4.24e-06  &  1.10e+01  \\ 
+31  &  $ \displaystyle\frac{d^{2} w}{c_{0} y_c} $  &  6.88e-02  &  -3.36e-01  &  8.96e-03  &  4.25e-06  &  1.20e+01  \\ 
+32  &  $ \theta_{as}^{2} c_{0} d $  &  3.94e-02  &  -2.16e-01  &  4.88e-03  &  1.43e-02  &  6.80e+01  \\ 
+33  &  $ \displaystyle\frac{4 d^{2}}{c_{0}} $  &  7.44e-02  &  -3.58e-01  &  8.59e-04  &  1.45e-06  &  1.60e+01  \\ 
+34  &  $ 3 c_{0} d^{2} $  &  7.44e-02  &  -3.58e-01  &  8.59e-04  &  1.45e-06  &  1.30e+01  \\ 
+35  &  $ 4 c_{0} d^{2} $  &  7.44e-02  &  -3.58e-01  &  8.59e-04  &  1.45e-06  &  1.70e+01  \\ 
+36  &  $ c_{0}^{2} d^{2} $  &  7.44e-02  &  -3.58e-01  &  8.59e-04  &  1.45e-06  &  2.70e+01  \\ 
+37  &  $ \displaystyle\frac{3 d^{2}}{c_{0}} $  &  7.44e-02  &  -3.58e-01  &  8.59e-04  &  1.45e-06  &  1.40e+01  \\ 
+38  &  $ c_{0} $  &  -8.70e-03  &  -1.32e-01  &  2.97e-13  &  0.00e+00  &  2.20e+01  \\ 
+39  &  $ \displaystyle\frac{\theta_{as} d^{2}}{c_{0}} $  &  5.61e-02  &  -4.01e-01  &  -2.31e-02  &  7.12e-03  &  6.60e+01  \\ 
+40  &  $ \displaystyle\frac{c_{0}}{\theta_{rs} \sin{\left(\theta_{as} \right)}} $  &  -2.08e-02  &  -2.21e-01  &  -3.87e-02  &  1.27e-02  &  4.50e+01  \\ 
+41  &  $ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right) $  &  -5.21e-02  &  -1.64e-01  &  -5.24e-02  &  1.61e-02  &  1.09e+02  \\ 
+42  &  $ \displaystyle\frac{d}{c_{0}^{6} \theta_{rs}^{2}} $  &  -3.95e-02  &  -2.33e-01  &  -7.14e-02  &  1.81e-02  &  6.20e+01  \\ 
+43  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{- \theta_{rs} + e^{\theta_{rs}}} $  &  -7.69e-02  &  -1.32e-01  &  -7.90e-02  &  2.78e-02  &  1.32e+02  \\ 
+44  &  $ \theta_{as}^{3} c_{0} e^{- \theta_{rs}} $  &  -9.04e-02  &  -1.57e-01  &  -9.23e-02  &  2.62e-02  &  1.03e+02  \\ 
+45  &  $ \displaystyle\frac{\theta_{as} c_{0}}{\theta_{rs}^{3}} $  &  -9.30e-02  &  -1.61e-01  &  -9.99e-02  &  2.85e-02  &  3.80e+01  \\ 
+46  &  $ \theta_{as} c_{0} $  &  -1.14e-01  &  -2.41e-01  &  -1.05e-01  &  7.06e-03  &  3.00e+01  \\ 
+47  &  $ \displaystyle\frac{c_{0} d^{2}}{\log{\left(\theta_{as} \right)}} $  &  -4.76e-02  &  -5.03e-01  &  -1.24e-01  &  3.52e-03  &  1.50e+01  \\ 
+48  &  $ \displaystyle\frac{c_{0} y_c}{\theta_{rs}^{3}} $  &  -1.32e-01  &  -2.37e-01  &  -1.42e-01  &  2.81e-02  &  2.60e+01  \\ 
+49  &  $ \theta_{as}^{2} c_{0} d^{2} $  &  -5.40e-02  &  -5.80e-01  &  -1.46e-01  &  1.43e-02  &  7.50e+01  \\ 
+50  &  $ \theta_{as}^{2} c_{0}^{2} d^{2} $  &  -5.40e-02  &  -5.80e-01  &  -1.46e-01  &  1.43e-02  &  8.40e+01  \\ 
+51  &  $ c_{0} d \left(\theta_{as}^{3} + \cos{\left(\theta_{rs}^{2} \right)}\right) $  &  -1.07e-01  &  -4.08e-01  &  -1.54e-01  &  2.40e-02  &  1.75e+02  \\ 
+52  &  $ c_{0} \left(\theta_{as}^{2} + \cos{\left(\theta_{rs} \right)}\right) $  &  -1.60e-01  &  -3.00e-01  &  -1.59e-01  &  1.47e-02  &  1.44e+02  \\ 
+53  &  $ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  -1.63e-01  &  -2.89e-01  &  -1.75e-01  &  2.62e-02  &  1.08e+02  \\ 
+54  &  $ c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  -1.67e-01  &  -2.67e-01  &  -1.79e-01  &  3.10e-02  &  9.80e+01  \\ 
+55  &  $ \displaystyle\frac{c_{0}^{6}}{\theta_{rs}^{3}} $  &  -1.70e-01  &  -2.77e-01  &  -1.83e-01  &  2.74e-02  &  6.30e+01  \\ 
+56  &  $ \displaystyle\frac{c_{0}}{\theta_{rs}^{3}} $  &  -1.70e-01  &  -2.77e-01  &  -1.83e-01  &  2.75e-02  &  2.90e+01  \\ 
+57  &  $ \displaystyle\frac{c_{0}^{3}}{\theta_{rs}^{3}} $  &  -1.70e-01  &  -2.77e-01  &  -1.83e-01  &  2.74e-02  &  5.90e+01  \\ 
+58  &  $ c_{0} d^{2} e^{\theta_{as}} $  &  -8.17e-02  &  -6.66e-01  &  -1.84e-01  &  1.44e-02  &  8.00e+01  \\ 
+59  &  $ \displaystyle\frac{c_{0} d \sin{\left(\theta_{rs} \right)}}{\theta_{rs}} $  &  -1.25e-01  &  -5.60e-01  &  -1.87e-01  &  9.49e-03  &  1.67e+02  \\ 
+60  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{\theta_{rs}} $  &  -1.83e-01  &  -3.09e-01  &  -1.89e-01  &  2.35e-02  &  9.90e+01  \\ 
+61  &  $ \displaystyle\frac{c_{0} d \left(\theta_{as}^{4} + 1\right)}{\theta_{as}} $  &  -1.45e-01  &  -4.77e-01  &  -1.93e-01  &  1.98e-02  &  1.65e+02  \\ 
+62  &  $ c_{0} \cos{\left(\displaystyle\frac{\theta_{rs}^{3}}{\theta_{as}^{3}} \right)} $  &  -1.99e-01  &  -2.71e-01  &  -1.94e-01  &  9.95e-03  &  1.77e+02  \\ 
+63  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0} \sin{\left(\theta_{rs} \right)}}{\theta_{rs}} $  &  -2.08e-01  &  -3.28e-01  &  -2.13e-01  &  1.74e-02  &  1.54e+02  \\ 
+64  &  $ \displaystyle\frac{c_{0} d \left(\theta_{as}^{6} + 1\right)}{\theta_{as}^{3}} $  &  -1.81e-01  &  -5.20e-01  &  -2.30e-01  &  2.09e-02  &  1.70e+02  \\ 
+65  &  $ c_{0}^{2} y_c $  &  -2.46e-01  &  -4.25e-01  &  -2.35e-01  &  3.84e-06  &  5.00e+01  \\ 
+66  &  $ c_{0} y_c $  &  -2.46e-01  &  -4.25e-01  &  -2.35e-01  &  3.83e-06  &  2.30e+01  \\ 
+67  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{3} \right)}} $  &  -2.48e-01  &  -3.14e-01  &  -2.53e-01  &  3.35e-02  &  1.42e+02  \\ 
+68  &  $ \theta_{as}^{3} c_{0} d $  &  -2.05e-01  &  -5.47e-01  &  -2.55e-01  &  2.15e-02  &  1.50e+02  \\ 
+69  &  $ \displaystyle\frac{c_{0} d w}{\log{\left(\theta_{rs} \right)}} $  &  -2.19e-01  &  -5.01e-01  &  -2.56e-01  &  4.59e-03  &  1.80e+01  \\ 
+70  &  $ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs} \right)}\right)^{2}}{\theta_{rs}} $  &  -2.80e-01  &  -4.12e-01  &  -2.87e-01  &  2.50e-02  &  9.40e+01  \\ 
+71  &  $ \theta_{as} c_{0} e^{- 2 \theta_{rs}} $  &  -2.82e-01  &  -4.20e-01  &  -3.02e-01  &  2.99e-02  &  5.10e+01  \\ 
+72  &  $ \theta_{as} c_{0} d e^{\theta_{as}} $  &  -2.49e-01  &  -6.54e-01  &  -3.10e-01  &  2.16e-02  &  1.64e+02  \\ 
+73  &  $ \theta_{as}^{2} c_{0}^{6} $  &  -3.14e-01  &  -4.70e-01  &  -3.10e-01  &  1.41e-02  &  4.40e+01  \\ 
+74  &  $ \theta_{as}^{2} c_{0} $  &  -3.14e-01  &  -4.70e-01  &  -3.10e-01  &  1.42e-02  &  7.00e+01  \\ 
+75  &  $ \theta_{as}^{2} c_{0}^{2} $  &  -3.14e-01  &  -4.70e-01  &  -3.10e-01  &  1.42e-02  &  8.50e+01  \\ 
+76  &  $ c_{0} \sin{\left(\theta_{rs} \right)} $  &  -3.13e-01  &  -5.36e-01  &  -3.20e-01  &  1.61e-03  &  7.60e+01  \\ 
+77  &  $ \theta_{as}^{4} c_{0} \sin{\left(\displaystyle\frac{1}{\theta_{rs}^{2}} \right)} $  &  -3.07e-01  &  -4.23e-01  &  -3.20e-01  &  3.40e-02  &  1.57e+02  \\ 
+78  &  $ c_{0} y_c \sin{\left(\theta_{mid} \right)} $  &  -3.56e-01  &  -5.41e-01  &  -3.40e-01  &  2.23e-03  &  5.40e+01  \\ 
+79  &  $ c_{0} e^{\theta_{as}} $  &  -3.46e-01  &  -5.28e-01  &  -3.46e-01  &  1.42e-02  &  7.90e+01  \\ 
+80  &  $ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \theta_{rs}\right)^{2}}{\theta_{rs}} $  &  -3.47e-01  &  -5.10e-01  &  -3.51e-01  &  2.09e-02  &  1.72e+02  \\ 
+81  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{3} \right)}} $  &  -3.57e-01  &  -3.94e-01  &  -3.56e-01  &  3.77e-02  &  1.15e+02  \\ 
+82  &  $ \theta_{as}^{4} c_{0} e^{- \theta_{rs}} $  &  -3.57e-01  &  -4.55e-01  &  -3.65e-01  &  3.26e-02  &  1.60e+02  \\ 
+83  &  $ \theta_{as}^{3} c_{0} d^{2} $  &  -2.55e-01  &  -8.95e-01  &  -3.67e-01  &  2.15e-02  &  8.70e+01  \\ 
+84  &  $ c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} \sin{\left(\theta_{rs} \right)} $  &  -3.72e-01  &  -4.17e-01  &  -3.76e-01  &  2.61e-02  &  1.04e+02  \\ 
+85  &  $ c_{0} \left(- \theta_{as}^{2} + \theta_{rs}\right) $  &  -3.94e-01  &  -5.58e-01  &  -4.01e-01  &  2.44e-02  &  1.38e+02  \\ 
+86  &  $ c_{0} \left(\theta_{as}^{2} - \theta_{rs}\right) $  &  -3.94e-01  &  -5.58e-01  &  -4.01e-01  &  2.44e-02  &  1.25e+02  \\ 
+87  &  $ c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs}^{3} \right)}\right) $  &  -3.76e-01  &  -6.75e-01  &  -4.13e-01  &  2.64e-02  &  1.43e+02  \\ 
+88  &  $ \theta_{as}^{2} c_{0} \cos{\left(\displaystyle\frac{\theta_{rs}^{2}}{\theta_{as}^{2}} \right)} $  &  -4.14e-01  &  -5.42e-01  &  -4.18e-01  &  2.29e-02  &  1.48e+02  \\ 
+89  &  $ \theta_{as}^{2} c_{0} \left(\theta_{rs} \cos{\left(\theta_{rs} \right)} + 1\right) $  &  -3.71e-01  &  -7.38e-01  &  -4.24e-01  &  2.95e-02  &  1.07e+02  \\ 
+90  &  $ \displaystyle\frac{c_{0} \left(\theta_{as}^{4} + \theta_{rs}\right)}{\theta_{rs}} $  &  -4.14e-01  &  -5.89e-01  &  -4.27e-01  &  2.76e-02  &  9.50e+01  \\ 
+91  &  $ c_{0} e^{2 \theta_{as} - \theta_{rs}} $  &  -4.48e-01  &  -6.01e-01  &  -4.65e-01  &  3.27e-02  &  1.22e+02  \\ 
+92  &  $ \theta_{as} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  -4.46e-01  &  -6.10e-01  &  -4.69e-01  &  3.67e-02  &  9.70e+01  \\ 
+93  &  $ c_{0} \theta_{rs} $  &  -5.18e-01  &  -7.05e-01  &  -5.03e-01  &  8.76e-03  &  7.70e+01  \\ 
+94  &  $ \displaystyle\frac{\theta_{as}^{4} c_{0}}{\theta_{rs}} $  &  -4.98e-01  &  -6.84e-01  &  -5.15e-01  &  3.04e-02  &  9.60e+01  \\ 
+95  &  $ \displaystyle\frac{c_{0} \left(\theta_{as}^{2} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2}}{\theta_{rs}} $  &  -4.72e-01  &  -8.08e-01  &  -5.21e-01  &  3.60e-02  &  9.30e+01  \\ 
+96  &  $ \theta_{as}^{2} c_{0} \left(\theta_{as} \cos{\left(\theta_{rs} \right)} + 1\right) $  &  -4.90e-01  &  -8.92e-01  &  -5.49e-01  &  3.49e-02  &  1.68e+02  \\ 
+97  &  $ \displaystyle\frac{1}{\theta_{as}^{4} c_{0}^{4} \theta_{rs}} $  &  -5.62e-01  &  -9.19e-01  &  -6.11e-01  &  2.93e-02  &  1.55e+02  \\ 
+98  &  $ \displaystyle\frac{c_{0}}{\theta_{as}^{4} \theta_{rs}} $  &  -5.62e-01  &  -9.19e-01  &  -6.11e-01  &  2.92e-02  &  1.79e+02  \\ 
+99  &  $ \theta_{as}^{3} c_{0} $  &  -6.08e-01  &  -8.18e-01  &  -6.13e-01  &  2.13e-02  &  8.10e+01  \\ 
+100  &  $ \theta_{as}^{3} c_{0}^{3} $  &  -6.08e-01  &  -8.18e-01  &  -6.13e-01  &  2.13e-02  &  7.10e+01  \\ 
+101  &  $ \displaystyle\frac{\theta_{as}^{3}}{c_{0}} $  &  -6.08e-01  &  -8.18e-01  &  -6.13e-01  &  2.13e-02  &  9.00e+01  \\ 
+102  &  $ c_{0} \left(\theta_{as}^{2} + \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  -6.56e-01  &  -9.21e-01  &  -6.82e-01  &  2.98e-02  &  1.73e+02  \\ 
+103  &  $ \theta_{as}^{3} c_{0} d w $  &  -6.91e-01  &  -1.15e+00  &  -7.42e-01  &  2.16e-02  &  8.20e+01  \\ 
+104  &  $ \theta_{as}^{2} c_{0} \left(\cos{\left(\theta_{rs} \right)} + 1\right) $  &  -7.35e-01  &  -1.05e+00  &  -7.76e-01  &  2.11e-02  &  1.49e+02  \\ 
+105  &  $ \theta_{as} c_{0} \left(\cos{\left(\theta_{rs} \right)} + 1\right) e^{\theta_{as}} $  &  -7.73e-01  &  -9.64e-01  &  -7.96e-01  &  2.68e-02  &  1.01e+02  \\ 
+106  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{d \theta_{rs}} $  &  -7.78e-01  &  -1.12e+00  &  -7.96e-01  &  2.32e-02  &  1.56e+02  \\ 
+107  &  $ \displaystyle\frac{c_{0} d^{3}}{y_c} $  &  -6.75e-01  &  -1.35e+00  &  -7.99e-01  &  4.26e-06  &  9.00e+00  \\ 
+108  &  $ \displaystyle\frac{d^{3}}{c_{0} y_c} $  &  -6.75e-01  &  -1.35e+00  &  -7.99e-01  &  4.27e-06  &  1.00e+01  \\ 
+109  &  $ \displaystyle\frac{d}{c_{0}^{6} \theta_{rs}^{3}} $  &  -7.64e-01  &  -1.03e+00  &  -8.12e-01  &  2.69e-02  &  6.10e+01  \\ 
+110  &  $ \theta_{as}^{2} c_{0} \left(\theta_{as} + \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  -8.10e-01  &  -1.06e+00  &  -8.48e-01  &  4.28e-02  &  1.80e+02  \\ 
+111  &  $ \displaystyle\frac{1}{c_{0}^{2} \left(\theta_{mid} - \cos{\left(\theta_{rs} \right)}\right)^{2}} $  &  -8.78e-01  &  -1.02e+00  &  -9.28e-01  &  2.74e-02  &  2.50e+01  \\ 
+112  &  $ \theta_{as}^{2} c_{0} w $  &  -9.54e-01  &  -1.20e+00  &  -9.45e-01  &  1.41e-02  &  8.60e+01  \\ 
+113  &  $ \displaystyle\frac{c_{0}^{4}}{\theta_{rs}^{4}} $  &  -9.51e-01  &  -1.13e+00  &  -9.76e-01  &  3.59e-02  &  3.70e+01  \\ 
+114  &  $ \displaystyle\frac{c_{0}}{\theta_{rs}^{4}} $  &  -9.51e-01  &  -1.13e+00  &  -9.76e-01  &  3.62e-02  &  5.20e+01  \\ 
+115  &  $ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2} $  &  -9.15e-01  &  -1.56e+00  &  -1.01e+00  &  3.14e-02  &  1.14e+02  \\ 
+116  &  $ \displaystyle\frac{y_c^{3}}{c_{0}^{3}} $  &  -9.86e-01  &  -1.62e+00  &  -1.03e+00  &  1.17e-05  &  5.60e+01  \\ 
+117  &  $ U \beta \eta w + c_{0} $  &  -9.72e-01  &  -1.44e+00  &  -1.05e+00  &  1.64e-06  &  5.00e+00  \\ 
+118  &  $ \displaystyle\frac{c_{0} e^{\theta_{as}}}{d} $  &  -1.11e+00  &  -1.52e+00  &  -1.12e+00  &  1.39e-02  &  7.80e+01  \\ 
+119  &  $ \displaystyle\frac{\theta_{as} c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2}}{\theta_{rs}} $  &  -1.13e+00  &  -1.80e+00  &  -1.23e+00  &  4.27e-02  &  1.12e+02  \\ 
+120  &  $ c_{0} \left(\left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{2} - \sin{\left(\theta_{rs} \right)}\right) $  &  -1.23e+00  &  -1.98e+00  &  -1.34e+00  &  3.76e-02  &  1.13e+02  \\ 
+121  &  $ \displaystyle\frac{c_{0} w}{d} $  &  -1.44e+00  &  -1.87e+00  &  -1.44e+00  &  1.26e-06  &  4.00e+00  \\ 
+122  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{e^{\theta_{rs}} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  -1.43e+00  &  -1.68e+00  &  -1.48e+00  &  3.96e-02  &  1.19e+02  \\ 
+123  &  $ \displaystyle\frac{\theta_{as}^{4} c_{0}^{2}}{\sin{\left(\theta_{rs} \right)}} $  &  -1.42e+00  &  -2.20e+00  &  -1.52e+00  &  3.20e-02  &  8.30e+01  \\ 
+124  &  $ \displaystyle\frac{1}{\theta_{as}^{2} c_{0} d^{2}} $  &  -1.60e+00  &  -3.01e+00  &  -1.75e+00  &  1.32e-02  &  8.90e+01  \\ 
+125  &  $ c_{0} \left(\theta_{as} + \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}\right) $  &  -1.90e+00  &  -3.10e+00  &  -2.08e+00  &  4.19e-02  &  1.27e+02  \\ 
+126  &  $ U c_{0} $  &  -2.16e+00  &  -2.42e+00  &  -2.19e+00  &  2.33e-06  &  2.10e+01  \\ 
+127  &  $ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3} $  &  -2.38e+00  &  -3.77e+00  &  -2.58e+00  &  4.72e-02  &  1.28e+02  \\ 
+128  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}}{\theta_{rs}} $  &  -2.51e+00  &  -3.73e+00  &  -2.69e+00  &  5.51e-02  &  1.18e+02  \\ 
+129  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{2} \right)}\right)^{3}}{\sin{\left(\theta_{rs} \right)}} $  &  -3.62e+00  &  -6.12e+00  &  -3.96e+00  &  4.60e-02  &  1.26e+02  \\ 
+130  &  $ \displaystyle\frac{\theta_{mid}^{9}}{c_{0}^{9} \theta_{rs}} $  &  -5.65e+00  &  -6.14e+00  &  -5.68e+00  &  8.08e-02  &  1.90e+01  \\ 
+131  &  $ c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{2} $  &  -6.31e+00  &  -6.93e+00  &  -6.41e+00  &  2.92e-02  &  1.69e+02  \\ 
+132  &  $ \displaystyle\frac{c_{0}}{\theta_{mid}^{9}} $  &  -1.08e+01  &  -1.12e+01  &  -1.11e+01  &  7.54e-02  &  4.10e+01  \\ 
+133  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3}}{d} $  &  -1.30e+01  &  -1.33e+01  &  -1.31e+01  &  4.35e-02  &  1.23e+02  \\ 
+134  &  $ c_{0} \left(\theta_{as} + \theta_{rs} \cos{\left(\theta_{rs} \right)}\right)^{3} $  &  -1.31e+01  &  -1.36e+01  &  -1.32e+01  &  4.32e-02  &  1.24e+02  \\ 
+135  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0}^{2} \sin{\left(\theta_{rs}^{2} \right)}}{\theta_{rs}^{2}} $  &  -1.43e+01  &  -1.59e+01  &  -1.44e+01  &  6.53e-02  &  1.53e+02  \\ 
+136  &  $ \displaystyle\frac{\theta_{as}^{4} c_{0} \sin{\left(\theta_{rs}^{2} \right)}}{\theta_{rs}^{2}} $  &  -1.46e+01  &  -1.65e+01  &  -1.47e+01  &  7.04e-02  &  1.52e+02  \\ 
+137  &  $ \displaystyle\frac{c_{0} y_c}{\theta_{mid}^{2} \left(\theta_{mid} - 1\right)^{2}} $  &  -1.50e+01  &  -1.54e+01  &  -1.53e+01  &  7.40e-02  &  5.70e+01  \\ 
+138  &  $ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3} + \cos{\left(\theta_{rs} \right)}\right) $  &  -1.53e+01  &  -1.53e+01  &  -1.53e+01  &  5.78e-02  &  1.47e+02  \\ 
+139  &  $ \theta_{as} c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{27} \right)}\right) $  &  -1.90e+01  &  -1.92e+01  &  -1.90e+01  &  9.26e+07  &  1.74e+02  \\ 
+140  &  $ \displaystyle\frac{y_c \cos{\left(\theta_{mid} \right)}}{c_{0}^{2}} $  &  -2.34e+01  &  -2.40e+01  &  -2.35e+01  &  9.48e-02  &  3.20e+01  \\ 
+141  &  $ \displaystyle\frac{y_c \cos{\left(\theta_{mid} \right)}}{c_{0}} $  &  -2.34e+01  &  -2.40e+01  &  -2.35e+01  &  9.48e-02  &  3.30e+01  \\ 
+142  &  $ c_{0} y_c \cos{\left(\theta_{mid} \right)} $  &  -2.34e+01  &  -2.40e+01  &  -2.35e+01  &  9.48e-02  &  4.60e+01  \\ 
+143  &  $ c_{0} \cos{\left(\theta_{mid} \right)} $  &  -2.41e+01  &  -2.48e+01  &  -2.42e+01  &  9.23e-02  &  3.40e+01  \\ 
+144  &  $ \displaystyle\frac{\theta_{as}^{3} c_{0}}{\theta_{rs} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  -2.52e+01  &  -2.59e+01  &  -2.52e+01  &  8.50e-02  &  1.40e+02  \\ 
+145  &  $ \displaystyle\frac{\theta_{as}^{2} c_{0}}{\theta_{rs} + \cos{\left(\theta_{rs}^{4} \right)}} $  &  -2.58e+01  &  -2.64e+01  &  -2.57e+01  &  8.29e-02  &  1.35e+02  \\ 
+146  &  $ c_{0}^{2} d \cos{\left(\theta_{mid} \right)} $  &  -2.58e+01  &  -2.65e+01  &  -2.60e+01  &  8.95e-02  &  6.70e+01  \\ 
+147  &  $ c_{0} \theta_{rs} \left(- \theta_{as} + \theta_{rs}\right) $  &  -2.62e+01  &  -2.68e+01  &  -2.63e+01  &  4.57e-02  &  1.31e+02  \\ 
+148  &  $ c_{0} \theta_{rs} \left(\theta_{as} - \theta_{rs}\right) $  &  -2.62e+01  &  -2.68e+01  &  -2.63e+01  &  4.57e-02  &  9.20e+01  \\ 
+149  &  $ \displaystyle\frac{c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3}\right)}{\theta_{as}} $  &  -2.62e+01  &  -2.69e+01  &  -2.63e+01  &  4.75e-02  &  1.06e+02  \\ 
+150  &  $ c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  -2.63e+01  &  -2.69e+01  &  -2.64e+01  &  4.84e-02  &  1.11e+02  \\ 
+151  &  $ c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  -2.63e+01  &  -2.69e+01  &  -2.64e+01  &  4.84e-02  &  3.00e+00  \\ 
+152  &  $ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3} + \sin{\left(\theta_{as} \theta_{rs} \right)}\right) $  &  -2.60e+01  &  -2.84e+01  &  -2.64e+01  &  5.44e-02  &  1.39e+02  \\ 
+153  &  $ c_{0} e^{\theta_{as}} \sin{\left(\theta_{as} \right)} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  -2.63e+01  &  -2.69e+01  &  -2.64e+01  &  5.42e-02  &  1.33e+02  \\ 
+154  &  $ c_{0} w \left(- \cos{\left(\theta_{as} \right)} + \cos{\left(\theta_{rs} \right)}\right) $  &  -2.64e+01  &  -2.69e+01  &  -2.65e+01  &  5.17e-02  &  6.00e+00  \\ 
+155  &  $ c_{0} \left(- \theta_{as} + \theta_{rs}\right) $  &  -2.64e+01  &  -2.70e+01  &  -2.65e+01  &  5.13e-02  &  1.36e+02  \\ 
+156  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) $  &  -2.64e+01  &  -2.70e+01  &  -2.65e+01  &  5.13e-02  &  1.17e+02  \\ 
+157  &  $ c_{0} w \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\displaystyle\frac{\theta_{as}}{2} + \displaystyle\frac{\theta_{rs}}{2} \right)} $  &  -2.64e+01  &  -2.70e+01  &  -2.65e+01  &  5.25e-02  &  8.00e+00  \\ 
+158  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{rs} + \sin{\left(\theta_{rs}^{2} \right)}\right) $  &  -2.64e+01  &  -2.71e+01  &  -2.65e+01  &  inf  &  1.29e+02  \\ 
+159  &  $ - c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{rs} + \sin{\left(\theta_{rs}^{2} \right)}\right) $  &  -2.64e+01  &  -2.71e+01  &  -2.65e+01  &  inf  &  1.45e+02  \\ 
+160  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right)}{d} $  &  -2.64e+01  &  -2.70e+01  &  -2.65e+01  &  5.18e-02  &  0.00e+00  \\ 
+161  &  $ \displaystyle\frac{c_{0} \left(- \theta_{as} + \theta_{rs}\right)}{d} $  &  -2.64e+01  &  -2.70e+01  &  -2.65e+01  &  5.18e-02  &  1.05e+02  \\ 
+162  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{as} + \theta_{rs}\right) $  &  -2.64e+01  &  -2.71e+01  &  -2.65e+01  &  5.19e-02  &  1.37e+02  \\ 
+163  &  $ c_{0} \left(\theta_{as}^{2} - \theta_{rs}^{2}\right) $  &  -2.64e+01  &  -2.71e+01  &  -2.65e+01  &  5.19e-02  &  1.00e+02  \\ 
+164  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) \left(\theta_{as} + \theta_{rs} + \sin{\left(\theta_{rs} \right)}\right) $  &  -2.64e+01  &  -2.71e+01  &  -2.65e+01  &  4.64e-02  &  1.02e+02  \\ 
+165  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) e^{\sin{\left(\theta_{rs} \right)}} $  &  -2.65e+01  &  -2.71e+01  &  -2.66e+01  &  5.13e-02  &  2.00e+00  \\ 
+166  &  $ c_{0} \left(e^{\theta_{as}} - e^{\theta_{rs}}\right) $  &  -2.65e+01  &  -2.73e+01  &  -2.66e+01  &  5.35e-02  &  1.16e+02  \\ 
+167  &  $ c_{0} \left(\theta_{as}^{3} - \theta_{rs}^{3}\right) $  &  -2.65e+01  &  -2.73e+01  &  -2.67e+01  &  5.35e-02  &  1.34e+02  \\ 
+168  &  $ \theta_{as} c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  -2.65e+01  &  -2.72e+01  &  -2.67e+01  &  5.38e-02  &  1.10e+02  \\ 
+169  &  $ - \theta_{as} c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)} $  &  -2.65e+01  &  -2.72e+01  &  -2.67e+01  &  5.38e-02  &  1.30e+02  \\ 
+170  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\theta_{rs} \right)} $  &  -2.66e+01  &  -2.72e+01  &  -2.67e+01  &  5.13e-02  &  9.10e+01  \\ 
+171  &  $ c_{0} \left(- \theta_{as} + \theta_{rs}\right) \sin{\left(\theta_{rs} \right)} $  &  -2.66e+01  &  -2.72e+01  &  -2.67e+01  &  5.13e-02  &  1.20e+02  \\ 
+172  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right)}{w} $  &  -2.66e+01  &  -2.72e+01  &  -2.67e+01  &  4.97e-02  &  7.00e+00  \\ 
+173  &  $ \displaystyle\frac{c_{0} \left(\theta_{as} - \theta_{rs}\right) \sin{\left(\theta_{rs} \right)}}{d} $  &  -2.67e+01  &  -2.72e+01  &  -2.68e+01  &  5.19e-02  &  1.76e+02  \\ 
+174  &  $ \theta_{as} c_{0} \left(- \theta_{as} + \theta_{rs}\right) $  &  -2.66e+01  &  -2.74e+01  &  -2.68e+01  &  5.67e-02  &  1.21e+02  \\ 
+175  &  $ \theta_{as} c_{0} \left(\theta_{as} - \theta_{rs}\right) $  &  -2.66e+01  &  -2.74e+01  &  -2.68e+01  &  5.67e-02  &  8.80e+01  \\ 
+176  &  $ \displaystyle\frac{\theta_{as} c_{0} \sin{\left(\theta_{as} - \theta_{rs} \right)}}{d} $  &  -2.67e+01  &  -2.73e+01  &  -2.68e+01  &  5.43e-02  &  1.71e+02  \\ 
+177  &  $ \displaystyle\frac{\theta_{as} c_{0} \left(\theta_{as} - \theta_{rs}\right)}{d} $  &  -2.67e+01  &  -2.74e+01  &  -2.68e+01  &  5.73e-02  &  1.00e+00  \\ 
+178  &  $ \theta_{as} c_{0} d \left(\theta_{as} - \theta_{rs}\right) $  &  -2.70e+01  &  -2.78e+01  &  -2.71e+01  &  5.55e-02  &  1.61e+02  \\ 
+179  &  $ c_{0} \left(\theta_{as} - \theta_{rs}\right) e^{\theta_{as}} $  &  -2.70e+01  &  -2.78e+01  &  -2.72e+01  &  6.25e-02  &  1.58e+02  \\ 
+180  &  $ c_{0} \left(\theta_{as} + \sin{\left(\theta_{rs}^{8} \right)}\right)^{2} $  &  -3.43e+01  &  -3.54e+01  &  -3.40e+01  &  1.60e+00  &  1.62e+02  \\ 
+181  &  $ \displaystyle\frac{c_{0}^{27}}{\theta_{mid}^{27}} $  &  -9.96e+01  &  -1.10e+02  &  -1.05e+02  &  2.26e-01  &  6.00e+01  \\ 
+\bottomrule
+\end{tabularx}
