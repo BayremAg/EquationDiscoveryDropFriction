@@ -4,9 +4,9 @@
         "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  /  ( drop_length )  ) ",
         "prediction": 0.00018541675301657953,
         "values": {
+            "adv": 1.87939634928168,
             "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -21,9 +21,9 @@
         "infix": "( (  ( adv )  * ( c_0 * (  ( adv )  -  ( rec )  )  )  )  /  ( drop_length )  ) ",
         "prediction": 0.00018174596430723552,
         "values": {
+            "adv": 1.87939634928168,
             "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -38,8 +38,8 @@
         "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  *  exp (  sin (  ( rec )  ) ) ) ",
         "prediction": 0.00019079188638050903,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -54,8 +54,8 @@
         "infix": "( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) ) ",
         "prediction": 0.0001915524266936084,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -70,8 +70,8 @@
         "infix": "( c_0 * (  ( width )  /  ( drop_length )  )  ) ",
         "prediction": 0.0001517141320366482,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "width": 0.0036268155631288
+            "width": 0.0036268155631288,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -87,9 +87,9 @@
         "prediction": 0.00019760764759622725,
         "values": {
             "viscosity": 0.00092,
+            "avg_vel": 0.273717425596094,
             "width": 0.0036268155631288,
-            "friction_coef": 96.0,
-            "avg_vel": 0.273717425596094
+            "friction_coef": 96.0
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -104,9 +104,9 @@
         "infix": "( c_0 * (  ( width )  * (  cos ( ( rec )  ) -  cos ( ( adv )  ) )  )  ) ",
         "prediction": 0.000180558771107933,
         "values": {
+            "adv": 1.87939634928168,
             "width": 0.0036268155631288,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -121,9 +121,9 @@
         "infix": "( ( c_0 * (  ( adv )  -  ( rec )  )  )  /  ( width )  ) ",
         "prediction": 0.00020400263431323014,
         "values": {
+            "adv": 1.87939634928168,
             "width": 0.0036268155631288,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -138,9 +138,9 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( width )  *  sin ( ( (  ( adv )  +   ( rec )  )  /  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.0001808098634488109,
         "values": {
+            "adv": 1.87939634928168,
             "width": 0.0036268155631288,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -155,8 +155,8 @@
         "infix": "( c_0 * (    ( drop_length )   ** (  ( 3 )  )  /  ( y_center )  )  ) ",
         "prediction": 0.00020358442565289025,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "y_center": 0.000995642210295
+            "y_center": 0.000995642210295,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -171,8 +171,8 @@
         "infix": "(    ( drop_length )   ** (  ( 3 )  )  / ( c_0 *  ( y_center )  )  ) ",
         "prediction": 0.0002035844256500476,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "y_center": 0.000995642210295
+            "y_center": 0.000995642210295,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -187,9 +187,9 @@
         "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  * (  ( width )  /  ( y_center )  )  )  ) ",
         "prediction": 0.0001844665703953643,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "y_center": 0.000995642210295,
             "width": 0.0036268155631288,
-            "y_center": 0.000995642210295
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -204,9 +204,9 @@
         "infix": "(    ( drop_length )   ** (  ( 2 )  )  * (  ( width )  / ( c_0 *  ( y_center )  )  )  ) ",
         "prediction": 0.0001844665704048439,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "y_center": 0.000995642210295,
             "width": 0.0036268155631288,
-            "y_center": 0.000995642210295
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -251,8 +251,8 @@
         "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  /  log (  ( adv )  ) )  ) ",
         "prediction": 0.0001961244715417115,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -297,9 +297,9 @@
         "infix": "( c_0 * (  ( drop_length )  * (  ( width )  /  log (  ( rec )  ) )  )  ) ",
         "prediction": 0.00019540216760864805,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "rec": 1.3633073030954517,
             "width": 0.0036268155631288,
-            "rec": 1.3633073030954517
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -510,8 +510,8 @@
         "infix": "(  ( y_center )  * (  cos ( ( mid )  ) /   c_0  ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00021709292146626337,
         "values": {
-            "mid": 1.3042956260215237,
-            "y_center": 0.000995642210295
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -526,8 +526,8 @@
         "infix": "(  ( y_center )  * (  cos ( ( mid )  ) / c_0 )  ) ",
         "prediction": 0.0002170929214664017,
         "values": {
-            "mid": 1.3042956260215237,
-            "y_center": 0.000995642210295
+            "y_center": 0.000995642210295,
+            "mid": 1.3042956260215237
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -603,8 +603,8 @@
         "infix": "(  ( adv )  * ( c_0 /    ( rec )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00020085361490965387,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -634,8 +634,8 @@
         "infix": "(  ( adv )  * ( c_0 /  ( rec )  )  ) ",
         "prediction": 0.00018287050311369994,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -680,8 +680,8 @@
         "infix": "(  ( adv )  * (   c_0  ** (  ( 2 )  )  /    ( rec )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00019254411639887346,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -711,8 +711,8 @@
         "infix": "( c_0 / (  ( rec )  *  sin (  ( adv )  ) )  ) ",
         "prediction": 0.00018394735584138466,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -805,8 +805,8 @@
         "infix": "(  ( adv )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  * (  ( 2 )  *  ( rec )  )  )  ) )  ) ",
         "prediction": 0.00020006702596110052,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -836,8 +836,8 @@
         "infix": "( c_0 * (  ( drop_length )  /  ( rec )  )  ) ",
         "prediction": 0.0001936658090418836,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -868,8 +868,8 @@
         "infix": "(   c_0  ** (  ( 4 )  )  / (  ( rec )  +   cos ((  ( adv )  /  ( rec )  )  ) )  ) ",
         "prediction": 0.00018965408983480093,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -961,8 +961,8 @@
         "infix": "(  ( drop_length )  / (   c_0  ** (  ( 6 )  )  *    ( rec )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00020887803594494758,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -977,8 +977,8 @@
         "infix": "(  ( drop_length )  / (   c_0  ** (  ( 6 )  )  *    ( rec )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.0002020815296256905,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1008,9 +1008,9 @@
         "infix": "(  ( drop_length )  / ( c_0 * (  ( rec )  *  ( y_center )  )  )  ) ",
         "prediction": 0.00019963879031604582,
         "values": {
-            "drop_length": 0.0052654182761481,
             "y_center": 0.000995642210295,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1025,8 +1025,8 @@
         "infix": "(  ( drop_length )  / ( c_0 *  ( rec )  )  ) ",
         "prediction": 0.00019366580903923836,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1041,8 +1041,8 @@
         "infix": "(  ( adv )  * (    ( drop_length )   ** (  ( 2 )  )  / c_0 )  ) ",
         "prediction": 0.00018810478481134102,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1057,8 +1057,8 @@
         "infix": "(   c_0  ** (  ( 2 )  )  * (  ( drop_length )  *  cos ( ( mid )  ) )  ) ",
         "prediction": 0.00022498745776479027,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "mid": 1.3042956260215237
+            "mid": 1.3042956260215237,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1073,8 +1073,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  ( drop_length )  )  ) ",
         "prediction": 0.00017695556953832033,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1135,8 +1135,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  /  ( width )  )  ) ",
         "prediction": 0.00018271774866877435,
         "values": {
-            "width": 0.0036268155631288,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "width": 0.0036268155631288
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1166,8 +1166,8 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  * (  ( adv )  +   ( 1 )  )  )  )  ) ",
         "prediction": 0.00017817987561999553,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1182,8 +1182,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00018467564449245198,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1228,8 +1228,8 @@
         "infix": "( c_0 * (  exp (  ( adv )  ) /  ( drop_length )  )  ) ",
         "prediction": 0.0001599375506455297,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1259,8 +1259,8 @@
         "infix": "( c_0 * (    ( drop_length )   ** (  ( 2 )  )  *  exp (  ( adv )  ) )  ) ",
         "prediction": 0.0001849756093727958,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1290,9 +1290,9 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 * (  ( drop_length )  *  ( width )  )  )  ) ",
         "prediction": 0.00015927746861486763,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "width": 0.0036268155631288,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1307,8 +1307,8 @@
         "infix": "(    ( adv )   ** (  ( 4 )  )  * (   c_0  ** (  ( 2 )  )  /  sin (  ( rec )  ) )  ) ",
         "prediction": 0.0001633030480006545,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1323,8 +1323,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00018467564448720864,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1354,8 +1354,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  ( width )  )  ) ",
         "prediction": 0.00015401687005722466,
         "values": {
-            "width": 0.0036268155631288,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "width": 0.0036268155631288
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1370,8 +1370,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00018112324679580395,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1386,8 +1386,8 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( adv )  -  ( rec )  )  )  ) ",
         "prediction": 0.00018884285913602382,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1402,8 +1402,8 @@
         "infix": "(  ( 1 )  / (    ( adv )   ** (  ( 2 )  )  * ( c_0 *    ( drop_length )   ** (  ( 2 )  )  )  )  ) ",
         "prediction": 0.00016420420663373035,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1433,8 +1433,8 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  sin (  ( rec )  ) )  ) ",
         "prediction": 0.00019077701262706887,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1449,8 +1449,8 @@
         "infix": "( c_0 * (  ( rec )  * (  ( adv )  -  ( rec )  )  )  ) ",
         "prediction": 0.00018328951982746541,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1465,8 +1465,8 @@
         "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
         "prediction": 0.0001839215018787204,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1481,8 +1481,8 @@
         "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   sin (  ( rec )  ) )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
         "prediction": 0.00017437076486924547,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1497,8 +1497,8 @@
         "infix": "( c_0 * ( (    ( adv )   ** (  ( 4 )  )  +   ( rec )  )  /  ( rec )  )  ) ",
         "prediction": 0.00017248081787975318,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1513,8 +1513,8 @@
         "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 /  ( rec )  )  ) ",
         "prediction": 0.00017208743171802623,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1529,8 +1529,8 @@
         "infix": "(  ( adv )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00018393308125592145,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1545,8 +1545,8 @@
         "infix": "( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  ) ",
         "prediction": 0.00018748721882218248,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1561,8 +1561,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 /  ( rec )  )  ) ",
         "prediction": 0.00017577857092788033,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1577,8 +1577,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  -    ( rec )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.00018655902856283457,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1593,8 +1593,8 @@
         "infix": "(  ( adv )  * ( c_0 * ( (  cos ( ( rec )  ) +   ( 1 )  )  *  exp (  ( adv )  ) )  )  ) ",
         "prediction": 0.00017880996196958398,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1609,8 +1609,8 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( adv )  +  (  ( rec )  +   sin (  ( rec )  ) )  )  )  ) ",
         "prediction": 0.000187533431496669,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1625,8 +1625,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
         "prediction": 0.0001802952214188891,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1641,8 +1641,8 @@
         "infix": "( c_0 * (   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  *  sin (  ( rec )  ) )  ) ",
         "prediction": 0.00018569212951685663,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1657,9 +1657,9 @@
         "infix": "( c_0 * ( ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  /  ( drop_length )  )  ) ",
         "prediction": 0.00018541675302293127,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1674,8 +1674,8 @@
         "infix": "( c_0 * ( (    ( adv )   ** (  ( 3 )  )  -    ( rec )   ** (  ( 3 )  )  )  /  ( adv )  )  ) ",
         "prediction": 0.0001843611597678394,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1690,8 +1690,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * ( (  ( rec )  *  cos ( ( rec )  ) )  +   ( 1 )  )  )  ) ",
         "prediction": 0.0001852495382844695,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1706,8 +1706,8 @@
         "infix": "(  ( adv )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 2 )  )  )  ) ",
         "prediction": 0.0001803994047619764,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1722,8 +1722,8 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( adv )  +   cos ( ( rec )  ) )  )  ) ",
         "prediction": 0.00017645956441060884,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1738,8 +1738,8 @@
         "infix": "(  ( adv )  * ( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) )  ) ",
         "prediction": 0.00018798925848800442,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1754,8 +1754,8 @@
         "infix": "( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) ) ",
         "prediction": 0.0001915524266936084,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1770,8 +1770,8 @@
         "infix": "(  ( adv )  * ( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  /  ( rec )  )  )  ) ",
         "prediction": 0.00019213753234777726,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1786,8 +1786,8 @@
         "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  -  sin (  ( rec )  ) )  ) ",
         "prediction": 0.00018776117541626064,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1802,8 +1802,8 @@
         "infix": "( c_0 *   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 2 )  )  ) ",
         "prediction": 0.00018606091605390693,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1818,8 +1818,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (   ( rec )   ** (  ( 3 )  )  ) )  )  ) ",
         "prediction": 0.00018008158494910083,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1834,8 +1834,8 @@
         "infix": "( c_0 * (  exp (  ( adv )  ) -  exp (  ( rec )  ) )  ) ",
         "prediction": 0.00018269083158186888,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1850,8 +1850,8 @@
         "infix": "( c_0 * (  ( adv )  -  ( rec )  )  ) ",
         "prediction": 0.0001923975423842072,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1866,8 +1866,8 @@
         "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  /  ( rec )  )  ) ",
         "prediction": 0.00019941783999538235,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1882,8 +1882,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.00021349766445326416,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1898,8 +1898,8 @@
         "infix": "( c_0 * ( ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  *  sin (  ( rec )  ) )  ) ",
         "prediction": 0.00019077701263311072,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1914,8 +1914,8 @@
         "infix": "(  ( adv )  * ( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  )  ) ",
         "prediction": 0.0001888428591462555,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1930,8 +1930,8 @@
         "infix": "( c_0 *  exp ( ( (  ( 2 )  *  ( adv )  )  -  ( rec )  )  ) ) ",
         "prediction": 0.0001772837522002145,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1946,9 +1946,9 @@
         "infix": "( c_0 * (   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  /  ( drop_length )  )  ) ",
         "prediction": 0.00018585080802104929,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1963,8 +1963,8 @@
         "infix": "( c_0 *   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  ) ",
         "prediction": 0.00019304310645213194,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1979,8 +1979,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  -  ( rec )  )  ) ",
         "prediction": 0.00017107033158069403,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -1995,8 +1995,8 @@
         "infix": "( c_0 * (   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  /  sin (  ( rec )  ) )  ) ",
         "prediction": 0.00019238847115991446,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2011,8 +2011,8 @@
         "infix": "( c_0 * (  ( adv )  +    (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00018921620400021825,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2027,8 +2027,8 @@
         "infix": "( c_0 *   (  ( adv )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )   ** (  ( 3 )  )  ) ",
         "prediction": 0.00019060204364681473,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2043,8 +2043,8 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( rec )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.00019449523788661724,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2059,8 +2059,8 @@
         "infix": "( (  ( 0 )  -  ( 1 )  )  * (  ( adv )  * ( c_0 *  sin ( (  ( adv )  -  ( rec )  )  ) )  )  ) ",
         "prediction": 0.00018798925848923984,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2075,8 +2075,8 @@
         "infix": "( c_0 * (  ( rec )  * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  )  ) ",
         "prediction": 0.00018328951982959685,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2091,8 +2091,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  +   exp (  ( rec )  ) )  )  ) ",
         "prediction": 0.00018256236644697077,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2107,8 +2107,8 @@
         "infix": "( c_0 * (  exp (  ( adv )  ) * (  sin (  ( adv )  ) *  sin ( (  ( adv )  -  ( rec )  )  ) )  )  ) ",
         "prediction": 0.00018715069842779007,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2123,8 +2123,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  -    ( rec )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00018064872373589396,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2139,8 +2139,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  ( rec )  +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.0002500987489730259,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2155,8 +2155,8 @@
         "infix": "( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *  ( adv )  )  +   ( rec )  )  ) ",
         "prediction": 0.0001923975423859039,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2171,8 +2171,8 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( adv )  +   ( rec )  )  )  ) ",
         "prediction": 0.00018655902856503905,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2187,8 +2187,8 @@
         "infix": "( c_0 * ( ( (  ( 0 )  -  ( 1 )  )  *    ( adv )   ** (  ( 2 )  )  )  +   ( rec )  )  ) ",
         "prediction": 0.00017107033157934287,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2203,8 +2203,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  - (    ( rec )   ** (  ( 3 )  )  -  sin ( (  ( adv )  *  ( rec )  )  ) )  )  ) ",
         "prediction": 0.0001879656835388044,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2219,8 +2219,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  ( rec )  +   cos (     ( rec )   ** (  ( 2 )  )   ** (  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.0002497355998214858,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2235,8 +2235,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos ((  ( adv )  *  ( rec )  )  ) )  )  ) ",
         "prediction": 0.00018345321816993682,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2251,8 +2251,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 / (  exp (  ( rec )  ) +   cos (   ( rec )   ** (  ( 3 )  )  ) )  )  ) ",
         "prediction": 0.00018370911409121494,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2267,8 +2267,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  +   sin (    ( rec )   ** (  ( 3 )  )  ) )  ) ",
         "prediction": 0.00019228505671886864,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2283,8 +2283,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 2 )  )  +   cos ( ( rec )  ) )  ) ",
         "prediction": 0.00017301223557055322,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2299,8 +2299,8 @@
         "infix": "( (  ( 0 )  -  ( 1 )  )  * ( c_0 * ( (  ( adv )  -  ( rec )  )  * (  ( rec )  +   sin (    ( rec )   ** (  ( 2 )  )  ) )  )  )  ) ",
         "prediction": 0.0001944952378897016,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2315,8 +2315,8 @@
         "infix": "( c_0 * (  ( adv )  +    (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.00018984386781764886,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2331,8 +2331,8 @@
         "infix": "( c_0 * (    ( adv )   ** (  ( 3 )  )  - (    ( rec )   ** (  ( 3 )  )  -  cos ( ( rec )  ) )  )  ) ",
         "prediction": 0.00018393337749170698,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2347,8 +2347,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *  cos (  (  ( rec )  /  ( adv )  )   ** (  ( 2 )  )  ) )  ) ",
         "prediction": 0.00017403031630890817,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2363,8 +2363,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * (  cos ( ( rec )  ) +   ( 1 )  )  )  ) ",
         "prediction": 0.00018207704985540222,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2379,8 +2379,8 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 *  ( drop_length )  )  ) ",
         "prediction": 0.00017332422351364025,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2395,8 +2395,8 @@
         "infix": "(  ( adv )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
         "prediction": 0.0001872817728533996,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2411,8 +2411,8 @@
         "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 * (  sin (    ( rec )   ** (  ( 2 )  )  ) /    ( rec )   ** (  ( 2 )  )  )  )  ) ",
         "prediction": 0.00020184438340959798,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2427,8 +2427,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * (   c_0  ** (  ( 2 )  )  * (  sin (    ( rec )   ** (  ( 2 )  )  ) /    ( rec )   ** (  ( 2 )  )  )  )  ) ",
         "prediction": 0.00020809574768626397,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2443,8 +2443,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * (  sin (  ( rec )  ) /  ( rec )  )  )  ) ",
         "prediction": 0.0001773833363920811,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2459,8 +2459,8 @@
         "infix": "(  ( 1 )  / (    ( adv )   ** (  ( 4 )  )  * (   c_0  ** (  ( 4 )  )  *  ( rec )  )  )  ) ",
         "prediction": 0.00019814209197323857,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2475,9 +2475,9 @@
         "infix": "(    ( adv )   ** (  ( 3 )  )  * ( c_0 / (  ( drop_length )  *  ( rec )  )  )  ) ",
         "prediction": 0.00016734198682779675,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2492,8 +2492,8 @@
         "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 *  sin (   (  ( 1 )  /  ( rec )  )   ** (  ( 2 )  )  ) )  ) ",
         "prediction": 0.00018066668329516555,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2508,8 +2508,8 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  *  exp (  ( adv )  ) )  ) ",
         "prediction": 0.00018549070974638164,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2524,8 +2524,8 @@
         "infix": "( c_0 *  exp ( (  ( adv )  -  ( rec )  )  ) ) ",
         "prediction": 0.0001841494343600523,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2540,8 +2540,8 @@
         "infix": "(    ( adv )   ** (  ( 4 )  )  * ( c_0 *  exp ( ( (  ( 0 )  -  ( 1 )  )  *  ( rec )  )  ) )  ) ",
         "prediction": 0.00017663837605811391,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2556,9 +2556,9 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  * (  ( adv )  -  ( rec )  )  )  )  ) ",
         "prediction": 0.00019508845523053193,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2573,8 +2573,8 @@
         "infix": "( c_0 *   (  ( adv )  +   sin (      ( rec )   ** (  ( 2 )  )   ** (  ( 3 )  )  ) )   ** (  ( 2 )  )  ) ",
         "prediction": 0.00011607173426826779,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2589,8 +2589,8 @@
         "infix": "( c_0 / (  ( adv )  * ( (  ( adv )  *  ( rec )  )  +   ( 1 )  )  )  ) ",
         "prediction": 0.0001891009740664259,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2605,8 +2605,8 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( drop_length )  *  exp (  ( adv )  ) )  )  ) ",
         "prediction": 0.00017364528079153775,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2621,8 +2621,8 @@
         "infix": "( c_0 * (  ( drop_length )  * ( (    ( adv )   ** (  ( 4 )  )  +   ( 1 )  )  /  ( adv )  )  )  ) ",
         "prediction": 0.00017434389139600522,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2637,8 +2637,8 @@
         "infix": "( c_0 * (  ( drop_length )  /  ( width )  )  ) ",
         "prediction": 0.00019727839315968,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "width": 0.0036268155631288
+            "width": 0.0036268155631288,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2653,8 +2653,8 @@
         "infix": "( c_0 * (  ( drop_length )  * (  sin (  ( rec )  ) /  ( rec )  )  )  ) ",
         "prediction": 0.00019193540620845995,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517
+            "rec": 1.3633073030954517,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2669,8 +2669,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 * ( (  ( adv )  *  cos ( ( rec )  ) )  +   ( 1 )  )  )  ) ",
         "prediction": 0.000190304369753331,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2685,8 +2685,8 @@
         "infix": "( c_0 *   (  ( adv )  +  (  ( rec )  *  cos ( ( rec )  ) )  )   ** (  ( 2 )  )  ) ",
         "prediction": 0.00018791597375279097,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2701,8 +2701,8 @@
         "infix": "( c_0 * (  ( drop_length )  * ( (    ( adv )   ** (  ( 6 )  )  +   ( 1 )  )  /    ( adv )   ** (  ( 3 )  )  )  )  ) ",
         "prediction": 0.00017376583863285304,
         "values": {
-            "drop_length": 0.0052654182761481,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2717,9 +2717,9 @@
         "infix": "(  ( adv )  * ( c_0 * (  sin ( (  ( adv )  -  ( rec )  )  ) /  ( drop_length )  )  )  ) ",
         "prediction": 0.00018072145177146554,
         "values": {
+            "adv": 1.87939634928168,
             "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2734,8 +2734,8 @@
         "infix": "( c_0 * (   (    ( adv )   ** (  ( 2 )  )  +   ( rec )  )   ** (  ( 2 )  )  /  ( rec )  )  ) ",
         "prediction": 0.00017014683656352321,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2750,8 +2750,8 @@
         "infix": "( c_0 *   (    ( adv )   ** (  ( 2 )  )  +   cos ( ( rec )  ) )   ** (  ( 2 )  )  ) ",
         "prediction": 0.00017004628150942618,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2766,8 +2766,8 @@
         "infix": "(  ( adv )  * ( c_0 * (  ( adv )  +   sin (      ( rec )   ** (  ( 3 )  )   ** (  ( 3 )  )  ) )  )  ) ",
         "prediction": 0.00010688246336924935,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2782,9 +2782,9 @@
         "infix": "( c_0 * (  ( drop_length )  * (    ( adv )   ** (  ( 3 )  )  +   cos (   ( rec )   ** (  ( 2 )  )  ) )  )  ) ",
         "prediction": 0.00017840306065640199,
         "values": {
-            "drop_length": 0.0052654182761481,
+            "adv": 1.87939634928168,
             "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "drop_length": 0.0052654182761481
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2799,9 +2799,9 @@
         "infix": "( c_0 * ( (  ( adv )  -  ( rec )  )  * (  sin (  ( rec )  ) /  ( drop_length )  )  )  ) ",
         "prediction": 0.0001836046370023915,
         "values": {
+            "adv": 1.87939634928168,
             "drop_length": 0.0052654182761481,
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2816,8 +2816,8 @@
         "infix": "( c_0 *  cos (  (  ( rec )  /  ( adv )  )   ** (  ( 3 )  )  ) ) ",
         "prediction": 0.00018019550461821325,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2832,8 +2832,8 @@
         "infix": "( c_0 / (  ( adv )  *  ( rec )  )  ) ",
         "prediction": 0.00018947119419123463,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2848,8 +2848,8 @@
         "infix": "( c_0 / (    ( adv )   ** (  ( 4 )  )  *  ( rec )  )  ) ",
         "prediction": 0.0001981420919747397,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
@@ -2864,8 +2864,8 @@
         "infix": "(    ( adv )   ** (  ( 2 )  )  * ( c_0 *   (  ( adv )  +   cos ( ( rec )  ) )   ** (  ( 3 )  )  )  ) ",
         "prediction": 0.0001802676586423166,
         "values": {
-            "rec": 1.3633073030954517,
-            "adv": 1.87939634928168
+            "adv": 1.87939634928168,
+            "rec": 1.3633073030954517
         },
         "constants": {
             "num_fitted_constants": 1,
