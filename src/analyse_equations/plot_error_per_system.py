@@ -51,43 +51,59 @@ def plot_error_per_system(args, df, index, proposed_equations):
     plt.show()
 
 
-def save_system_error_heatmap(args, pd_dict, metric='', fmt_error = '.2e', fmt_const='.2', round_to_digits=False,
-                              reverse_color_map = False, multiplier_error = False, kwags={}, figsize=(9, 6)):
+
+
+def save_system_error_heatmap(args, pd_dict, metric='', fmt_error='.2e', fmt_const='.2', round_to_digits=False,
+                              reverse_color_map=False, multiplier_error=False, kwags={}, figsize=(9, 6)):
     pd_constants_values = pd.DataFrame(pd_dict)
     if multiplier_error:
         pd_constants_values[:-3] = pd_constants_values[:-3] * multiplier_error
     if round_to_digits:
         pd_constants_values = pd_constants_values.round(round_to_digits)
-    pd_constants_values = pd_constants_values.rename(columns=dict_pre_to_infix)
-    fig, ax = plt.subplots(figsize=figsize)
-    mask = np.zeros(pd_constants_values.shape)
-    mask[-3:, :] = True
-    if reverse_color_map:
-        orig_map=plt.cm.get_cmap('Oranges').reversed()
-
+    if  reverse_color_map:
+        cmap = plt.cm.get_cmap('Oranges').reversed()
     else:
-        orig_map=plt.cm.get_cmap('Oranges')
-    sns.set(font_scale=1.2)
-    sns.heatmap(pd_constants_values, mask=mask, cmap=orig_map, linewidths=1.5,
-                ax=ax, cbar=False, **kwags)
-    sns.heatmap(pd_constants_values, alpha=0.0, fmt=fmt_error, cmap=orig_map,
-                cbar=False, annot=True, mask=mask, **kwags)
-    sns.heatmap(pd_constants_values, mask=np.logical_not(mask),
-                cmap='BrBG', linewidths=1.5, ax=ax, cbar=False)
-    sns.heatmap(pd_constants_values, alpha=0.0, fmt=fmt_const, cmap='BrBG',
-                cbar=False, annot=True, mask=np.logical_not(mask))
-    ax.xaxis.tick_top()
-    ax.set_xticklabels(rotation=45, labels=[label.get_text() for label in ax.get_xticklabels()],
-                       ha='left')
+        cmap = plt.cm.get_cmap('Oranges')
+    pd_constants_values = pd_constants_values.rename(columns=dict_pre_to_infix)
+    fig, axes = plt.subplots(
+        nrows=pd_constants_values.shape[0],
+        ncols=1,
+        figsize=figsize,
+        #sharex=True,
+        sharey=False,
+    )
+    for i, ax in enumerate(axes):
+        sns.heatmap(
+            pd_constants_values.iloc[[i]],  # a 1‑row DataFrame
+            cmap=cmap,
+            cbar=False,  # only one colour bar needed (optional)
+            linewidths=1.5,
+            linecolor="white",
+            annot=True,  # show the numeric values
+            fmt=fmt_error,
+            ax=ax,
+            yticklabels=False,
+            xticklabels=True,
+            vmax=max(pd_constants_values.iloc[[i]].values[0])  if reverse_color_map else  pd_constants_values['c'].iloc[[i]].values[0],
+            vmin= 0 if reverse_color_map else  min(pd_constants_values.iloc[[i]].values[0] -0.01 )
+        )
+        ax.set_ylabel(pd_constants_values.index[i], rotation=0, labelpad=100,
+                      va='center')
+        if i > 0:
+            ax.set_xticks([])
+        else:
+            ax.xaxis.tick_top()
+            ax.set_xticklabels(rotation=45, labels=[label.get_text() for label in ax.get_xticklabels()],
+                                    ha='left')
+
     ax.tick_params(axis='x', which='both', length=0)
     ax.tick_params(axis='y', which='both', length=0)
 
-    fig.tight_layout()
+    fig.tight_layout(pad=0.0, h_pad=0.0, w_pad=0.0)   # no extra padding
     save_path = args.save_path / f"error_per_system_heatmap_{metric}_{multiplier_error if multiplier_error else ''}.pdf"
     print(f"Heatmap saved @ {save_path}")
     fig.savefig(save_path)
     fig.show()
-
 
 def heatmap_error_per_system(all_data_dfs, args, df_error, proposed_equations, indices, metric):
     excel_names = list(all_data_dfs['excel_name'].unique())
@@ -100,7 +116,6 @@ def heatmap_error_per_system(all_data_dfs, args, df_error, proposed_equations, i
         test_error_system = proposed_equations[equation]['test_error_system']
         for name in excel_names:
             pd_dict[equation][name] = test_error_system[name][metric]
-
 
         correlation_df = create_constant_table(all_data_dfs, args, equation, proposed_equations)
         for i in range(proposed_equations[equation]['all_data']['train']['constants'][name]['num_fitted_constants']):
