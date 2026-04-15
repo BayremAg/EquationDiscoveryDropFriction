@@ -21,7 +21,10 @@ def evaluate_equation(args, tree, X_df):
             multioutput='uniform_average'
         ) *100
         #err_r2 = r2_score( X_df.loc[:, 'y'], y_pred)
-        err_r2 = R2_y_true_mean_precomputed(args, X_df, y_pred)
+        if hasattr(args, 'liquid_surface_mean'):
+           err_r2 = R2_y_true_mean_precomputed(args, X_df, y_pred)
+        else:
+            err_r2 = None
         output = {}
         output['error'] = err
         output['error_mse'] = err_mse
