@@ -38,7 +38,7 @@ source Equation_Discovery_Venv/bin/activate
 ```
 The necessary packages are installed with:
 ```
- pip install -r requirements.txt
+ pip install -r requirements3_9.txt
 ```
 
 # Structure of the project
