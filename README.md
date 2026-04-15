@@ -22,7 +22,7 @@ If it doesn't work, we can also download it manually.
 ```
 # Virtual Enviroment 
 
-The code is tested on Ubuntu 20.04 with Python 3.10 
+The code is tested on Ubuntu 24.04 with Python 3.9.
 The Python path should be located in the root folder of this project
 
 ```export PYTHONPATH=$PYTHONPATH:$(pwd) ```
