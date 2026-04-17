@@ -1,0 +1,11 @@
+{
+  "0": {},
+  "input_features": [
+    "drop_length",
+    "y_center",
+    "avg_vel",
+    "width",
+    "adv",
+    "rec"
+  ]
+}
