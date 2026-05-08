@@ -25,7 +25,7 @@ def run(args):
     np.random.seed(args.seed)
     random.seed(args.seed)
     best_models = {}
-    args.time_stamp = time.strftime('%d_%b_%Y_%H:%M:%S')
+    args.time_stamp = time.strftime('%d_%b_%Y_%H-%M-%S')
     if args.run_equation_discovery:
         files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()
                  if f.is_file()

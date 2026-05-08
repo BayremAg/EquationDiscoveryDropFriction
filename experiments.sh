@@ -12,4 +12,5 @@ python src/equation_discovery/equations_for_each_dataset.py  --number_of_runs 1 
 python src/equation_discovery/equations_for_each_dataset.py --number_of_runs 10  --equation_discoverer PySR
 
 # Run analysis
+
 jupyter notebook src/analyse_equations/analyse_equations.ipynb
