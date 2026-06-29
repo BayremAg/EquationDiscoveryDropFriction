@@ -1,0 +1,679 @@
+{
+  "0": {
+    "best_model_0": {
+      "train": {
+        "error": 0.017813304632764555,
+        "error_mse": 0.0006530087001204386,
+        "err_rel": 0.07419068295951765,
+        "err_percent": 5.253838713595742,
+        "err_r2": null,
+        "infix": "( c_0 - ( c_1 *  exp ( ( (  ( 0 )  -  ( 1 )  )  * (  ( 1 )  /  ( tilt )  )  )  ) )  ) ",
+        "prefix": " - c  * c  exp  *  - 0 1  / 1 tilt   ",
+        "num_operations": 6,
+        "num_constants": 2,
+        "constants": {
+          "S2.01": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.14724591337808246
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.15444469290397497
+            }
+          },
+          "S2.05": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.470746308298932
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.5788666737669249
+            }
+          },
+          "S2.06": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.545108029765328
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.6331853796599988
+            }
+          },
+          "S2.07": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.7234193802648174
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.9127901550462618
+            }
+          },
+          "S2.09": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.8027228496624932
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.8873555537957702
+            }
+          },
+          "S3.03": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.632300215929982
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.8956640595557525
+            }
+          },
+          "S3.04": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.6812586160397727
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.8924294507421542
+            }
+          },
+          "S3.05": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.2129740306746333
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 1.365699655483734
+            }
+          },
+          "S3.06": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.7104984731679047
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 2.12111489455349
+            }
+          },
+          "S3.07": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 1.5719395498982829
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 1.6288895489976687
+            }
+          },
+          "S50per": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.15855587077664068
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.16531858222526413
+            }
+          },
+          "S60per": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.301386595673195
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.41322672087652557
+            }
+          },
+          "S80per": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.8422851561965861
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.9460460132786201
+            }
+          },
+          "SDS1": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.12481549755667995
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.12670796313093163
+            }
+          },
+          "SDS10": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.12170907858373374
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.1186163679014238
+            }
+          },
+          "SDS99": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.2070555065368345
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.2973649773451522
+            }
+          },
+          "WD": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.11922705830818943
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.1232727477651447
+            }
+          },
+          "WnD": {
+            "num_fitted_constants": 2,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.10989883883729708
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.09025180415265487
+            }
+          },
+          "num_fitted_constants": 2,
+          "average": {
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.5823970538638547
+            },
+            "c_1": {
+              "node_id": 513.0,
+              "value": 0.686180291176747
+            },
+            "num_fitted_constants": 2
+          }
+        }
+      }
+    },
+    "best_model_1": {
+      "train": {
+        "error": 0.03921775841531658,
+        "error_mse": 0.004271561849843438,
+        "err_rel": 0.18975063362424563,
+        "err_percent": 10.643537931282086,
+        "err_r2": null,
+        "infix": "( c_0 /  sin (  ( tilt )  ) ) ",
+        "prefix": " / c  sin tilt ",
+        "num_operations": 2,
+        "num_constants": 1,
+        "constants": {
+          "S2.01": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.0628175450297745
+            }
+          },
+          "S2.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.18845689207843846
+            }
+          },
+          "S2.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.22355771965944252
+            }
+          },
+          "S2.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.28635234903570767
+            }
+          },
+          "S2.09": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.33525489039827855
+            }
+          },
+          "S3.03": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.23546094283413693
+            }
+          },
+          "S3.04": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.2630433113274698
+            }
+          },
+          "S3.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.5042263678241689
+            }
+          },
+          "S3.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.6798568184579081
+            }
+          },
+          "S3.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.670847350498281
+            }
+          },
+          "S50per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.06789140588944526
+            }
+          },
+          "S60per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.11490677114138337
+            }
+          },
+          "S80per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.35009511141571137
+            }
+          },
+          "SDS1": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05377739005771239
+            }
+          },
+          "SDS10": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05315323852129632
+            }
+          },
+          "SDS99": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.07758207978702719
+            }
+          },
+          "WD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05116557396858422
+            }
+          },
+          "WnD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05047363529965374
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.23716218851246776
+            },
+            "num_fitted_constants": 1
+          }
+        }
+      }
+    },
+    "best_model_2": {
+      "train": {
+        "error": 0.06462304582321929,
+        "error_mse": 0.010162249584304615,
+        "err_rel": 0.2926744519059543,
+        "err_percent": 18.31413762474095,
+        "err_r2": null,
+        "infix": "( c_0 /  ( tilt )  ) ",
+        "prefix": " / c tilt ",
+        "num_operations": 1,
+        "num_constants": 1,
+        "constants": {
+          "S2.01": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.06727831865597791
+            }
+          },
+          "S2.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.20275193787469345
+            }
+          },
+          "S2.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.24090730335407945
+            }
+          },
+          "S2.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.3083305948654629
+            }
+          },
+          "S2.09": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.3595418548243748
+            }
+          },
+          "S3.03": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.2546295764262984
+            }
+          },
+          "S3.04": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.28353113776251926
+            }
+          },
+          "S3.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.5409979993364691
+            }
+          },
+          "S3.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.7315103592579216
+            }
+          },
+          "S3.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.7182017905964173
+            }
+          },
+          "S50per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.07270279881147673
+            }
+          },
+          "S60per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.12409936349858314
+            }
+          },
+          "S80per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.3756266804885188
+            }
+          },
+          "SDS1": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05754739357306033
+            }
+          },
+          "SDS10": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05682723586194263
+            }
+          },
+          "SDS99": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.08244952892696197
+            }
+          },
+          "WD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.054782092935844955
+            }
+          },
+          "WnD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.05379075900405041
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "node_id": 1.0,
+              "value": 0.254750373669703
+            },
+            "num_fitted_constants": 1
+          }
+        }
+      }
+    },
+    "best_model_3": {
+      "train": {
+        "error": 0.08134404699213892,
+        "error_mse": 0.015624733741312694,
+        "err_rel": 0.3629077125018783,
+        "err_percent": 20.670599211160603,
+        "err_r2": null,
+        "infix": "c_0",
+        "prefix": "c",
+        "num_operations": 0,
+        "num_constants": 1,
+        "constants": {
+          "S2.01": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.10109427327284082
+            }
+          },
+          "S2.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.2977675811352799
+            }
+          },
+          "S2.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.34794471257766535
+            }
+          },
+          "S2.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.45065660717367795
+            }
+          },
+          "S2.09": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.537560522809514
+            }
+          },
+          "S3.03": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.36465511571622955
+            }
+          },
+          "S3.04": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.41458009148842967
+            }
+          },
+          "S3.05": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.8048714414854389
+            }
+          },
+          "S3.06": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 1.0766603697754662
+            }
+          },
+          "S3.07": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 1.0851897435897435
+            }
+          },
+          "S50per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.10915486148466917
+            }
+          },
+          "S60per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.17790491079254023
+            }
+          },
+          "S80per": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.5595847649145727
+            }
+          },
+          "SDS1": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.08695223270120245
+            }
+          },
+          "SDS10": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.08626376920590723
+            }
+          },
+          "SDS99": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.13223563866688867
+            }
+          },
+          "WD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.08239031513158246
+            }
+          },
+          "WnD": {
+            "num_fitted_constants": 1,
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.08292951599682369
+            }
+          },
+          "num_fitted_constants": 1,
+          "average": {
+            "c_0": {
+              "node_id": 0.0,
+              "value": 0.37768869266213734
+            },
+            "num_fitted_constants": 1
+          }
+        }
+      }
+    }
+  },
+  "input_features": [
+    "tilt"
+  ]
+}
