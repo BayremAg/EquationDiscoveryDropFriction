@@ -5,7 +5,7 @@ Scripts to run equation discovery on historical data for the drop friction exper
 # Installation guide
 Clone project from github
 ```
-git clone git clone git@github.com:wwjbrugger/EquatationDiscoveryDropFriction.git
+git clone git@github.com:wwjbrugger/EquatationDiscoveryDropFriction.git
 ```
 
 We represent equations as syntax trees. The code for this is integrated via a git submodule. 
