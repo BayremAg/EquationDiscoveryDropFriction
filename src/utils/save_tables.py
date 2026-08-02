@@ -99,7 +99,7 @@ def equation_to_latex(args, equation):
         equation = replace_features_with_symbols(args, equation)
         equation1 = sp.sympify(equation)
         equation1 = sp.simplify(equation1)
-        latex_str = f"$ {sp.latex(equation1)} $"
+        latex_str = f"$ {sp.latex(equation1).replace(chr(92)+'frac', chr(92)+'dfrac')} $"
         return latex_str
     except:
         return f"$ { equation} $"
@@ -109,4 +109,7 @@ def replace_features_with_symbols(args, features):
     features = features.replace("friction_coef", "frictioncoef")
     features = features.replace("drop_length", "droplength")
     features = features.replace("y_center", "ycenter")
+
+    ## Viscosity / Yassin data
+    features = features.replace("tilt", "theta")
     return features
