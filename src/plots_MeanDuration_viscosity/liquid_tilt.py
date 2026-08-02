@@ -25,11 +25,11 @@ CHARTS_PER_PAGE = N_ROWS * N_COLS
 
 
 PARENT_FOLDER = Path("/home/bagrebi/EquationDiscoveryDropFriction/data/Yassin_Viscosity")
-OUTPUT_PDF = Path(f"/home/bagrebi/EquationDiscoveryDropFriction/src/plots_viscosity/{X_COLUMN},velocity.pdf")
+OUTPUT_PDF = Path(f"/home/bagrebi/EquationDiscoveryDropFriction/src/plots_MeanDuration_viscosity/{X_COLUMN},velocity.pdf")
 counter = 1
 while OUTPUT_PDF.exists():
     OUTPUT_PDF = Path(
-        f"/home/bagrebi/EquationDiscoveryDropFriction/src/plots_viscosity/{X_COLUMN},Y_COLUMN({counter}).pdf"
+        f"/home/bagrebi/EquationDiscoveryDropFriction/src/plots_MeanDuration_viscosity/{X_COLUMN},Y_COLUMN({counter}).pdf"
     )
     counter += 1
 
