@@ -13,11 +13,13 @@ class ConfigLoadData:
         parser.add_argument("--number_of_data_sets_to_load", type=int, default=3000,
                             help='How many data sets to read in')
 
-        parser.add_argument("--system_id_column", type=str, default='excel_name',
-                            help='Column name which gives the system id')
+        parser.add_argument("--system_id_column", type=str, ##default='excel_name',
+                           default='fluid', ##!!!!!!!!!!!!!!!!!!!
+                            help='Column name which gives the system id') ##fluid-name Column
 
         parser.add_argument("--path_to_datasets", type=str,
-                            default='data/Nov_2025/unmodified',
+                            #default='data/Nov_2025/unmodified',       ##need to be changed but path to parent folder
+                            default='data/Yassin_Viscosity',
                             help='Path to the folder with the data sets we would like to fit inside ')
 
         parser.add_argument("--path_to_units", type=str,
@@ -27,11 +29,11 @@ class ConfigLoadData:
         parser.add_argument("--corridor_width", type=float,
                             default=10,
                             help='When filter the df how often the distance between 0.25 and 0.75 quantile should be allowed ')
-
+        # what is this?
         parser.add_argument("--delete_adjacent_rows_number", type=int,
                             default=3,
                             help='Delete the x adjacent rows before and after the row with the filtered values')
-
+        # what is this?
         parser.add_argument("--ema_alpha", type=float,
                             default=0.1,
                             help='alpha value for calculating the exponential moving average'
@@ -43,18 +45,21 @@ class ConfigLoadData:
         parser.add_argument('--features', nargs='+',
                             #  'id','time','tilt_angle','gamma','m','m*','viscosity','static_adv','static_rec','friction_coef',
                             #'row_id','col_id','sheet_name', 'mid', 'rec', 'adv'
-                            default = ['drop_length', 'y_center',
-                                       'avg_vel', 'width',
-                                       'adv', 'rec',
+                            ##default = ['drop_length', 'y_center',
+                            ##           'avg_vel', 'width',
+                            ##           'adv', 'rec',
                                        # 'cos_adv','cos_rec','cos_mid',
                                        # 'sin_adv', 'sin_rec', 'sin_mid',
                                        # 'cos_square_adv', 'cos_square_rec', 'cos_square_mid',
                                        # 'sin_square_adv', 'sin_square_rec', 'sin_square_mid'
-                                       ],
+                            ##           ],
+                            default=['tilt'], ## the input variabels for the equation not all columns!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             help='Features we would like to use in the equation discovery'
                             )
-
-        parser.add_argument("--target", type=str, default='smoothed_friction_force',
+        #Should i change in the dataframe the target column to 'y' or i give hier its name and its changed automatically?
+        #because in line 162 it does not use args.target it uses directly 'y' !!
+        parser.add_argument("--target", type=str, ##default='smoothed_friction_force',
+                            default='mean', ##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             help='(y) Column name we want to fit '
                             )
 

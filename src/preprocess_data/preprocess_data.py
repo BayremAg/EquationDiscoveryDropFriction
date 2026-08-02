@@ -15,7 +15,7 @@ def load_Sajjad(args, path):
     df['viscosity'] = df.loc[:, 'viscosity'].to_numpy() * 0.001
     df = df.rename(columns={'velocity': 'avg_vel',
                             'middle_angle': 'mid'})
-    df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy())
+    df['adv'] = np.deg2rad(df.loc[:, 'adv'].to_numpy()) ##change degree to Rad:[2pi] because PySR interpret it as [2pi].
     df['rec'] = np.deg2rad(df.loc[:, 'rec'].to_numpy())
     df['mid'] = np.deg2rad(df.loc[:, 'mid'].to_numpy())
 
@@ -43,7 +43,7 @@ def load_Sajjad(args, path):
     one_hot_encoder.add_one_hot_to_frame(df)
 
     df['tilt_angle'] = np.deg2rad(df.loc[:, 'tilt_angle'].to_numpy())
-    df.rename(columns={args.target: 'y'}, inplace=True)
+    df.rename(columns={args.target: 'y'}, inplace=True) ##Variable we want to predict: in our case viscosity column name.
 
     return df
 

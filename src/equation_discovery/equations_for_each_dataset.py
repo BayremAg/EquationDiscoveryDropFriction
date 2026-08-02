@@ -27,7 +27,7 @@ def run(args):
     best_models = {}
     args.time_stamp = time.strftime('%d_%b_%Y_%H-%M-%S')
     if args.run_equation_discovery:
-        files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()
+        files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()  ## path_to_datasets should be specified in config_load_dataset.py!!!
                  if f.is_file()
                  ][:args.number_of_data_sets_to_load]
         filtered_dfs = prepare_dataset(args, files)
@@ -45,7 +45,6 @@ def run(args):
                 )
             best_models['input_features'] = args.features
             save_best_mode_dict(args, best_models)
-
 
 
 def run_pysr(df, args):
@@ -123,8 +122,8 @@ def __run_pysr(args, df):
         # ^ Define operator for SymPy as well
         elementwise_loss="myloss(x, y) = abs(x-y)",
         # ^ Custom loss function (julia syntax)
-        maxsize=7,  # ^ max complexity.
-        expression_spec=ParametricExpressionSpec(max_parameters=2),
+        maxsize=7,  ## <- max complexity.
+        expression_spec=ParametricExpressionSpec(max_parameters=2), ##maximal num of constants in equation
         temp_equation_file=True,
         constraints={
             "square": 6,
@@ -135,12 +134,12 @@ def __run_pysr(args, df):
         },
         complexity_of_constants=2,
         nested_constraints={
-            "square": {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
-            "cube":   {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
-            "sin":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
-            "cos":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
-            "exp":    {"sin": 0, "cos": 0, "exp": 0, 'cube':0, 'square':0},
-            'inv':    {'inv':0}
+            "square": {"sin": 0, "cos": 0, "exp": 0, 'cube': 0, 'square': 0},
+            "cube": {"sin": 0, "cos": 0, "exp": 0, 'cube': 0, 'square': 0},
+            "sin": {"sin": 0, "cos": 0, "exp": 0, 'cube': 0, 'square': 0},
+            "cos": {"sin": 0, "cos": 0, "exp": 0, 'cube': 0, 'square': 0},
+            "exp": {"sin": 0, "cos": 0, "exp": 0, 'cube': 0, 'square': 0},
+            'inv': {'inv': 0}
         },
         warm_start=True,
         # output_directory = pysr_output_folder,
@@ -151,7 +150,7 @@ def __run_pysr(args, df):
     model.fit(X, y,
               # X_units=[unit_vector_to_str(unit_dict[feature]) for feature in args.features],
               # y_units=unit_vector_to_str(unit_dict[args.target]),
-              category=category[0])
+              category=category[0])      ## category code for each row, based on fluid(same fluid same ID).
     return model, variables_to_feature_dict
 
 
@@ -160,8 +159,8 @@ def prepare_data_for_eq(args, df):
     size = min(args.num_rows_for_ed, num_rows)
     random_indices = np.random.choice(num_rows, size=size, replace=False)
     X = df.iloc[random_indices].loc[:, args.features].to_numpy()
-    y = df.iloc[random_indices].loc[:, ['y']].to_numpy()
-    category = pd.factorize(df.iloc[random_indices].loc[:, [args.system_id_column]].to_numpy().squeeze())
+    y = df.iloc[random_indices].loc[:, ['y']].to_numpy() ## args.target???? or rename to 'y' ?
+    category = pd.factorize(df.iloc[random_indices].loc[:, [args.system_id_column]].to_numpy().squeeze()) ##seperate not in df as a new column, but follows its fluid column order[0,1,2,1,0,0,2]
     return X, y, category
 
 
