@@ -112,4 +112,6 @@ def replace_features_with_symbols(args, features):
 
     ## Viscosity / Yassin data
     features = features.replace("tilt", "theta")
+    features = features.replace("viscosity", "eta")
+    features = features.replace("Viscosity (mPa.s)", "eta")
     return features
