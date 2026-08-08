@@ -27,7 +27,7 @@ def run(args):
     best_models = {}
     args.time_stamp = time.strftime('%d_%b_%Y_%H-%M-%S')
     if args.run_equation_discovery:
-        files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir()  ## path_to_datasets should be specified in config_load_dataset.py!!!
+        files = [f for f in (ROOT_DIR / args.path_to_datasets).iterdir() ### path_to_datasets should be specified in config_load_dataset.py!!!
                  if f.is_file()
                  ][:args.number_of_data_sets_to_load]
         filtered_dfs = prepare_dataset(args, files)
@@ -166,7 +166,7 @@ def prepare_data_for_eq(args, df):
 
 def save_best_mode_dict(args, best_models):
     if not hasattr(args, 'save_path'):
-        args.save_path = args.ROOT_DIR / (f"results/{args.path_to_datasets.split('/')[1]}/"
+        args.save_path = args.ROOT_DIR / (f"results/{args.path_to_datasets.split('/')[1]}/Mean_Duration_PySR/"
                                           f"{args.time_stamp}_best_models_{args.exp_name}.json")
     print(f'results are saved to {args.save_path}')
     Path(args.save_path).parent.mkdir(parents=True, exist_ok=True)
@@ -190,11 +190,11 @@ def clean_up_pysr():
             print(f"Error deleting {file_path}: {e}")
 
 
-if __name__ == '__main__':
-    parser = ConfigLoadData.arguments_parser()
-    ConfigHyperparameter.arguments_parser(parser)
-    ConfigSyntaxTree.arguments_parser(parser)
-    ConfigEquationDiscovery.arguments_parser(parser)
-    ConfigMGMT.arguments_parser(parser)
-    args = parser.parse_args()
-    run(args)
+#if __name__ == '__main__':
+#    parser = ConfigLoadData.arguments_parser()
+#    ConfigHyperparameter.arguments_parser(parser)
+#    ConfigSyntaxTree.arguments_parser(parser)
+#    ConfigEquationDiscovery.arguments_parser(parser)
+#    ConfigMGMT.arguments_parser(parser)
+#    args = parser.parse_args()
+#    run(args)

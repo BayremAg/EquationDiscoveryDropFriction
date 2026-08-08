@@ -20,7 +20,7 @@ from src.plots_MeanDuration_viscosity.error_bar import prepare_dataset
 # CONFIGURATION
 # ============================================================
 JSON_PATH = Path(
-    ROOT_DIR / "results/Yassin_Viscosity/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
+    ROOT_DIR / "results/Yassin_Viscosity/Mean_Duration_PySR/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
 )
 
 MODEL_NAME = "best_model_0"

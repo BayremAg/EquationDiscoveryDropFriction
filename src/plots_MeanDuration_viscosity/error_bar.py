@@ -206,10 +206,10 @@ def run_pysr_test(df, args):
     #3.Output/ROOT_DIR in Jannis code/where can i find the results?
 
     #Or better to change args here? like this:
-    #args.features = ['tilt']
-    #args.system_id_column = 'fluid'
-    #args.target='mean'
-    #args.equation_discoverer = "PySR"
+    args.features = ['tilt']
+    args.system_id_column = 'fluid'
+    args.target='mean'
+    args.equation_discoverer = "PySR"
 
     #Done in process_data the change to 'y' of args.target
     df = df.rename(columns={args.target: "y"})

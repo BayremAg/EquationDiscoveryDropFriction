@@ -29,7 +29,7 @@ from src.utils.save_tables import equation_to_latex
 # ============================================================
 #pysr Equations saved as json to visualize:
 JSON_PATH = Path(
-    ROOT_DIR / "results/Yassin_Viscosity/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
+    ROOT_DIR / "results/Yassin_Viscosity/Mean_Duration_PySR/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
 )
 
 OUTPUT_FOLDER = ROOT_DIR / "src/plots_MeanDuration_viscosity/equation_visualisations"
@@ -54,9 +54,8 @@ def load_errorbar_data(args):
     raw_data = prepare_dataset()
     errorbars_df = create_errorbars_df(raw_data)
 
-    if args.target in errorbars_df.columns and args.target != "y":
-        errorbars_df = errorbars_df.rename(columns={args.target: "y"})
-    elif "mean" in errorbars_df.columns and "y" not in errorbars_df.columns:
+
+    if "mean" in errorbars_df.columns and "y" not in errorbars_df.columns:
         errorbars_df = errorbars_df.rename(columns={"mean": "y"})
 
     return errorbars_df
@@ -92,7 +91,7 @@ def get_x_column(best_models, args):
     if "input_features" in best_models:
         return best_models["input_features"][0]
 
-    return args.features[0]
+    return "tilt"
 
 
 # ============================================================
@@ -148,12 +147,12 @@ def plot_one_model(model_name, model_data, errorbars_df, args, x_column, pdf):
     })
     fig, ax = plt.subplots(figsize=(8.69, 8.69*0.6))
 
-    fluids = sorted(errorbars_df[args.system_id_column].unique())
+    fluids = sorted(errorbars_df['fluid'].unique())
 
     for index, fluid in enumerate(fluids):
         color = colors[index % len(colors)]
         fluid_df = errorbars_df[
-            errorbars_df[args.system_id_column] == fluid
+            errorbars_df['fluid'] == fluid
         ].copy()
 
         fluid_df = fluid_df.sort_values(x_column)
@@ -164,7 +163,7 @@ def plot_one_model(model_name, model_data, errorbars_df, args, x_column, pdf):
         y_measured = fluid_df["y"]
 
         # Evaluate the equation at the same real tilt values.
-        prediction_df = fluid_df[[x_column, args.system_id_column]].copy()
+        prediction_df = fluid_df[[x_column, 'fluid']].copy()
 
         try:
             y_predicted = eq_tree.evaluate_subtree(-1, prediction_df)
@@ -263,7 +262,7 @@ if __name__ == "__main__":
 
     print(f"JSON path: {JSON_PATH}")
     print(f"Input feature used as x-axis: {x_column}")
-    print(f"System/fluid column: {args.system_id_column}")
+    print(f"System/fluid column: {'fluid'}")
     print(f"Found {len(model_dict)} models.")
 
     with PdfPages(OUTPUT_PDF) as pdf:

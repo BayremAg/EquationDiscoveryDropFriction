@@ -16,12 +16,13 @@ from src.equation_discovery.evaluate_equation import map_equation_to_syntax_tree
 from src.plots_MeanDuration_viscosity.error_bar import prepare_dataset, create_errorbars_df
 from src.utils.save_tables import equation_to_latex
 
+# ToDo: make the plot better!!!!!!
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
 JSON_PATH = Path(
-    ROOT_DIR / "results/Yassin_Viscosity/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
+    ROOT_DIR / "results/Yassin_Viscosity/Mean_Duration_PySR/19_Jun_2026_03-32-19_best_models_ID_error_per_dataset_max_num_const_1.json"
 )
 
 MODEL_NAME = "best_model_0"
@@ -231,8 +232,6 @@ def plot_viscosity_based_above_original(args, best_models, data, viscosity_df, c
     Lower plot:
         original best_model_0 with fitted constants from JSON
     """
-
-    args.system_id_column = FLUID_COLUMN
 
     # reuse the existing error-bar table creation
     errorbars_df = create_errorbars_df(data)
