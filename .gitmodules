@@ -7,3 +7,6 @@
 [submodule "src/HerNeuralMCTS"]
 	path = src/HerNeuralMCTS
 	url = git@github.com:wwjbrugger/her-neural-mcts.git
+[submodule "HerNeuralMCTS"]
+	path = HerNeuralMCTS
+	url = https://github.com/wwjbrugger/her-neural-mcts.git
